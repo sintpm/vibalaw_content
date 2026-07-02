@@ -1,0 +1,61 @@
+# Thừa kế đất đai khi không có di chúc — chia thế nào?
+
+**Chủ đề:** Đất đai
+**Căn cứ pháp lý:** Điều 650, 651, 652, 623 Bộ luật Dân sự 2015; Điều 45 Luật Đất đai 2024
+**Cập nhật:** 2026-07-02
+
+---
+
+## Mở đầu
+
+Cha mẹ mất đi để lại mảnh đất, nhưng không có di chúc. Anh em trong nhà bắt đầu tranh chấp, ai cũng cho rằng mình xứng đáng được hưởng nhiều hơn. Đây là một trong những câu chuyện đau lòng phổ biến nhất tại Việt Nam. Vậy khi không có di chúc, pháp luật chia đất đai như thế nào? Ai được hưởng, ai không? Và nếu không thỏa thuận được thì phải làm sao? Vibalaw sẽ giải đáp toàn bộ cho bạn ngay sau đây.
+
+## Không có di chúc thì chia theo 3 hàng thừa kế
+
+Đây là điều quan trọng nhất bạn cần biết. Theo Điều 651 Bộ luật Dân sự 2015, khi người mất không để lại di chúc, đất đai sẽ được chia theo 3 hàng thừa kế, và những người cùng hàng được hưởng phần bằng nhau.
+
+Hàng thừa kế thứ nhất gồm: vợ hoặc chồng, cha mẹ đẻ, cha mẹ nuôi, con đẻ và con nuôi của người mất. Đây là nhóm được ưu tiên cao nhất.
+
+Hàng thừa kế thứ hai gồm: ông bà nội, ông bà ngoại, anh chị em ruột của người mất, và cháu ruột mà người mất là ông bà.
+
+Hàng thừa kế thứ ba gồm: cụ nội, cụ ngoại, cô chú bác cậu dì của người mất, và các cháu chắt.
+
+Nguyên tắc rất rõ ràng: chỉ khi không còn ai ở hàng thứ nhất, những người ở hàng thứ hai mới được hưởng. Tương tự với hàng thứ ba. Và những người cùng một hàng thì chia đều, không ai được nhiều hơn ai.
+
+## Ví dụ cụ thể để bạn dễ hình dung
+
+Ông A mất, để lại mảnh đất 200 mét vuông, không có di chúc. Ông A có vợ là bà B, 3 người con là C, D, E, và mẹ già là cụ F. Tất cả đều thuộc hàng thừa kế thứ nhất, nên mảnh đất được chia đều cho 5 người, mỗi người được một phần năm. Không phải vợ được nhiều hơn, cũng không phải con trai được nhiều hơn con gái. Pháp luật chia bằng nhau, không phân biệt giới tính.
+
+Nhưng đây mới là điều nhiều người không biết: nếu anh C đã mất trước ông A, thì con của anh C, tức cháu nội của ông A, sẽ được hưởng phần của anh C. Đây gọi là thừa kế thế vị, quy định tại Điều 652 Bộ luật Dân sự 2015.
+
+## Thời hiệu khởi kiện — bạn có 30 năm
+
+Nhiều gia đình để đất cha mẹ mấy chục năm không chia, nghĩ rằng để từ từ rồi tính. Nhưng pháp luật có giới hạn thời gian. Theo Điều 623 Bộ luật Dân sự 2015, thời hiệu yêu cầu chia di sản thừa kế là bất động sản là 30 năm, kể từ ngày người để lại di sản qua đời.
+
+Hết 30 năm mà chưa yêu cầu chia, đất sẽ thuộc về người thừa kế đang trực tiếp quản lý mảnh đất đó. Nếu không ai quản lý, đất thuộc về Nhà nước. Nghĩa là bạn có thể mất quyền thừa kế chỉ vì để quá lâu không giải quyết.
+
+Lưu ý thêm: nếu người mất qua đời trước ngày 1 tháng 1 năm 2017, thời hiệu chỉ là 10 năm. Rất nhiều trường hợp đã hết thời hiệu mà người thừa kế không biết.
+
+## Muốn chia đất thừa kế phải làm gì?
+
+Có hai cách. Cách thứ nhất, nếu tất cả người thừa kế đồng ý, các bên lập văn bản thỏa thuận phân chia di sản và đem đi công chứng. Đây là cách nhanh nhất, ít tốn kém nhất, và Vibalaw khuyến khích bạn ưu tiên cách này.
+
+Cách thứ hai, nếu không thỏa thuận được, bất kỳ người thừa kế nào cũng có quyền khởi kiện tại Tòa án nhân dân để yêu cầu phân chia. Tuy nhiên, kiện tụng thừa kế đất đai thường kéo dài từ 6 tháng đến 2-3 năm, tốn kém về thời gian, tiền bạc và tình cảm gia đình.
+
+Một điểm quan trọng: tranh chấp chia thừa kế đất đai không bắt buộc phải hòa giải tại Ủy ban nhân dân xã trước khi khởi kiện. Bạn có quyền nộp đơn thẳng tại Tòa án.
+
+## Lưu ý thực tế
+
+Sai lầm phổ biến nhất là nghĩ rằng con trai được hưởng nhiều hơn con gái, hoặc người ở cùng cha mẹ được hưởng nhiều hơn. Pháp luật không quy định như vậy. Cùng hàng thừa kế thì chia đều.
+
+Sai lầm thứ hai là để đất không chia quá lâu. Càng để lâu, càng phát sinh thêm người thừa kế, càng phức tạp, và có thể hết thời hiệu.
+
+Nếu đất chưa có sổ đỏ, việc phân chia thừa kế sẽ khó khăn hơn rất nhiều. Hãy làm sổ đỏ trước khi tính chuyện chia thừa kế.
+
+## Kết luận
+
+Khi không có di chúc, đất đai được chia đều cho những người cùng hàng thừa kế, ưu tiên hàng thứ nhất gồm vợ chồng, cha mẹ và con cái. Bạn có 30 năm để yêu cầu chia, nhưng đừng chờ đến phút cuối. Thỏa thuận được thì công chứng, không thỏa thuận được thì kiện ra tòa. Và quan trọng nhất: hãy khuyên cha mẹ lập di chúc sớm, đó là cách tốt nhất để giữ gìn hòa khí gia đình.
+
+---
+
+*Nội dung mang tính tham khảo. Để được tư vấn chi tiết, vui lòng liên hệ Vibalaw.*
