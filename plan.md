@@ -2,20 +2,20 @@
 
 **Tổng:** 117 bài · 17 tuần · 7 bài/tuần
 **Phát sóng từ:** 2026-07-21 (Thứ 2)
-**Tiến độ:** 2/117 hoàn thành
+**Tiến độ:** 4/117 hoàn thành
 **Quy tắc:** Nội dung chuẩn bị trước 1 tuần so với ngày phát sóng
 
 ## Lịch phát sóng cố định
 
 | Thứ | Kênh | Giọng |
 |:---:|------|-------|
-| T2 | STL | Mạnh Dũng |
-| T3 | GLDT | Mona Phạm |
-| T4 | STL | Mạnh Dũng |
-| T5 | GLDT | Mona Phạm |
-| T6 | LSKC | Bảo Trung |
-| T7 | STL | Mạnh Dũng |
-| CN | GLDT | Mona Phạm |
+| T2 | STL | Nam Nhẹ Nhàng |
+| T3 | GLDT | Nam Nhẹ Nhàng |
+| T4 | STL | Nam Nhẹ Nhàng |
+| T5 | GLDT | Nam Nhẹ Nhàng |
+| T6 | LSKC | Nam Nhẹ Nhàng |
+| T7 | STL | Nam Nhẹ Nhàng |
+| CN | GLDT | Nam Nhẹ Nhàng |
 
 ---
 
@@ -25,9 +25,9 @@
 |------|:---:|:----:|--------|-----------|------|:------:|
 | 21/07 | T2 | STL | Đặt cọc mua đất — mất cọc khi nào, đòi gấp đôi? | Đất đai | dat-coc-mua-dat | ✅ |
 | 22/07 | T3 | GLDT | Mua đất chưa có sổ đỏ — rủi ro gì, mất tiền thế nào? | Đất đai | mua-dat-chua-co-so-do | ❌ |
-| 23/07 | T4 | STL | Nghỉ việc đúng luật — bao nhiêu ngày báo trước? | Lao động | nghi-viec-dung-luat | ❌ |
+| 23/07 | T4 | STL | Nghỉ việc đúng luật — bao nhiêu ngày báo trước? | Lao động | nghi-viec-dung-luat | ✅ |
 | 24/07 | T5 | GLDT | Quyền nuôi con sau ly hôn — ai được nuôi? | Hôn nhân | quyen-nuoi-con-sau-ly-hon | ❌ |
-| 25/07 | T6 | LSKC | Mua đất chưa có sổ đỏ — case mất trắng vì giấy tay | Đất đai | mua-dat-chua-co-so-do | ❌ |
+| 25/07 | T6 | LSKC | Mua đất chưa có sổ đỏ — case mất trắng vì giấy tay | Đất đai | mua-dat-chua-co-so-do | ✅ |
 | 26/07 | T7 | STL | Bị công an triệu tập — quyền của bạn là gì? | Hình sự | bi-cong-an-trieu-tap | ❌ |
 | 27/07 | CN | GLDT | Cho vay tiền không giấy tờ — đòi lại được không? | Dân sự | cho-vay-tien-khong-giay-to | ❌ |
 
