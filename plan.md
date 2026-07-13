@@ -2,7 +2,7 @@
 
 **Tổng:** 117 bài · 17 tuần · 7 bài/tuần
 **Phát sóng từ:** 2026-07-21 (Thứ 2)
-**Tiến độ:** 4/117 hoàn thành
+**Tiến độ:** 9/117 hoàn thành
 **Quy tắc:** Nội dung chuẩn bị trước 1 tuần so với ngày phát sóng
 
 ## Lịch phát sóng cố định
@@ -24,19 +24,19 @@
 | Ngày | Thứ | Kênh | Chủ đề | Lĩnh vực | Slug | Status |
 |------|:---:|:----:|--------|-----------|------|:------:|
 | 21/07 | T2 | STL | Đặt cọc mua đất — mất cọc khi nào, đòi gấp đôi? | Đất đai | dat-coc-mua-dat | ✅ |
-| 22/07 | T3 | GLDT | Mua đất chưa có sổ đỏ — rủi ro gì, mất tiền thế nào? | Đất đai | mua-dat-chua-co-so-do | ❌ |
+| 22/07 | T3 | GLDT | Mua đất chưa có sổ đỏ — rủi ro gì, mất tiền thế nào? | Đất đai | mua-dat-chua-co-so-do | ✅ |
 | 23/07 | T4 | STL | Nghỉ việc đúng luật — bao nhiêu ngày báo trước? | Lao động | nghi-viec-dung-luat | ✅ |
-| 24/07 | T5 | GLDT | Quyền nuôi con sau ly hôn — ai được nuôi? | Hôn nhân | quyen-nuoi-con-sau-ly-hon | ❌ |
+| 24/07 | T5 | GLDT | Quyền nuôi con sau ly hôn — ai được nuôi? | Hôn nhân | quyen-nuoi-con-sau-ly-hon | ✅ |
 | 25/07 | T6 | LSKC | Mua đất chưa có sổ đỏ — case mất trắng vì giấy tay | Đất đai | mua-dat-chua-co-so-do | ✅ |
-| 26/07 | T7 | STL | Bị công an triệu tập — quyền của bạn là gì? | Hình sự | bi-cong-an-trieu-tap | ❌ |
-| 27/07 | CN | GLDT | Cho vay tiền không giấy tờ — đòi lại được không? | Dân sự | cho-vay-tien-khong-giay-to | ❌ |
+| 26/07 | T7 | STL | Bị công an triệu tập — quyền của bạn là gì? | Hình sự | bi-cong-an-trieu-tap | ✅ |
+| 27/07 | CN | GLDT | Cho vay tiền không giấy tờ — đòi lại được không? | Dân sự | cho-vay-tien-khong-giay-to | ✅ |
 
 ## Tuần 2 — Phát sóng: 28/07 → 03/08 · Sản xuất xong trước: 27/07
 
 | Ngày | Thứ | Kênh | Chủ đề | Lĩnh vực | Slug | Status |
 |------|:---:|:----:|--------|-----------|------|:------:|
 | 28/07 | T2 | STL | Sang tên sổ đỏ — thủ tục, phí, mất bao lâu? | Đất đai | sang-ten-so-do | ✅ |
-| 29/07 | T3 | GLDT | Thừa kế đất đai khi không có di chúc | Đất đai | thua-ke-dat-dai-khong-di-chuc | ❌ |
+| 29/07 | T3 | GLDT | Thừa kế đất đai khi không có di chúc | Đất đai | thua-ke-dat-dai-khong-di-chuc | ✅ |
 | 30/07 | T4 | STL | Ly hôn đơn phương khi chồng/vợ không chịu ký đơn | Hôn nhân | ly-hon-don-phuong | ❌ |
 | 31/07 | T5 | GLDT | Đặt cọc mua đất — mất cọc khi nào? | Đất đai | dat-coc-mua-dat | ❌ |
 | 01/08 | T6 | LSKC | Thừa kế đất đai không di chúc — case tranh chấp anh em | Đất đai | thua-ke-dat-dai-khong-di-chuc | ❌ |
