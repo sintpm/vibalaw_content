@@ -1,0 +1,24 @@
+{
+  "title_vi": "Đặt cọc mua đất — Mất cọc khi nào, đòi gấp đôi khi nào?",
+  "topic": "Đất đai — Hợp đồng đặt cọc",
+  "legal_basis": "Điều 328 Bộ luật Dân sự 2015, Điều 188 Luật Đất đai 2024",
+  "type": "single",
+  "channels": ["STL", "GLDT"],
+  "primary_channel": "STL",
+  "voice": "hn_male_manhdung_news_48k-fhg",
+  "voice_name": "Mạnh Dũng",
+  "provider": "vbee",
+  "speed": 1.0,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "stl/dat-coc-mua-dat/audio/dat-coc-mua-dat.mp3",
+      "duration_minutes": 4.0,
+      "title": "Đặt cọc 200 triệu mua đất rồi bên bán đổi ý — đòi lại 400 triệu được không?",
+      "description": "Mất cọc hay đòi gấp đôi? Tất cả nằm trong 1 điều luật. Nhiều người đặt cọc hàng trăm triệu mà không biết quyền của mình.",
+      "hook_quote": "Đặt cọc 200 triệu — bên bán đổi ý phải trả 400 triệu",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #datcoc #muadat"
+    }
+  ]
+}

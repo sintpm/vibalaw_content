@@ -1,0 +1,24 @@
+{
+  "title_vi": "Sang tên sổ đỏ — Thủ tục, phí, mất bao lâu?",
+  "topic": "Đất đai — Chuyển nhượng quyền sử dụng đất",
+  "legal_basis": "Điều 45, Điều 133 Luật Đất đai 2024; Nghị định 151/2024/NĐ-CP",
+  "type": "single",
+  "channels": ["STL"],
+  "primary_channel": "STL",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng (custom)",
+  "provider": "vbee",
+  "speed": 1.0,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "stl/sang-ten-so-do/audio/sang-ten-so-do.mp3",
+      "duration_minutes": 3.6,
+      "title": "Mua đất 2 tỷ — sang tên tốn gần 54 triệu, quá 30 ngày còn bị phạt",
+      "description": "Thủ tục sang tên sổ đỏ gồm 5 bước, 5 khoản phí, và 3 mốc thời gian bắt buộc. Tổng chi phí khoảng 2,7% giá trị giao dịch. Sang tên giữa người thân được miễn thuế.",
+      "hook_quote": "Đất 2 tỷ — sang tên tốn 54 triệu, quá 30 ngày bị phạt hành chính",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #sangtensodon #datdai"
+    }
+  ]
+}

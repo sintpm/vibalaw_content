@@ -378,7 +378,7 @@ body {
 
 <section class="hero">
   <h1>Content Production Plan</h1>
-  <div class="subtitle">7 bài/tuần — 3 STL · 3 GLDT · 1 LSKC — Hoàn thành trong ~17 tuần</div>
+  <div class="subtitle">7 bài/tuần — 3 STL · 3 GLDT · 1 LSKC — Hoàn thành trong ~17 tuần<br>Phát sóng từ 21/07/2026 · Nội dung chuẩn bị trước 1 tuần</div>
 </section>
 
 <section class="dashboard" id="dashboard"></section>
@@ -409,8 +409,8 @@ body {
 // DATA — 117 episodes scheduled across 17 weeks
 // ============================================================
 const EPISODES = [
-  // Week 1 — start 2026-07-14
-  { week:1, day:'T2', ch:'stl', title:'Đặt cọc mua đất — mất cọc khi nào, đòi gấp đôi?', cat:'Đất đai', slug:'dat-coc-mua-dat' },
+  // Week 1 — start 2026-07-21
+  { week:1, day:'T2', ch:'stl', title:'Đặt cọc mua đất — mất cọc khi nào, đòi gấp đôi?', cat:'Đất đai', slug:'dat-coc-mua-dat', done:true },
   { week:1, day:'T3', ch:'gldt', title:'Mua đất chưa có sổ đỏ — rủi ro gì, mất tiền thế nào?', cat:'Đất đai', slug:'mua-dat-chua-co-so-do' },
   { week:1, day:'T4', ch:'stl', title:'Nghỉ việc đúng luật — bao nhiêu ngày báo trước?', cat:'Lao động', slug:'nghi-viec-dung-luat' },
   { week:1, day:'T5', ch:'gldt', title:'Quyền nuôi con sau ly hôn — ai được nuôi?', cat:'Hôn nhân', slug:'quyen-nuoi-con-sau-ly-hon' },
@@ -419,7 +419,7 @@ const EPISODES = [
   { week:1, day:'CN', ch:'gldt', title:'Cho vay tiền không giấy tờ — đòi lại được không?', cat:'Dân sự', slug:'cho-vay-tien-khong-giay-to' },
 
   // Week 2
-  { week:2, day:'T2', ch:'stl', title:'Sang tên sổ đỏ — thủ tục, phí, mất bao lâu?', cat:'Đất đai', slug:'sang-ten-so-do' },
+  { week:2, day:'T2', ch:'stl', title:'Sang tên sổ đỏ — thủ tục, phí, mất bao lâu?', cat:'Đất đai', slug:'sang-ten-so-do', done:true },
   { week:2, day:'T3', ch:'gldt', title:'Thừa kế đất đai khi không có di chúc', cat:'Đất đai', slug:'thua-ke-dat-dai-khong-di-chuc' },
   { week:2, day:'T4', ch:'stl', title:'Ly hôn đơn phương khi chồng/vợ không chịu ký đơn', cat:'Hôn nhân', slug:'ly-hon-don-phuong' },
   { week:2, day:'T5', ch:'gldt', title:'Đặt cọc mua đất — mất cọc khi nào?', cat:'Đất đai', slug:'dat-coc-mua-dat' },
@@ -580,7 +580,7 @@ function getKey(i, type) { return `${i}_${type}`; }
 // ============================================================
 // DATE UTILS
 // ============================================================
-const START_DATE = new Date(2026, 6, 14); // 2026-07-14 Monday
+const START_DATE = new Date(2026, 6, 21); // 2026-07-21 Monday
 const DAY_MAP = { 'T2':0, 'T3':1, 'T4':2, 'T5':3, 'T6':4, 'T7':5, 'CN':6 };
 
 function getWeekStart(weekNum) {
@@ -670,17 +670,18 @@ function renderWeeks() {
       <div class="week-header" onclick="this.parentElement.classList.toggle('collapsed')">
         <span class="week-title">Tuần ${w}</span>
         <span class="week-dates">${formatDate(ws)} — ${formatDate(we)}</span>
-        <span class="week-progress">${filtered.length} bài</span>
+        <span class="week-dates" style="font-style:italic">SX trước: ${formatDate(new Date(ws.getTime() - 86400000))}</span>
+        <span class="week-progress">${filtered.filter(e=>e.done).length}/${filtered.length} bài</span>
         <span class="week-chevron">▼</span>
       </div>
       <div class="week-body">
         ${filtered.map(ep => {
           const epDate = getEpDate(ep);
           return `
-          <div class="episode-row">
+          <div class="episode-row${ep.done?' completed':''}">
             <span class="ep-day">${ep.day}</span>
             <span class="ep-channel ${ep.ch}">${ep.ch.toUpperCase()}</span>
-            <span class="ep-title">${ep.title}</span>
+            <span class="ep-title">${ep.done?'✅ ':''}${ep.title}</span>
             <span class="ep-category">${ep.cat}</span>
           </div>`;
         }).join('')}
