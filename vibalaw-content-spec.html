@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibalaw Content — Specification v1.2</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0f62fe;
+    --on-primary: #ffffff;
+    --ink: #161616;
+    --ink-muted: #525252;
+    --ink-subtle: #8c8c8c;
+    --canvas: #ffffff;
+    --surface-1: #f4f4f4;
+    --surface-2: #e0e0e0;
+    --inverse-canvas: #161616;
+    --inverse-ink: #ffffff;
+    --inverse-ink-muted: #c6c6c6;
+    --hairline: #e0e0e0;
+    --success: #24a148;
+    --warning: #f1c21b;
+    --error: #da1e28;
+    --stl: #0f62fe;
+    --gldt: #24a148;
+    --lskc: #8a3800;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.16px;
+    color: var(--ink);
+    background: var(--canvas);
+  }
+
+  /* Utility bar */
+  .utility-bar {
+    background: var(--surface-1);
+    color: var(--ink-muted);
+    font-size: 12px;
+    letter-spacing: 0.32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 32px;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  /* Top nav */
+  .top-nav {
+    background: var(--canvas);
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    border-bottom: 1px solid var(--hairline);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-nav nav {
+    margin-left: auto;
+    display: flex;
+    gap: 24px;
+  }
+  .top-nav nav a {
+    font-size: 14px;
+    color: var(--ink-muted);
+    text-decoration: none;
+    letter-spacing: 0.16px;
+    transition: color 0.15s;
+  }
+  .top-nav nav a:hover,
+  .top-nav nav a.active { color: var(--ink); }
+
+  /* Hero */
+  .hero {
+    padding: 48px 32px 32px;
+    max-width: 1312px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.17;
+    letter-spacing: -0.4px;
+    margin-bottom: 16px;
+  }
+  .hero .version-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--on-primary);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+  }
+  .hero .meta {
+    font-size: 14px;
+    color: var(--ink-muted);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .hero .subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--ink-muted);
+    max-width: 720px;
+    margin-top: 24px;
+  }
+
+  /* Section */
+  .section {
+    max-width: 1312px;
+    margin: 0 auto;
+    padding: 64px 32px;
+  }
+  .section-alt { background: var(--surface-1); }
+  .section-alt .section { padding: 64px 32px; }
+  .section h2 {
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 32px;
+  }
+  .section h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.33;
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+  .section h3:first-child { margin-top: 0; }
+  .section h4 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    margin-top: 24px;
+  }
+  .section p {
+    margin-bottom: 16px;
+    max-width: 720px;
+  }
+  .section ul, .section ol {
+    margin-bottom: 16px;
+    padding-left: 24px;
+    max-width: 720px;
+  }
+  .section li { margin-bottom: 8px; }
+
+  /* Blockquote */
+  blockquote {
+    border-left: 2px solid var(--primary);
+    padding: 12px 16px;
+    margin: 16px 0;
+    color: var(--ink-muted);
+    font-size: 14px;
+    max-width: 720px;
+  }
+
+  /* Table */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 16px 0 24px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    letter-spacing: 0.16px;
+  }
+  thead th {
+    background: var(--surface-1);
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--ink);
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+  tbody tr:hover { background: var(--surface-1); }
+
+  /* Cards */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--hairline);
+    margin: 24px 0;
+  }
+  .card {
+    background: var(--canvas);
+    padding: 24px;
+  }
+  .card h4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 8px;
+  }
+  .card p {
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin: 0;
+  }
+  .card .tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    margin-top: 12px;
+    letter-spacing: 0.32px;
+  }
+
+  /* Channel colors */
+  .tag-stl { background: #edf5ff; color: var(--stl); }
+  .tag-gldt { background: #defbe6; color: var(--gldt); }
+  .tag-lskc { background: #fff1e6; color: var(--lskc); }
+
+  .channel-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 0;
+    margin-right: 6px;
+  }
+  .dot-stl { background: var(--stl); }
+  .dot-gldt { background: var(--gldt); }
+  .dot-lskc { background: var(--lskc); }
+
+  /* Status */
+  .status-done { color: var(--success); }
+  .status-pending { color: var(--ink-subtle); }
+  .status-warn { color: var(--warning); }
+  .status-error { color: var(--error); }
+
+  /* Code / pre */
+  code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    background: var(--surface-1);
+    padding: 2px 6px;
+    letter-spacing: 0;
+  }
+  pre {
+    background: var(--inverse-canvas);
+    color: var(--inverse-ink);
+    padding: 24px;
+    overflow-x: auto;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 16px 0 24px;
+    letter-spacing: 0;
+  }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+  .checklist li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--hairline);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .checklist .check {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--hairline);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .checklist .check.done {
+    background: var(--success);
+    border-color: var(--success);
+    position: relative;
+  }
+  .checklist .check.done::after {
+    content: '';
+    position: absolute;
+    left: 4px; top: 1px;
+    width: 6px; height: 10px;
+    border: solid var(--on-primary);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    background: var(--primary);
+    color: var(--on-primary);
+    padding: 48px 32px;
+    text-align: center;
+  }
+  .cta-banner h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  .cta-banner p {
+    font-size: 18px;
+    max-width: 560px;
+    margin: 0 auto;
+    opacity: 0.85;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--inverse-canvas);
+    color: var(--inverse-ink-muted);
+    padding: 48px 32px;
+    font-size: 14px;
+  }
+  footer .footer-inner {
+    max-width: 1312px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer .logo-footer {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--inverse-ink);
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    height: 4px;
+    background: var(--surface-2);
+    margin: 8px 0;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.3s;
+  }
+
+  /* Stat card */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--hairline);
+    margin: 24px 0;
+  }
+  .stat-card {
+    background: var(--canvas);
+    padding: 24px;
+    text-align: center;
+  }
+  .stat-card .num {
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--primary);
+  }
+  .stat-card .label {
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin-top: 4px;
+  }
+
+  /* Tabs */
+  .tab-strip {
+    display: flex;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 24px;
+    overflow-x: auto;
+  }
+  .tab-strip a {
+    font-size: 14px;
+    color: var(--ink-muted);
+    text-decoration: none;
+    padding: 16px 20px;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all 0.15s;
+  }
+  .tab-strip a:hover { color: var(--ink); }
+  .tab-strip a.active {
+    color: var(--ink);
+    font-weight: 600;
+    border-bottom-color: var(--primary);
+  }
+
+  /* Podcast list */
+  .pl-filter-bar {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 0;
+  }
+  .pl-filter-tab {
+    padding: 12px 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    color: var(--ink-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+  }
+  .pl-filter-tab:hover { color: var(--ink); }
+  .pl-filter-tab.active {
+    color: var(--ink);
+    font-weight: 600;
+    border-bottom-color: var(--primary);
+  }
+  .pl-table { width: 100%; border-collapse: collapse; }
+  .pl-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    padding: 10px 12px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .pl-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: middle;
+  }
+  .pl-table tr:hover { background: var(--surface-1); }
+  .pl-ch {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16px;
+    padding: 2px 8px;
+    display: inline-block;
+  }
+  .pl-ch.stl { color: var(--stl); background: #edf5ff; }
+  .pl-ch.gldt { color: var(--gldt); background: #defbe6; }
+  .pl-ch.lskc { color: var(--lskc); background: #fff1e6; }
+  .pl-cat {
+    font-size: 12px;
+    color: var(--ink-subtle);
+    letter-spacing: 0.32px;
+  }
+  .pl-status {
+    font-size: 12px;
+    display: flex;
+    gap: 8px;
+  }
+  .pl-status span {
+    width: 20px;
+    text-align: center;
+  }
+  .pl-summary {
+    display: flex;
+    gap: 24px;
+    padding: 16px 12px;
+    font-size: 13px;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--hairline);
+    background: var(--surface-1);
+  }
+  .pl-summary strong { color: var(--ink); }
+
+  /* Responsive */
+  @media (max-width: 672px) {
+    .hero h1 { font-size: 32px; letter-spacing: 0; }
+    .section h2 { font-size: 28px; }
+    .hero, .section { padding: 32px 16px; }
+    .top-nav { padding: 0 16px; }
+    .top-nav nav { display: none; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Utility Bar -->
+<div class="utility-bar">
+  Vibalaw Content Specification &mdash; v1.2 &mdash; 2026-07-13
+</div>
+
+<!-- Top Nav -->
+<div class="top-nav">
+  <nav>
+    <a href="#overview" class="active">Tổng quan</a>
+    <a href="#channels">3 Kênh</a>
+    <a href="#platforms">Nền tảng</a>
+    <a href="#video">Video</a>
+    <a href="#pipeline">Pipeline</a>
+    <a href="#branding">Branding</a>
+    <a href="#content">Nội dung</a>
+    <a href="#podcast-list">Danh sách</a>
+    <a href="#resources">Tài nguyên</a>
+  </nav>
+</div>
+
+<!-- Hero -->
+<div class="hero" id="overview">
+  <div class="version-badge">v1.2</div>
+  <h1>Vibalaw Content<br>Specification</h1>
+  <div class="subtitle">Hệ thống sản xuất nội dung pháp luật đa nền tảng &mdash; video ngắn, video dài và podcast. Trở thành nguồn kiến thức pháp luật đáng tin cậy, dễ hiểu cho người Việt.</div>
+  <div class="meta">
+    <span>BA: AI Agent</span>
+    <span>Status: 🟡 Chờ confirm</span>
+    <span>Cập nhật: 2026-07-13</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="section-alt">
+  <div class="section">
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="num">117</div>
+        <div class="label">Chủ đề đã lên danh sách</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">3</div>
+        <div class="label">Kênh TikTok</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">8</div>
+        <div class="label">Nền tảng phân phối</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">0</div>
+        <div class="label">Bài đã hoàn thành</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 1: Mục tiêu -->
+<div class="section">
+  <h3>Mục tiêu</h3>
+  <ul>
+    <li>Xây dựng 3 kênh nội dung có bản sắc riêng biệt trên mỗi nền tảng</li>
+    <li>Đạt 100 bài content gốc trong giai đoạn đầu</li>
+    <li>Tối đa hoá tái sử dụng nội dung (1 bài gốc &rarr; nhiều format, nhiều nền tảng)</li>
+    <li>Xây dựng uy tín thương hiệu Vibalaw trên các nền tảng số</li>
+  </ul>
+
+  <h3>Đối tượng</h3>
+  <ul>
+    <li><strong>Primary:</strong> Người Việt 22-45 tuổi, gặp vấn đề pháp lý đời thường</li>
+    <li><strong>Secondary:</strong> Sinh viên luật, người kinh doanh nhỏ cần hiểu luật liên quan</li>
+  </ul>
+</div>
+
+<!-- Section 2: 3 Kênh -->
+<div class="section-alt" id="channels">
+  <div class="section">
+    <h2>Hệ thống 3 kênh</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="tag tag-stl">STL</span>
+        <h4>Sổ Tay Luật</h4>
+        <p><strong>Định vị:</strong> Tin tức &amp; kiến thức luật</p>
+        <p>Chính thống, rõ ràng, số liệu cụ thể. Giọng "người giải thích luật". Đi thẳng vào quy định, so sánh cũ-mới.</p>
+        <p style="margin-top:12px;font-size:12px;color:var(--ink-subtle)">52 chủ đề &middot; Mạnh Dũng &middot; 5-7 bài/tuần</p>
+      </div>
+      <div class="card">
+        <span class="tag tag-gldt">GLDT</span>
+        <h4>Góc Luật Đời Thường</h4>
+        <p><strong>Định vị:</strong> Kịch bản tình huống thực tế</p>
+        <p>Gần gũi, có drama, kể chuyện. Giọng "bạn bè tư vấn". Đặt tình huống trước rồi mới dẫn luật.</p>
+        <p style="margin-top:12px;font-size:12px;color:var(--ink-subtle)">48 chủ đề &middot; Mona Phạm &middot; 3-4 bài/tuần</p>
+      </div>
+      <div class="card">
+        <span class="tag tag-lskc">LSKC</span>
+        <h4>Luật Sư Kể Chuyện</h4>
+        <p><strong>Định vị:</strong> Câu chuyện nghề &amp; case study</p>
+        <p>Sâu sắc, trải nghiệm, cảm xúc. Giọng "luật sư chia sẻ". Kể case thật, bài học rút ra.</p>
+        <p style="margin-top:12px;font-size:12px;color:var(--ink-subtle)">17 chủ đề &middot; Bảo Trung &middot; 2-3 bài/tuần</p>
+      </div>
+    </div>
+
+    <h3>Phân biệt chi tiết</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Yếu tố</th><th><span class="channel-dot dot-stl"></span>STL</th><th><span class="channel-dot dot-gldt"></span>GLDT</th><th><span class="channel-dot dot-lskc"></span>LSKC</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mở đầu</td><td>Đi thẳng vào quy định/vấn đề</td><td>"Hãy tưởng tượng bạn..."</td><td>"Có một vụ việc khiến tôi nhớ mãi..."</td></tr>
+          <tr><td>Cấu trúc</td><td>Quy định &rarr; giải thích &rarr; lưu ý</td><td>Tình huống &rarr; phân tích &rarr; xử lý &rarr; bài học</td><td>Bối cảnh &rarr; diễn biến &rarr; kết quả &rarr; bài học</td></tr>
+          <tr><td>Ví dụ</td><td>Con số, so sánh, mức phạt</td><td>Kịch bản: "Anh A mua đất..."</td><td>Case thật: "Có khách hàng đến..."</td></tr>
+          <tr><td>Hook</td><td>Số liệu gây sốc</td><td>"Bạn sẽ làm gì nếu...?"</td><td>"Vụ việc này tưởng đơn giản..."</td></tr>
+          <tr><td>Nguồn</td><td>AI + văn bản pháp luật</td><td>AI + sáng tạo kịch bản</td><td>Luật sư kể/cung cấp case</td></tr>
+          <tr><td>Viral</td><td>Trung bình</td><td>Cao (drama)</td><td>Cao (cảm xúc)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Tracking &amp; thư mục</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Kênh</th><th>File tracking</th><th>Thư mục content</th><th>Số chủ đề</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="channel-dot dot-stl"></span>STL</td><td><code>podcast_list_stl.md</code></td><td><code>content/stl/&lt;slug&gt;/</code></td><td>52</td></tr>
+          <tr><td><span class="channel-dot dot-gldt"></span>GLDT</td><td><code>podcast_list_gldt.md</code></td><td><code>content/gldt/&lt;slug&gt;/</code></td><td>48</td></tr>
+          <tr><td><span class="channel-dot dot-lskc"></span>LSKC</td><td><code>podcast_list_lskc.md</code></td><td><code>content/lskc/&lt;slug&gt;/</code></td><td>17</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: Nền tảng phân phối -->
+<div class="section" id="platforms">
+  <h2>Nền tảng phân phối</h2>
+
+  <h3>Ma trận nền tảng &times; kênh</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Nền tảng</th><th>STL</th><th>GLDT</th><th>LSKC</th><th>Format chính</th><th>Ghi chú</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>TikTok</strong></td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td>Video ngắn 30-90s</td><td>Nền tảng chính, reach cao nhất</td></tr>
+        <tr><td><strong>YouTube</strong></td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td>Shorts + Long-form</td><td>Shorts tái sử dụng từ TikTok</td></tr>
+        <tr><td><strong>Facebook</strong></td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td>Reels + Video</td><td>Đối tượng 30-50 tuổi</td></tr>
+        <tr><td><strong>Instagram</strong></td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td class="status-pending">&mdash;</td><td>Reels</td><td>Visual-first, trẻ hơn</td></tr>
+        <tr><td><strong>Threads</strong></td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td>Text + link</td><td>Thread giải thích</td></tr>
+        <tr><td><strong>Zalo Video</strong></td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td>Video ngắn</td><td>35+, tin tưởng cao</td></tr>
+        <tr><td><strong>Spotify</strong></td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td>Podcast audio</td><td>Audio 3-20 phút</td></tr>
+        <tr><td><strong>Apple Podcasts</strong></td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td class="status-done">&#10003;</td><td>Podcast audio</td><td>Cùng feed với Spotify</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <blockquote>TikTok tách 3 tài khoản riêng (algorithm ưu tiên kênh chuyên biệt). Các nền tảng khác gom chung 1 tài khoản/page, dùng playlist/series phân loại.</blockquote>
+</div>
+
+<!-- Section 4: Video -->
+<div class="section-alt" id="video">
+  <div class="section">
+    <h2>Định dạng video</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Format</th><th>Mô tả</th><th>Kênh</th><th>Chi phí</th><th>Tỷ lệ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>AI Video</strong></td><td>Text-to-video, AI voiceover + hình minh hoạ</td><td>STL, GLDT</td><td>Thấp</td><td>70%</td></tr>
+          <tr><td><strong>Tự quay</strong></td><td>Luật sư/MC nói trước camera</td><td>LSKC, GLDT</td><td>Trung bình</td><td>20%</td></tr>
+          <tr><td><strong>Podcast video</strong></td><td>Ghi hình buổi podcast, cắt clip</td><td>LSKC</td><td>Trung bình</td><td>10%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Section 5: Pipeline -->
+<div class="section" id="pipeline">
+  <h2>Pipeline sản xuất</h2>
+
+  <h3>1 content gốc &rarr; N output</h3>
+  <pre>
+                    CONTENT GỐC (.md)
+                 Research → Viết bài 700-1200 từ
+                           │
+              ┌────────────┼────────────┐
+              ▼            ▼            ▼
+         AUDIO (3-6')  VIDEO NGẮN   TEXT POST
+         Podcast MP3   30-90s clip  Thread/Post
+              │            │            │
+       ┌──────┘     ┌──────┘     ┌──────┘
+       ▼            ▼            ▼
+    Spotify      TikTok       Threads
+    Apple Pod.   YT Shorts    Facebook
+    YouTube      IG Reels     Zalo Article
+                 FB Reels
+                 Zalo Video</pre>
+
+  <h3>Quy trình AI Video (7 bước)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Step</th><th>Mô tả</th><th>Tool</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Chọn chủ đề từ <code>podcast_list_&lt;kênh&gt;.md</code></td><td>Manual</td></tr>
+        <tr><td>2</td><td>Research + viết content gốc (.md)</td><td>Skill vibalaw-audio</td></tr>
+        <tr><td>3</td><td>Audio-convert + validate độ dài</td><td>Skill vibalaw-audio</td></tr>
+        <tr><td>4</td><td>TTS Vbee &rarr; MP3</td><td>Vbee API</td></tr>
+        <tr><td>5</td><td>Tạo video từ audio (AI hình + overlay)</td><td>Cần bổ sung</td></tr>
+        <tr><td>6</td><td>Đăng tải + cập nhật tracking</td><td>Manual / Scheduling tool</td></tr>
+        <tr><td>7</td><td>Đo lường + tối ưu</td><td>Analytics</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Lịch đăng bài tuần mẫu</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Ngày</th><th><span class="channel-dot dot-stl"></span>STL</th><th><span class="channel-dot dot-gldt"></span>GLDT</th><th><span class="channel-dot dot-lskc"></span>LSKC</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>T2</td><td>1 bài</td><td>1 bài</td><td>&mdash;</td></tr>
+        <tr><td>T3</td><td>1 bài</td><td>&mdash;</td><td>1 bài (video thật)</td></tr>
+        <tr><td>T4</td><td>1 bài</td><td>1 bài</td><td>&mdash;</td></tr>
+        <tr><td>T5</td><td>1 bài</td><td>1 bài</td><td>1 bài</td></tr>
+        <tr><td>T6</td><td>1 bài</td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td>T7</td><td>&mdash;</td><td>1 bài</td><td>1 bài (video thật)</td></tr>
+        <tr><td>CN</td><td>1 bài</td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td><strong>Tổng</strong></td><td><strong>5-7</strong></td><td><strong>3-4</strong></td><td><strong>2-3</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Section 6: Branding -->
+<div class="section-alt" id="branding">
+  <div class="section">
+    <h2>Branding theo kênh</h2>
+
+    <h3>Visual identity</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Yếu tố</th><th>STL</th><th>GLDT</th><th>LSKC</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Màu chủ đạo</td><td>Xanh navy + trắng</td><td>Xanh lá + vàng ấm</td><td>Nâu đất + gold</td></tr>
+          <tr><td>Tone</td><td>Professional, clean</td><td>Friendly, warm</td><td>Premium, trust</td></tr>
+          <tr><td>Font overlay</td><td>Sans-serif, bold</td><td>Rounded, friendly</td><td>Serif, elegant</td></tr>
+          <tr><td>Intro video</td><td>2s — "Sổ Tay Luật"</td><td>2s — "Góc Luật Đời Thường"</td><td>2s — "Luật Sư Kể Chuyện"</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Audio branding</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Kênh</th><th>Giọng</th><th>Voice ID</th><th>Đặc điểm</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="channel-dot dot-stl"></span>STL</td><td>Mạnh Dũng (Nam, Bắc)</td><td><code>hn_male_manhdung_news_48k-fhg</code></td><td>Giọng tin tức, chính thống</td></tr>
+          <tr><td><span class="channel-dot dot-gldt"></span>GLDT</td><td>Mona Phạm (Nữ, Nam)</td><td><code>s_hochiminh_female_monapham...story_vc</code></td><td>Giọng story, gần gũi, ấm</td></tr>
+          <tr><td><span class="channel-dot dot-lskc"></span>LSKC</td><td>Bảo Trung (Nam, Bắc)</td><td><code>n_hanoi_male_baotrung...story_vc</code></td><td>Giọng kể chuyện, sâu sắc</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Intro/Outro theo platform</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Platform</th><th>Intro</th><th>Outro</th><th>Vibalaw</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Video ngắn</strong></td><td>KHÔNG &mdash; thẳng vào hook</td><td>CTA tự nhiên</td><td>KHÔNG nhắc trong audio</td></tr>
+          <tr><td><strong>Podcast</strong></td><td>8 câu random theo kênh</td><td>8 câu random theo kênh</td><td>Soft mention 1 lần cuối outro</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <blockquote>Chiến lược: Channel-first, không brand-first. Vibalaw chỉ xuất hiện ở profile bio, description, watermark, và soft mention cuối podcast.</blockquote>
+  </div>
+</div>
+
+<!-- Section 7: Nội dung -->
+<div class="section" id="content">
+  <h2>Nội dung &mdash; Lĩnh vực pháp luật</h2>
+
+  <h3>Phân bổ theo lĩnh vực</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Lĩnh vực</th><th>STL</th><th>GLDT</th><th>LSKC</th><th>Tổng</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Đất đai</td><td>8</td><td>10</td><td>4</td><td>22</td></tr>
+        <tr><td>Hôn nhân - Gia đình</td><td>10</td><td>8</td><td>4</td><td>22</td></tr>
+        <tr><td>Dân sự</td><td>9</td><td>12</td><td>6</td><td>27</td></tr>
+        <tr><td>Lao động</td><td>14</td><td>8</td><td>1</td><td>23</td></tr>
+        <tr><td>Hình sự</td><td>4</td><td>6</td><td>2</td><td>12</td></tr>
+        <tr><td>TMĐT / Công nghệ</td><td>4</td><td>4</td><td>0</td><td>8</td></tr>
+        <tr><td>Quy định mới</td><td>3</td><td>0</td><td>0</td><td>3</td></tr>
+        <tr style="font-weight:600;border-top:2px solid var(--ink)"><td>Tổng</td><td>52</td><td>48</td><td>17</td><td>117</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Content format theo thời lượng</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Loại</th><th>Thời lượng</th><th>Dùng cho</th><th>Nền tảng</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Clip ngắn</td><td>30-60s</td><td>1 ý chính, 1 hook</td><td>TikTok, Shorts, Reels</td></tr>
+        <tr><td>Clip trung</td><td>60-90s</td><td>1 tình huống + phân tích</td><td>TikTok, Shorts, Reels</td></tr>
+        <tr><td>Audio ngắn</td><td>3-4 phút</td><td>Q&amp;A, tin pháp luật</td><td>Podcast</td></tr>
+        <tr><td>Audio trung</td><td>4-5 phút</td><td>Hướng dẫn, phân tích</td><td>Podcast</td></tr>
+        <tr><td>Audio dài</td><td>5-6 phút</td><td>Pillar, tổng hợp</td><td>Podcast</td></tr>
+        <tr><td>Video dài</td><td>8-15 phút</td><td>Phân tích sâu</td><td>YouTube</td></tr>
+        <tr><td>Compilation</td><td>15-20 phút</td><td>Ghép 3-4 bài</td><td>YouTube, Podcast</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- Section 10: Tài nguyên -->
+<div class="section-alt" id="resources">
+  <div class="section">
+    <h2>Tài nguyên</h2>
+
+    <h3>Đã có</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Tài nguyên</th><th>Trạng thái</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Skill vibalaw-audio (pipeline content &rarr; audio)</td><td class="status-done">&#10003; Hoạt động</td></tr>
+          <tr><td>117 chủ đề &mdash; 3 file tracking riêng</td><td class="status-done">&#10003; podcast_list_stl/gldt/lskc.md</td></tr>
+          <tr><td>TTS Vbee (3 giọng: Mạnh Dũng, Mona Phạm, Bảo Trung)</td><td class="status-done">&#10003; API key sẵn</td></tr>
+          <tr><td>Telegram bot gửi content</td><td class="status-done">&#10003; Trong skill</td></tr>
+          <tr><td>Thư mục content theo kênh</td><td class="status-done">&#10003; content/stl/, gldt/, lskc/</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Cần xây thêm</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Tài nguyên</th><th>Ưu tiên</th><th>Phase</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Pipeline audio &rarr; video ngắn</td><td><strong>P0</strong></td><td>1</td></tr>
+          <tr><td>3 bộ template video</td><td><strong>P0</strong></td><td>1</td></tr>
+          <tr><td>3 tài khoản TikTok</td><td><strong>P0</strong></td><td>1</td></tr>
+          <tr><td>1 show Podcast (Spotify + Apple)</td><td><strong>P0</strong></td><td>1</td></tr>
+          <tr><td>Kênh YouTube</td><td>P1</td><td>2</td></tr>
+          <tr><td>Fanpage Facebook</td><td>P1</td><td>2</td></tr>
+          <tr><td>Scheduling tool</td><td>P1</td><td>2</td></tr>
+          <tr><td>Luật sư partner</td><td>P1</td><td>2</td></tr>
+          <tr><td>Instagram + Threads</td><td>P2</td><td>2</td></tr>
+          <tr><td>Zalo OA</td><td>P2</td><td>3</td></tr>
+          <tr><td>Jingle/nhạc nền</td><td>P2</td><td>2</td></tr>
+          <tr><td>Pipeline podcast video</td><td>P3</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Podcast List -->
+<div class="section" id="podcast-list">
+  <h2>Danh sách chủ đề</h2>
+  <div class="pl-filter-bar" id="pl-filter-bar">
+    <button class="pl-filter-tab active" data-ch="all">Tất cả <span id="pl-count-all"></span></button>
+    <button class="pl-filter-tab" data-ch="stl">STL <span id="pl-count-stl"></span></button>
+    <button class="pl-filter-tab" data-ch="gldt">GLDT <span id="pl-count-gldt"></span></button>
+    <button class="pl-filter-tab" data-ch="lskc">LSKC <span id="pl-count-lskc"></span></button>
+  </div>
+  <div id="pl-container"></div>
+</div>
+
+<script>
+const TOPICS = [
+  // STL — Đất đai
+  {ch:'stl',cat:'Đất đai',title:'Đặt cọc mua đất — mất cọc khi nào, đòi gấp đôi khi nào?',slug:'dat-coc-mua-dat'},
+  {ch:'stl',cat:'Đất đai',title:'Sang tên sổ đỏ — thủ tục, phí, mất bao lâu?',slug:'sang-ten-so-do'},
+  {ch:'stl',cat:'Đất đai',title:'Mua bán đất bằng giấy tay — có hợp pháp không?',slug:'mua-ban-dat-giay-tay'},
+  {ch:'stl',cat:'Đất đai',title:'Đất bị thu hồi — được đền bù bao nhiêu?',slug:'dat-bi-thu-hoi-den-bu'},
+  {ch:'stl',cat:'Đất đai',title:'Tách thửa đất 2026 — điều kiện, diện tích tối thiểu?',slug:'tach-thua-dat-2026'},
+  {ch:'stl',cat:'Đất đai',title:'Đất nông nghiệp có được xây nhà không?',slug:'dat-nong-nghiep-xay-nha'},
+  {ch:'stl',cat:'Đất đai',title:'Đất đứng tên 1 người — vợ/chồng có quyền gì?',slug:'dat-dung-ten-mot-nguoi'},
+  {ch:'stl',cat:'Đất đai',title:'Đất cha mẹ để lại không giấy tờ — làm sổ đỏ được không?',slug:'dat-cha-me-de-lai-khong-giay-to'},
+  // STL — Hôn nhân
+  {ch:'stl',cat:'Hôn nhân',title:'Quyền nuôi con sau ly hôn',slug:'quyen-nuoi-con-sau-ly-hon'},
+  {ch:'stl',cat:'Hôn nhân',title:'Ly hôn đơn phương khi chồng/vợ không chịu ký đơn',slug:'ly-hon-don-phuong'},
+  {ch:'stl',cat:'Hôn nhân',title:'Chia tài sản khi ly hôn',slug:'chia-tai-san-ly-hon'},
+  {ch:'stl',cat:'Hôn nhân',title:'Chồng không được ly hôn khi vợ đang mang thai',slug:'khong-duoc-ly-hon-khi-mang-thai'},
+  {ch:'stl',cat:'Hôn nhân',title:'Bạo lực gia đình — quyền pháp lý của nạn nhân',slug:'bao-luc-gia-dinh-quyen-nan-nhan'},
+  {ch:'stl',cat:'Hôn nhân',title:'Cấp dưỡng nuôi con — mức bao nhiêu, không trả bị phạt gì?',slug:'cap-duong-nuoi-con'},
+  {ch:'stl',cat:'Hôn nhân',title:'Kết hôn với người nước ngoài — thủ tục, rủi ro',slug:'ket-hon-nguoi-nuoc-ngoai'},
+  {ch:'stl',cat:'Hôn nhân',title:'Hôn nhân đồng giới tại Việt Nam',slug:'hon-nhan-dong-gioi'},
+  {ch:'stl',cat:'Hôn nhân',title:'Tài sản thừa kế trong hôn nhân',slug:'tai-san-thua-ke-trong-hon-nhan'},
+  {ch:'stl',cat:'Hôn nhân',title:'Thay đổi cấp dưỡng hoặc quyền nuôi con sau ly hôn',slug:'thay-doi-quyen-nuoi-con-sau-ly-hon'},
+  // STL — Hình sự
+  {ch:'stl',cat:'Hình sự',title:'Bị công an triệu tập — quyền của bạn là gì?',slug:'bi-cong-an-trieu-tap'},
+  {ch:'stl',cat:'Hình sự',title:'Phòng vệ chính đáng — ranh giới đánh nhau vs tự vệ',slug:'phong-ve-chinh-dang'},
+  {ch:'stl',cat:'Hình sự',title:'Chửi người trên Facebook — bị kiện hình sự được không?',slug:'chui-nguoi-tren-facebook'},
+  {ch:'stl',cat:'Hình sự',title:'Mua bán tài khoản ngân hàng — có phạm tội không?',slug:'mua-ban-tai-khoan-ngan-hang'},
+  // STL — Dân sự
+  {ch:'stl',cat:'Dân sự',title:'Tai nạn giao thông — bồi thường thế nào?',slug:'tai-nan-giao-thong-boi-thuong'},
+  {ch:'stl',cat:'Dân sự',title:'Hợp đồng thuê nhà — 5 điều khoản phải có',slug:'hop-dong-thue-nha'},
+  {ch:'stl',cat:'Dân sự',title:'Di chúc miệng có giá trị pháp lý không?',slug:'di-chuc-mieng'},
+  {ch:'stl',cat:'Dân sự',title:'Cho vay lãi nặng — ranh giới dân sự và hình sự',slug:'cho-vay-lai-nang'},
+  {ch:'stl',cat:'Dân sự',title:'Con riêng, con nuôi có được hưởng thừa kế không?',slug:'con-rieng-con-nuoi-thua-ke'},
+  {ch:'stl',cat:'Dân sự',title:'Hàng xóm chặn lối đi — quyền về lối đi chung',slug:'hang-xom-chan-loi-di'},
+  {ch:'stl',cat:'Dân sự',title:'Vợ/chồng bán đất mà không hỏi — hợp đồng vô hiệu?',slug:'ban-dat-khong-dong-y-vo-chong'},
+  {ch:'stl',cat:'Dân sự',title:'Bồi thường thiệt hại ngoài hợp đồng',slug:'boi-thuong-thiet-hai-ngoai-hop-dong'},
+  {ch:'stl',cat:'Dân sự',title:'Ủy quyền bán nhà đất — rủi ro và cách làm đúng luật',slug:'uy-quyen-ban-nha-dat'},
+  // STL — Lao động
+  {ch:'stl',cat:'Lao động',title:'Nghỉ việc đúng luật — bao nhiêu ngày báo trước?',slug:'nghi-viec-dung-luat'},
+  {ch:'stl',cat:'Lao động',title:'Chế độ thai sản 2025 — những thay đổi cần biết',slug:'che-do-thai-san-2025'},
+  {ch:'stl',cat:'Lao động',title:'Công ty không đóng BHXH — báo ở đâu?',slug:'cong-ty-khong-dong-bhxh'},
+  {ch:'stl',cat:'Lao động',title:'Quyền từ chối làm thêm giờ',slug:'quyen-tu-choi-lam-them-gio'},
+  {ch:'stl',cat:'Lao động',title:'Bị sa thải trái luật — đòi bao nhiêu tiền?',slug:'bi-sa-thai-trai-luat'},
+  {ch:'stl',cat:'Lao động',title:'Công ty trừ lương, phạt tiền đi trễ — đúng luật không?',slug:'cong-ty-tru-luong-phat-tien'},
+  {ch:'stl',cat:'Lao động',title:'Trợ cấp thôi việc vs trợ cấp mất việc',slug:'tro-cap-thoi-viec-mat-viec'},
+  {ch:'stl',cat:'Lao động',title:'Thuế TNCN 2026 — giảm trừ gia cảnh tăng 40%',slug:'thue-tncn-giam-tru-gia-canh-2026'},
+  {ch:'stl',cat:'Lao động',title:'Freelancer — đóng BHXH tự nguyện được gì?',slug:'freelancer-bhxh-tu-nguyen'},
+  {ch:'stl',cat:'Lao động',title:'Lương tối thiểu vùng 2026 tăng — công ty có bắt buộc tăng?',slug:'luong-toi-thieu-vung-2026'},
+  {ch:'stl',cat:'Lao động',title:'Lương hưu giảm còn 15 năm — rút BHXH 1 lần còn đáng?',slug:'luong-huu-15-nam-rut-bhxh'},
+  {ch:'stl',cat:'Lao động',title:'Thai sản cho lao động nam — nghỉ bao nhiêu ngày?',slug:'thai-san-lao-dong-nam'},
+  {ch:'stl',cat:'Lao động',title:'Hợp đồng thử việc — bẫy pháp lý phổ biến',slug:'hop-dong-thu-viec-bay-phap-ly'},
+  {ch:'stl',cat:'Lao động',title:'Công ty giám sát camera, đọc email nhân viên',slug:'cong-ty-giam-sat-nhan-vien'},
+  // STL — TMĐT
+  {ch:'stl',cat:'TMĐT',title:'Bán hàng online không đăng ký kinh doanh — phạt?',slug:'ban-hang-online-khong-dang-ky'},
+  {ch:'stl',cat:'TMĐT',title:'Livestream nói sai công dụng — bị phạt thế nào?',slug:'livestream-noi-sai-cong-dung'},
+  {ch:'stl',cat:'TMĐT',title:'Deepfake giả mạo lừa tiền — tố cáo thế nào?',slug:'deepfake-lua-tien'},
+  {ch:'stl',cat:'TMĐT',title:'Dữ liệu cá nhân bị rao bán — kiện được không?',slug:'du-lieu-ca-nhan-bi-rao-ban'},
+  // STL — Quy định mới
+  {ch:'stl',cat:'Quy định mới',title:'Tổng hợp luật có hiệu lực từ 01/7/2026',slug:'tong-hop-luat-hieu-luc-1-7-2026'},
+  {ch:'stl',cat:'Quy định mới',title:'Tổng hợp luật có hiệu lực từ 01/1/2027',slug:'tong-hop-luat-hieu-luc-1-1-2027'},
+  {ch:'stl',cat:'Quy định mới',title:'Tổng hợp luật có hiệu lực từ 01/7/2027',slug:'tong-hop-luat-hieu-luc-1-7-2027'},
+
+  // GLDT — Đất đai
+  {ch:'gldt',cat:'Đất đai',title:'Mua đất chưa có sổ đỏ — rủi ro gì?',slug:'mua-dat-chua-co-so-do'},
+  {ch:'gldt',cat:'Đất đai',title:'Thừa kế đất đai khi không có di chúc',slug:'thua-ke-dat-dai-khong-di-chuc'},
+  {ch:'gldt',cat:'Đất đai',title:'Đặt cọc mua đất — mất cọc khi nào?',slug:'dat-coc-mua-dat'},
+  {ch:'gldt',cat:'Đất đai',title:'Mua bán đất bằng giấy tay — có hợp pháp không?',slug:'mua-ban-dat-giay-tay'},
+  {ch:'gldt',cat:'Đất đai',title:'Hàng xóm xây nhà lấn đất — xử lý thế nào?',slug:'hang-xom-lan-dat'},
+  {ch:'gldt',cat:'Đất đai',title:'Đất bị thu hồi — được đền bù bao nhiêu?',slug:'dat-bi-thu-hoi-den-bu'},
+  {ch:'gldt',cat:'Đất đai',title:'Đất nông nghiệp có được xây nhà không?',slug:'dat-nong-nghiep-xay-nha'},
+  {ch:'gldt',cat:'Đất đai',title:'Đất đứng tên 1 người — vợ/chồng có quyền gì?',slug:'dat-dung-ten-mot-nguoi'},
+  {ch:'gldt',cat:'Đất đai',title:'Lừa đảo mua bán đất — 5 chiêu trò phổ biến',slug:'lua-dao-mua-ban-dat'},
+  {ch:'gldt',cat:'Đất đai',title:'Đất cha mẹ để lại không giấy tờ — làm sổ đỏ được không?',slug:'dat-cha-me-de-lai-khong-giay-to'},
+  // GLDT — Hôn nhân
+  {ch:'gldt',cat:'Hôn nhân',title:'Quyền nuôi con sau ly hôn',slug:'quyen-nuoi-con-sau-ly-hon'},
+  {ch:'gldt',cat:'Hôn nhân',title:'Ly hôn đơn phương khi chồng/vợ không chịu ký đơn',slug:'ly-hon-don-phuong'},
+  {ch:'gldt',cat:'Hôn nhân',title:'Chia tài sản khi ly hôn',slug:'chia-tai-san-ly-hon'},
+  {ch:'gldt',cat:'Hôn nhân',title:'Kênh TikTok, Fanpage có được chia khi ly hôn?',slug:'tai-san-so-chia-khi-ly-hon'},
+  {ch:'gldt',cat:'Hôn nhân',title:'Bạo lực gia đình — quyền pháp lý của nạn nhân',slug:'bao-luc-gia-dinh-quyen-nan-nhan'},
+  {ch:'gldt',cat:'Hôn nhân',title:'Cấp dưỡng nuôi con — mức bao nhiêu?',slug:'cap-duong-nuoi-con'},
+  {ch:'gldt',cat:'Hôn nhân',title:'Tài sản thừa kế trong hôn nhân',slug:'tai-san-thua-ke-trong-hon-nhan'},
+  {ch:'gldt',cat:'Hôn nhân',title:'Thay đổi quyền nuôi con sau ly hôn',slug:'thay-doi-quyen-nuoi-con-sau-ly-hon'},
+  // GLDT — Hình sự
+  {ch:'gldt',cat:'Hình sự',title:'Bị công an triệu tập — quyền của bạn là gì?',slug:'bi-cong-an-trieu-tap'},
+  {ch:'gldt',cat:'Hình sự',title:'Quay lén, phát tán hình ảnh — kiện được không?',slug:'quay-len-phat-tan-hinh-anh'},
+  {ch:'gldt',cat:'Hình sự',title:'Phòng vệ chính đáng — ranh giới đánh nhau vs tự vệ',slug:'phong-ve-chinh-dang'},
+  {ch:'gldt',cat:'Hình sự',title:'Lừa đảo online — tố cáo ở đâu?',slug:'lua-dao-online-to-cao'},
+  {ch:'gldt',cat:'Hình sự',title:'Chửi người trên Facebook — bị kiện hình sự?',slug:'chui-nguoi-tren-facebook'},
+  {ch:'gldt',cat:'Hình sự',title:'Mua bán tài khoản ngân hàng — có phạm tội?',slug:'mua-ban-tai-khoan-ngan-hang'},
+  // GLDT — Dân sự
+  {ch:'gldt',cat:'Dân sự',title:'Cho vay tiền không giấy tờ — đòi lại được không?',slug:'cho-vay-tien-khong-giay-to'},
+  {ch:'gldt',cat:'Dân sự',title:'Tai nạn giao thông — bồi thường thế nào?',slug:'tai-nan-giao-thong-boi-thuong'},
+  {ch:'gldt',cat:'Dân sự',title:'Hợp đồng thuê nhà — 5 điều khoản phải có',slug:'hop-dong-thue-nha'},
+  {ch:'gldt',cat:'Dân sự',title:'Đặt cọc mua nhà bị "bùng" — lấy lại tiền?',slug:'dat-coc-mua-nha-bi-bung'},
+  {ch:'gldt',cat:'Dân sự',title:'Mua hàng online bị lừa — khởi kiện hay báo công an?',slug:'mua-hang-online-bi-lua'},
+  {ch:'gldt',cat:'Dân sự',title:'Di chúc miệng có giá trị pháp lý không?',slug:'di-chuc-mieng'},
+  {ch:'gldt',cat:'Dân sự',title:'Cho vay lãi nặng — ranh giới dân sự và hình sự',slug:'cho-vay-lai-nang'},
+  {ch:'gldt',cat:'Dân sự',title:'Con riêng, con nuôi có được hưởng thừa kế?',slug:'con-rieng-con-nuoi-thua-ke'},
+  {ch:'gldt',cat:'Dân sự',title:'Bị công ty sa thải trái luật — đòi bồi thường?',slug:'sa-thai-trai-luat-boi-thuong'},
+  {ch:'gldt',cat:'Dân sự',title:'Hàng xóm chặn lối đi — quyền về lối đi chung',slug:'hang-xom-chan-loi-di'},
+  {ch:'gldt',cat:'Dân sự',title:'Vợ/chồng bán đất mà không hỏi — hợp đồng vô hiệu?',slug:'ban-dat-khong-dong-y-vo-chong'},
+  {ch:'gldt',cat:'Dân sự',title:'Ủy quyền bán nhà đất — rủi ro',slug:'uy-quyen-ban-nha-dat'},
+  // GLDT — Lao động
+  {ch:'gldt',cat:'Lao động',title:'Nghỉ việc đúng luật — bao nhiêu ngày báo trước?',slug:'nghi-viec-dung-luat'},
+  {ch:'gldt',cat:'Lao động',title:'Công ty không đóng BHXH — báo ở đâu?',slug:'cong-ty-khong-dong-bhxh'},
+  {ch:'gldt',cat:'Lao động',title:'Quyền từ chối làm thêm giờ',slug:'quyen-tu-choi-lam-them-gio'},
+  {ch:'gldt',cat:'Lao động',title:'Bị sa thải trái luật — đòi bao nhiêu tiền?',slug:'bi-sa-thai-trai-luat'},
+  {ch:'gldt',cat:'Lao động',title:'Công ty trừ lương, phạt tiền đi trễ — đúng luật?',slug:'cong-ty-tru-luong-phat-tien'},
+  {ch:'gldt',cat:'Lao động',title:'Lương hưu 15 năm — rút BHXH 1 lần còn đáng?',slug:'luong-huu-15-nam-rut-bhxh'},
+  {ch:'gldt',cat:'Lao động',title:'Hợp đồng thử việc — bẫy pháp lý phổ biến',slug:'hop-dong-thu-viec-bay-phap-ly'},
+  {ch:'gldt',cat:'Lao động',title:'Công ty giám sát camera, đọc email nhân viên',slug:'cong-ty-giam-sat-nhan-vien'},
+  // GLDT — TMĐT
+  {ch:'gldt',cat:'TMĐT',title:'Bán hàng online không đăng ký kinh doanh — phạt?',slug:'ban-hang-online-khong-dang-ky'},
+  {ch:'gldt',cat:'TMĐT',title:'Livestream nói sai công dụng — bị phạt thế nào?',slug:'livestream-noi-sai-cong-dung'},
+  {ch:'gldt',cat:'TMĐT',title:'Deepfake giả mạo lừa tiền — tố cáo thế nào?',slug:'deepfake-lua-tien'},
+  {ch:'gldt',cat:'TMĐT',title:'Dữ liệu cá nhân bị rao bán — kiện được không?',slug:'du-lieu-ca-nhan-bi-rao-ban'},
+
+  // LSKC — Đất đai
+  {ch:'lskc',cat:'Đất đai',title:'Mua đất chưa có sổ đỏ — rủi ro gì?',slug:'mua-dat-chua-co-so-do',note:'Case: mất trắng vì giấy tay'},
+  {ch:'lskc',cat:'Đất đai',title:'Thừa kế đất đai khi không có di chúc',slug:'thua-ke-dat-dai-khong-di-chuc',note:'Case: tranh chấp anh em'},
+  {ch:'lskc',cat:'Đất đai',title:'Hàng xóm xây nhà lấn đất — xử lý thế nào?',slug:'hang-xom-lan-dat',note:'Case: mâu thuẫn láng giềng'},
+  {ch:'lskc',cat:'Đất đai',title:'Lừa đảo mua bán đất — 5 chiêu trò phổ biến',slug:'lua-dao-mua-ban-dat',note:'Case: nạn nhân lừa đảo'},
+  // LSKC — Hôn nhân
+  {ch:'lskc',cat:'Hôn nhân',title:'Quyền nuôi con sau ly hôn',slug:'quyen-nuoi-con-sau-ly-hon',note:'Case: tranh chấp quyền nuôi con'},
+  {ch:'lskc',cat:'Hôn nhân',title:'Chia tài sản khi ly hôn',slug:'chia-tai-san-ly-hon',note:'Case: tài sản chung vs riêng'},
+  {ch:'lskc',cat:'Hôn nhân',title:'Bạo lực gia đình — quyền pháp lý của nạn nhân',slug:'bao-luc-gia-dinh-quyen-nan-nhan',note:'Case: nạn nhân BLGĐ'},
+  {ch:'lskc',cat:'Hôn nhân',title:'Kết hôn với người nước ngoài — thủ tục, rủi ro',slug:'ket-hon-nguoi-nuoc-ngoai',note:'Case: cạm bẫy hôn nhân quốc tế'},
+  // LSKC — Hình sự
+  {ch:'lskc',cat:'Hình sự',title:'Quay lén, phát tán hình ảnh — kiện được không?',slug:'quay-len-phat-tan-hinh-anh',note:'Case: nạn nhân quay lén'},
+  {ch:'lskc',cat:'Hình sự',title:'Lừa đảo online — tố cáo ở đâu?',slug:'lua-dao-online-to-cao',note:'Case: lấy lại tiền bị lừa'},
+  // LSKC — Dân sự
+  {ch:'lskc',cat:'Dân sự',title:'Cho vay tiền không giấy tờ — đòi lại được không?',slug:'cho-vay-tien-khong-giay-to',note:'Case: đòi nợ không bằng chứng'},
+  {ch:'lskc',cat:'Dân sự',title:'Đặt cọc mua nhà bị "bùng" — lấy lại tiền?',slug:'dat-coc-mua-nha-bi-bung',note:'Case: bên bán biến mất'},
+  {ch:'lskc',cat:'Dân sự',title:'Cho vay lãi nặng — ranh giới dân sự và hình sự',slug:'cho-vay-lai-nang',note:'Case: app vay tiền lãi nặng'},
+  {ch:'lskc',cat:'Dân sự',title:'Bị công ty sa thải trái luật — đòi bồi thường?',slug:'sa-thai-trai-luat-boi-thuong',note:'Case: NLĐ thắng kiện'},
+  {ch:'lskc',cat:'Dân sự',title:'Vợ/chồng bán đất mà không hỏi — hợp đồng vô hiệu?',slug:'ban-dat-khong-dong-y-vo-chong',note:'Case: vợ kiện chồng bán đất'},
+  {ch:'lskc',cat:'Dân sự',title:'Ủy quyền bán nhà đất — rủi ro',slug:'uy-quyen-ban-nha-dat',note:'Case: lừa đảo qua ủy quyền'},
+  // LSKC — Lao động
+  {ch:'lskc',cat:'Lao động',title:'Bị sa thải trái luật — đòi bao nhiêu tiền?',slug:'bi-sa-thai-trai-luat',note:'Case: tranh chấp #1 tòa án'},
+];
+
+let plFilter = 'all';
+
+function renderPL() {
+  const filtered = plFilter === 'all' ? TOPICS : TOPICS.filter(t => t.ch === plFilter);
+
+  // Update counts
+  document.getElementById('pl-count-all').textContent = `(${TOPICS.length})`;
+  document.getElementById('pl-count-stl').textContent = `(${TOPICS.filter(t=>t.ch==='stl').length})`;
+  document.getElementById('pl-count-gldt').textContent = `(${TOPICS.filter(t=>t.ch==='gldt').length})`;
+  document.getElementById('pl-count-lskc').textContent = `(${TOPICS.filter(t=>t.ch==='lskc').length})`;
+
+  // Group by category
+  const groups = {};
+  filtered.forEach((t, i) => {
+    if (!groups[t.cat]) groups[t.cat] = [];
+    groups[t.cat].push(t);
+  });
+
+  let html = '';
+  for (const [cat, items] of Object.entries(groups)) {
+    html += `<div class="pl-summary"><strong>${cat}</strong> <span>${items.length} chủ đề</span></div>`;
+    html += `<table class="pl-table"><thead><tr>
+      <th style="width:60px">Kênh</th>
+      <th>Chủ đề</th>
+      <th style="width:100px">Lĩnh vực</th>
+    </tr></thead><tbody>`;
+    items.forEach(t => {
+      const noteHtml = t.note ? ` <span style="color:var(--ink-subtle);font-size:12px">— ${t.note}</span>` : '';
+      html += `<tr>
+        <td><span class="pl-ch ${t.ch}">${t.ch.toUpperCase()}</span></td>
+        <td>${t.title}${noteHtml}</td>
+        <td><span class="pl-cat">${t.cat}</span></td>
+      </tr>`;
+    });
+    html += '</tbody></table>';
+  }
+
+  document.getElementById('pl-container').innerHTML = html;
+}
+
+document.querySelectorAll('.pl-filter-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.pl-filter-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    plFilter = tab.dataset.ch;
+    renderPL();
+  });
+});
+
+renderPL();
+</script>
+
+<!-- CTA Banner -->
+<div class="cta-banner">
+  <h2>1 content gốc = 7 outputs</h2>
+  <p>Video ngắn, podcast, carousel, thread, Facebook post, Zalo article &mdash; tất cả từ 1 bài .md duy nhất.</p>
+</div>
+
+<!-- Changelog -->
+<div class="section">
+  <h2>Changelog</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Version</th><th>Ngày</th><th>Thay đổi</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1.0</td><td>2026-07-13</td><td>Initial draft</td></tr>
+        <tr><td>1.1</td><td>2026-07-13</td><td>Giọng đọc riêng theo kênh, branding tự nhiên (channel-first)</td></tr>
+        <tr><td><strong>1.2</strong></td><td>2026-07-13</td><td>Tách tracking 3 file riêng, thư mục content theo kênh, cập nhật 117 chủ đề</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="logo-footer">Vibalaw</div>
+    <div>Tư vấn pháp luật &middot; Content Specification v1.2 &middot; 2026-07-13</div>
+  </div>
+</footer>
+
+</body>
+</html>

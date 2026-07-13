@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibalaw — Production Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #0f62fe;
+  --on-primary: #ffffff;
+  --ink: #161616;
+  --ink-muted: #525252;
+  --ink-subtle: #8c8c8c;
+  --canvas: #ffffff;
+  --surface-1: #f4f4f4;
+  --surface-2: #e0e0e0;
+  --hairline: #e0e0e0;
+  --inverse-canvas: #161616;
+  --inverse-ink: #ffffff;
+  --inverse-ink-muted: #c6c6c6;
+  --success: #24a148;
+  --warning: #f1c21b;
+  --error: #da1e28;
+  --stl-color: #0f62fe;
+  --gldt-color: #8a3ffc;
+  --lskc-color: #005d5d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
+  color: var(--ink);
+  background: var(--canvas);
+}
+
+/* Top Nav */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--canvas);
+  border-bottom: 1px solid var(--hairline);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  gap: 24px;
+}
+.top-nav .brand {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.16px;
+  color: var(--ink);
+}
+.top-nav .nav-stats {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: 0.32px;
+}
+.top-nav .nav-stats strong { color: var(--ink); font-weight: 600; }
+
+/* Hero */
+.hero {
+  padding: 48px 32px 32px;
+  max-width: 1312px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.20;
+  letter-spacing: 0;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.hero .subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.50;
+  color: var(--ink-muted);
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 0 32px 32px;
+  max-width: 1312px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: var(--canvas);
+}
+.stat-card {
+  background: var(--canvas);
+  padding: 24px;
+  border: 1px solid var(--hairline);
+}
+.stat-card .label {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.stat-card .value {
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.20;
+  color: var(--ink);
+}
+.stat-card .value .unit {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink-subtle);
+  margin-left: 4px;
+}
+.stat-card .sub {
+  font-size: 12px;
+  color: var(--ink-subtle);
+  margin-top: 4px;
+}
+
+/* Progress bars */
+.progress-section {
+  padding: 32px 32px 16px;
+  max-width: 1312px;
+  margin: 0 auto;
+}
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.progress-label {
+  width: 80px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.16px;
+}
+.progress-label.stl { color: var(--stl-color); }
+.progress-label.gldt { color: var(--gldt-color); }
+.progress-label.lskc { color: var(--lskc-color); }
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--surface-1);
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  transition: width 0.3s;
+}
+.progress-fill.stl { background: var(--stl-color); }
+.progress-fill.gldt { background: var(--gldt-color); }
+.progress-fill.lskc { background: var(--lskc-color); }
+.progress-count {
+  width: 60px;
+  font-size: 12px;
+  color: var(--ink-muted);
+  text-align: right;
+  letter-spacing: 0.32px;
+}
+
+/* Filters */
+.filter-bar {
+  padding: 0 32px;
+  max-width: 1312px;
+  margin: 0 auto 16px;
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.filter-tab {
+  padding: 12px 20px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  color: var(--ink-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+}
+.filter-tab:hover { color: var(--ink); }
+.filter-tab.active {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom-color: var(--primary);
+}
+
+/* Week sections */
+.weeks-container {
+  padding: 0 32px 64px;
+  max-width: 1312px;
+  margin: 0 auto;
+}
+.week-section {
+  margin-bottom: 2px;
+}
+.week-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background: var(--surface-1);
+  cursor: pointer;
+  user-select: none;
+}
+.week-header:hover { background: var(--surface-2); }
+.week-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.16px;
+}
+.week-dates {
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: 0.32px;
+}
+.week-progress {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: 0.32px;
+}
+.week-progress .done { color: var(--success); font-weight: 600; }
+.week-chevron {
+  font-size: 12px;
+  color: var(--ink-subtle);
+  transition: transform 0.2s;
+}
+.week-section.collapsed .week-chevron { transform: rotate(-90deg); }
+.week-section.collapsed .week-body { display: none; }
+
+.week-body {
+  border: 1px solid var(--hairline);
+  border-top: none;
+}
+
+/* Episode rows */
+.episode-row {
+  display: grid;
+  grid-template-columns: 40px 60px 1fr 100px;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 14px;
+  transition: background 0.1s;
+}
+.episode-row:last-child { border-bottom: none; }
+.episode-row:hover { background: var(--surface-1); }
+.episode-row.completed { opacity: 0.5; }
+
+.ep-day {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  letter-spacing: 0.32px;
+}
+.ep-channel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16px;
+  padding: 2px 8px;
+  display: inline-block;
+}
+.ep-channel.stl { color: var(--stl-color); background: #edf5ff; }
+.ep-channel.gldt { color: var(--gldt-color); background: #f6f2ff; }
+.ep-channel.lskc { color: var(--lskc-color); background: #d9fbfb; }
+
+.ep-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: 0.16px;
+  padding-right: 16px;
+}
+.ep-category {
+  font-size: 12px;
+  color: var(--ink-subtle);
+  letter-spacing: 0.32px;
+}
+
+/* Checkboxes */
+.ep-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ep-check input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--ink-muted);
+  background: var(--canvas);
+  cursor: pointer;
+  position: relative;
+}
+.ep-check input[type="checkbox"]:checked {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.ep-check input[type="checkbox"]:checked::after {
+  content: '✓';
+  color: white;
+  font-size: 11px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ep-check label {
+  font-size: 11px;
+  color: var(--ink-subtle);
+  letter-spacing: 0.32px;
+  margin-left: 4px;
+}
+
+/* Column headers */
+.col-headers {
+  display: grid;
+  grid-template-columns: 40px 60px 1fr 100px;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--ink);
+}
+
+/* Footer */
+.page-footer {
+  background: var(--inverse-canvas);
+  padding: 48px 32px;
+  color: var(--inverse-ink-muted);
+  font-size: 12px;
+  letter-spacing: 0.32px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1056px) {
+  .dashboard { grid-template-columns: repeat(2, 1fr); }
+  .episode-row { grid-template-columns: 36px 50px 1fr 80px; font-size: 13px; }
+  .col-headers { grid-template-columns: 36px 50px 1fr 80px; }
+}
+@media (max-width: 672px) {
+  .dashboard { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 32px; }
+  .episode-row { grid-template-columns: 36px 44px 1fr 60px; font-size: 12px; padding: 8px 8px; }
+  .col-headers { grid-template-columns: 36px 44px 1fr 60px; padding: 8px 8px; }
+  .top-nav, .hero, .progress-section, .filter-bar, .weeks-container { padding-left: 16px; padding-right: 16px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="brand">Vibalaw Production Plan</div>
+  <div class="nav-stats">
+    <span>117 bài · 17 tuần</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Content Production Plan</h1>
+  <div class="subtitle">7 bài/tuần — 3 STL · 3 GLDT · 1 LSKC — Hoàn thành trong ~17 tuần</div>
+</section>
+
+<section class="dashboard" id="dashboard"></section>
+
+
+<div class="filter-bar" id="filter-bar">
+  <button class="filter-tab active" data-filter="all">Tất cả</button>
+  <button class="filter-tab" data-filter="stl">STL</button>
+  <button class="filter-tab" data-filter="gldt">GLDT</button>
+  <button class="filter-tab" data-filter="lskc">LSKC</button>
+</div>
+
+<section class="weeks-container" id="weeks-container">
+  <div class="col-headers">
+    <span>Ngày</span>
+    <span>Kênh</span>
+    <span>Chủ đề</span>
+    <span>Lĩnh vực</span>
+  </div>
+</section>
+
+<footer class="page-footer">
+  Vibalaw — Tư vấn pháp luật · Production Plan · IBM Carbon Design System
+</footer>
+
+<script>
+// ============================================================
+// DATA — 117 episodes scheduled across 17 weeks
+// ============================================================
+const EPISODES = [
+  // Week 1 — start 2026-07-14
+  { week:1, day:'T2', ch:'stl', title:'Đặt cọc mua đất — mất cọc khi nào, đòi gấp đôi?', cat:'Đất đai', slug:'dat-coc-mua-dat' },
+  { week:1, day:'T3', ch:'gldt', title:'Mua đất chưa có sổ đỏ — rủi ro gì, mất tiền thế nào?', cat:'Đất đai', slug:'mua-dat-chua-co-so-do' },
+  { week:1, day:'T4', ch:'stl', title:'Nghỉ việc đúng luật — bao nhiêu ngày báo trước?', cat:'Lao động', slug:'nghi-viec-dung-luat' },
+  { week:1, day:'T5', ch:'gldt', title:'Quyền nuôi con sau ly hôn — ai được nuôi?', cat:'Hôn nhân', slug:'quyen-nuoi-con-sau-ly-hon' },
+  { week:1, day:'T6', ch:'lskc', title:'Mua đất chưa có sổ đỏ — case mất trắng vì giấy tay', cat:'Đất đai', slug:'mua-dat-chua-co-so-do' },
+  { week:1, day:'T7', ch:'stl', title:'Bị công an triệu tập — quyền của bạn là gì?', cat:'Hình sự', slug:'bi-cong-an-trieu-tap' },
+  { week:1, day:'CN', ch:'gldt', title:'Cho vay tiền không giấy tờ — đòi lại được không?', cat:'Dân sự', slug:'cho-vay-tien-khong-giay-to' },
+
+  // Week 2
+  { week:2, day:'T2', ch:'stl', title:'Sang tên sổ đỏ — thủ tục, phí, mất bao lâu?', cat:'Đất đai', slug:'sang-ten-so-do' },
+  { week:2, day:'T3', ch:'gldt', title:'Thừa kế đất đai khi không có di chúc', cat:'Đất đai', slug:'thua-ke-dat-dai-khong-di-chuc' },
+  { week:2, day:'T4', ch:'stl', title:'Ly hôn đơn phương khi chồng/vợ không chịu ký đơn', cat:'Hôn nhân', slug:'ly-hon-don-phuong' },
+  { week:2, day:'T5', ch:'gldt', title:'Đặt cọc mua đất — mất cọc khi nào?', cat:'Đất đai', slug:'dat-coc-mua-dat' },
+  { week:2, day:'T6', ch:'lskc', title:'Thừa kế đất đai không di chúc — case tranh chấp anh em', cat:'Đất đai', slug:'thua-ke-dat-dai-khong-di-chuc' },
+  { week:2, day:'T7', ch:'stl', title:'Chế độ thai sản 2025 — những thay đổi cần biết', cat:'Lao động', slug:'che-do-thai-san-2025' },
+  { week:2, day:'CN', ch:'gldt', title:'Ly hôn đơn phương khi không chịu ký đơn', cat:'Hôn nhân', slug:'ly-hon-don-phuong' },
+
+  // Week 3
+  { week:3, day:'T2', ch:'stl', title:'Mua bán đất bằng giấy tay — có hợp pháp không?', cat:'Đất đai', slug:'mua-ban-dat-giay-tay' },
+  { week:3, day:'T3', ch:'gldt', title:'Hàng xóm xây nhà lấn đất — xử lý thế nào?', cat:'Đất đai', slug:'hang-xom-lan-dat' },
+  { week:3, day:'T4', ch:'stl', title:'Chia tài sản khi ly hôn — tài sản riêng hay chung?', cat:'Hôn nhân', slug:'chia-tai-san-ly-hon' },
+  { week:3, day:'T5', ch:'gldt', title:'Mua bán đất bằng giấy tay — có hợp pháp?', cat:'Đất đai', slug:'mua-ban-dat-giay-tay' },
+  { week:3, day:'T6', ch:'lskc', title:'Hàng xóm xây nhà lấn đất — case mâu thuẫn láng giềng', cat:'Đất đai', slug:'hang-xom-lan-dat' },
+  { week:3, day:'T7', ch:'stl', title:'Công ty không đóng BHXH — báo ở đâu?', cat:'Lao động', slug:'cong-ty-khong-dong-bhxh' },
+  { week:3, day:'CN', ch:'gldt', title:'Chia tài sản khi ly hôn — tài sản riêng hay chung?', cat:'Hôn nhân', slug:'chia-tai-san-ly-hon' },
+
+  // Week 4
+  { week:4, day:'T2', ch:'stl', title:'Đất bị thu hồi — được đền bù bao nhiêu?', cat:'Đất đai', slug:'dat-bi-thu-hoi-den-bu' },
+  { week:4, day:'T3', ch:'gldt', title:'Lừa đảo mua bán đất — 5 chiêu trò phổ biến', cat:'Đất đai', slug:'lua-dao-mua-ban-dat' },
+  { week:4, day:'T4', ch:'stl', title:'Phòng vệ chính đáng — ranh giới đánh nhau vs tự vệ', cat:'Hình sự', slug:'phong-ve-chinh-dang' },
+  { week:4, day:'T5', ch:'gldt', title:'Đất bị thu hồi — được đền bù bao nhiêu?', cat:'Đất đai', slug:'dat-bi-thu-hoi-den-bu' },
+  { week:4, day:'T6', ch:'lskc', title:'Lừa đảo mua bán đất — case nạn nhân lừa đảo', cat:'Đất đai', slug:'lua-dao-mua-ban-dat' },
+  { week:4, day:'T7', ch:'stl', title:'Tách thửa đất 2026 — điều kiện, diện tích tối thiểu?', cat:'Đất đai', slug:'tach-thua-dat-2026' },
+  { week:4, day:'CN', ch:'gldt', title:'Đất đứng tên 1 người — vợ/chồng có quyền gì?', cat:'Đất đai', slug:'dat-dung-ten-mot-nguoi' },
+
+  // Week 5
+  { week:5, day:'T2', ch:'stl', title:'Đất nông nghiệp có được xây nhà không?', cat:'Đất đai', slug:'dat-nong-nghiep-xay-nha' },
+  { week:5, day:'T3', ch:'gldt', title:'Đất nông nghiệp có được xây nhà không?', cat:'Đất đai', slug:'dat-nong-nghiep-xay-nha' },
+  { week:5, day:'T4', ch:'stl', title:'Đất đứng tên 1 người — vợ/chồng có quyền gì?', cat:'Đất đai', slug:'dat-dung-ten-mot-nguoi' },
+  { week:5, day:'T5', ch:'gldt', title:'Đất cha mẹ để lại không giấy tờ — làm sổ đỏ?', cat:'Đất đai', slug:'dat-cha-me-de-lai-khong-giay-to' },
+  { week:5, day:'T6', ch:'lskc', title:'Quyền nuôi con sau ly hôn — case tranh chấp', cat:'Hôn nhân', slug:'quyen-nuoi-con-sau-ly-hon' },
+  { week:5, day:'T7', ch:'stl', title:'Đất cha mẹ để lại không giấy tờ — làm sổ đỏ?', cat:'Đất đai', slug:'dat-cha-me-de-lai-khong-giay-to' },
+  { week:5, day:'CN', ch:'gldt', title:'Bị công an triệu tập — quyền của bạn là gì?', cat:'Hình sự', slug:'bi-cong-an-trieu-tap' },
+
+  // Week 6
+  { week:6, day:'T2', ch:'stl', title:'Chồng không được ly hôn khi vợ đang mang thai', cat:'Hôn nhân', slug:'khong-duoc-ly-hon-khi-mang-thai' },
+  { week:6, day:'T3', ch:'gldt', title:'Bạo lực gia đình — quyền pháp lý của nạn nhân', cat:'Hôn nhân', slug:'bao-luc-gia-dinh-quyen-nan-nhan' },
+  { week:6, day:'T4', ch:'stl', title:'Bạo lực gia đình — quyền pháp lý của nạn nhân', cat:'Hôn nhân', slug:'bao-luc-gia-dinh-quyen-nan-nhan' },
+  { week:6, day:'T5', ch:'gldt', title:'Cấp dưỡng nuôi con — mức bao nhiêu?', cat:'Hôn nhân', slug:'cap-duong-nuoi-con' },
+  { week:6, day:'T6', ch:'lskc', title:'Chia tài sản khi ly hôn — case tài sản chung vs riêng', cat:'Hôn nhân', slug:'chia-tai-san-ly-hon' },
+  { week:6, day:'T7', ch:'stl', title:'Cấp dưỡng nuôi con — mức bao nhiêu, không trả bị phạt?', cat:'Hôn nhân', slug:'cap-duong-nuoi-con' },
+  { week:6, day:'CN', ch:'gldt', title:'Kênh TikTok, Fanpage có được chia khi ly hôn?', cat:'Hôn nhân', slug:'tai-san-so-chia-khi-ly-hon' },
+
+  // Week 7
+  { week:7, day:'T2', ch:'stl', title:'Kết hôn với người nước ngoài — thủ tục, rủi ro', cat:'Hôn nhân', slug:'ket-hon-nguoi-nuoc-ngoai' },
+  { week:7, day:'T3', ch:'gldt', title:'Quay lén, phát tán hình ảnh — kiện được không?', cat:'Hình sự', slug:'quay-len-phat-tan-hinh-anh' },
+  { week:7, day:'T4', ch:'stl', title:'Hôn nhân đồng giới tại Việt Nam', cat:'Hôn nhân', slug:'hon-nhan-dong-gioi' },
+  { week:7, day:'T5', ch:'gldt', title:'Phòng vệ chính đáng — ranh giới đánh nhau vs tự vệ', cat:'Hình sự', slug:'phong-ve-chinh-dang' },
+  { week:7, day:'T6', ch:'lskc', title:'Bạo lực gia đình — case nạn nhân BLGĐ', cat:'Hôn nhân', slug:'bao-luc-gia-dinh-quyen-nan-nhan' },
+  { week:7, day:'T7', ch:'stl', title:'Tài sản thừa kế trong hôn nhân', cat:'Hôn nhân', slug:'tai-san-thua-ke-trong-hon-nhan' },
+  { week:7, day:'CN', ch:'gldt', title:'Tài sản thừa kế trong hôn nhân', cat:'Hôn nhân', slug:'tai-san-thua-ke-trong-hon-nhan' },
+
+  // Week 8
+  { week:8, day:'T2', ch:'stl', title:'Thay đổi cấp dưỡng/quyền nuôi con sau ly hôn', cat:'Hôn nhân', slug:'thay-doi-quyen-nuoi-con-sau-ly-hon' },
+  { week:8, day:'T3', ch:'gldt', title:'Lừa đảo online — tố cáo ở đâu, lấy lại tiền?', cat:'Hình sự', slug:'lua-dao-online-to-cao' },
+  { week:8, day:'T4', ch:'stl', title:'Quyền từ chối làm thêm giờ', cat:'Lao động', slug:'quyen-tu-choi-lam-them-gio' },
+  { week:8, day:'T5', ch:'gldt', title:'Thay đổi quyền nuôi con sau ly hôn', cat:'Hôn nhân', slug:'thay-doi-quyen-nuoi-con-sau-ly-hon' },
+  { week:8, day:'T6', ch:'lskc', title:'Kết hôn với người nước ngoài — case cạm bẫy', cat:'Hôn nhân', slug:'ket-hon-nguoi-nuoc-ngoai' },
+  { week:8, day:'T7', ch:'stl', title:'Chửi người trên Facebook — bị kiện hình sự?', cat:'Hình sự', slug:'chui-nguoi-tren-facebook' },
+  { week:8, day:'CN', ch:'gldt', title:'Chửi người trên Facebook — bị kiện hình sự?', cat:'Hình sự', slug:'chui-nguoi-tren-facebook' },
+
+  // Week 9
+  { week:9, day:'T2', ch:'stl', title:'Mua bán tài khoản ngân hàng — có phạm tội?', cat:'Hình sự', slug:'mua-ban-tai-khoan-ngan-hang' },
+  { week:9, day:'T3', ch:'gldt', title:'Mua bán tài khoản ngân hàng — có phạm tội?', cat:'Hình sự', slug:'mua-ban-tai-khoan-ngan-hang' },
+  { week:9, day:'T4', ch:'stl', title:'Tai nạn giao thông — bồi thường thế nào?', cat:'Dân sự', slug:'tai-nan-giao-thong-boi-thuong' },
+  { week:9, day:'T5', ch:'gldt', title:'Tai nạn giao thông — bồi thường thế nào?', cat:'Dân sự', slug:'tai-nan-giao-thong-boi-thuong' },
+  { week:9, day:'T6', ch:'lskc', title:'Quay lén, phát tán hình ảnh — case nạn nhân', cat:'Hình sự', slug:'quay-len-phat-tan-hinh-anh' },
+  { week:9, day:'T7', ch:'stl', title:'Hợp đồng thuê nhà — 5 điều khoản phải có', cat:'Dân sự', slug:'hop-dong-thue-nha' },
+  { week:9, day:'CN', ch:'gldt', title:'Hợp đồng thuê nhà — 5 điều khoản phải có', cat:'Dân sự', slug:'hop-dong-thue-nha' },
+
+  // Week 10
+  { week:10, day:'T2', ch:'stl', title:'Bị sa thải trái luật — đòi bao nhiêu tiền?', cat:'Lao động', slug:'bi-sa-thai-trai-luat' },
+  { week:10, day:'T3', ch:'gldt', title:'Đặt cọc mua nhà bị "bùng" — lấy lại tiền?', cat:'Dân sự', slug:'dat-coc-mua-nha-bi-bung' },
+  { week:10, day:'T4', ch:'stl', title:'Công ty trừ lương, phạt tiền đi trễ — đúng luật?', cat:'Lao động', slug:'cong-ty-tru-luong-phat-tien' },
+  { week:10, day:'T5', ch:'gldt', title:'Bị sa thải trái luật — đòi bao nhiêu tiền?', cat:'Lao động', slug:'bi-sa-thai-trai-luat' },
+  { week:10, day:'T6', ch:'lskc', title:'Lừa đảo online — case lấy lại tiền bị lừa', cat:'Hình sự', slug:'lua-dao-online-to-cao' },
+  { week:10, day:'T7', ch:'stl', title:'Di chúc miệng có giá trị pháp lý không?', cat:'Dân sự', slug:'di-chuc-mieng' },
+  { week:10, day:'CN', ch:'gldt', title:'Mua hàng online bị lừa — khởi kiện hay báo công an?', cat:'Dân sự', slug:'mua-hang-online-bi-lua' },
+
+  // Week 11
+  { week:11, day:'T2', ch:'stl', title:'Cho vay lãi nặng — ranh giới dân sự và hình sự', cat:'Dân sự', slug:'cho-vay-lai-nang' },
+  { week:11, day:'T3', ch:'gldt', title:'Di chúc miệng có giá trị pháp lý không?', cat:'Dân sự', slug:'di-chuc-mieng' },
+  { week:11, day:'T4', ch:'stl', title:'Trợ cấp thôi việc vs mất việc — khác nhau thế nào?', cat:'Lao động', slug:'tro-cap-thoi-viec-mat-viec' },
+  { week:11, day:'T5', ch:'gldt', title:'Cho vay lãi nặng — ranh giới dân sự và hình sự', cat:'Dân sự', slug:'cho-vay-lai-nang' },
+  { week:11, day:'T6', ch:'lskc', title:'Cho vay tiền không giấy tờ — case đòi nợ không bằng chứng', cat:'Dân sự', slug:'cho-vay-tien-khong-giay-to' },
+  { week:11, day:'T7', ch:'stl', title:'Con riêng, con nuôi có được hưởng thừa kế?', cat:'Dân sự', slug:'con-rieng-con-nuoi-thua-ke' },
+  { week:11, day:'CN', ch:'gldt', title:'Con riêng, con nuôi có được hưởng thừa kế?', cat:'Dân sự', slug:'con-rieng-con-nuoi-thua-ke' },
+
+  // Week 12
+  { week:12, day:'T2', ch:'stl', title:'Thuế TNCN 2026 — giảm trừ gia cảnh tăng 40%', cat:'Lao động', slug:'thue-tncn-giam-tru-gia-canh-2026' },
+  { week:12, day:'T3', ch:'gldt', title:'Công ty trừ lương, phạt tiền đi trễ — đúng luật?', cat:'Lao động', slug:'cong-ty-tru-luong-phat-tien' },
+  { week:12, day:'T4', ch:'stl', title:'Hàng xóm chặn lối đi — quyền về lối đi chung', cat:'Dân sự', slug:'hang-xom-chan-loi-di' },
+  { week:12, day:'T5', ch:'gldt', title:'Hàng xóm chặn lối đi — quyền về lối đi chung', cat:'Dân sự', slug:'hang-xom-chan-loi-di' },
+  { week:12, day:'T6', ch:'lskc', title:'Đặt cọc mua nhà bị "bùng" — case bên bán biến mất', cat:'Dân sự', slug:'dat-coc-mua-nha-bi-bung' },
+  { week:12, day:'T7', ch:'stl', title:'Vợ/chồng bán đất không hỏi — hợp đồng vô hiệu?', cat:'Dân sự', slug:'ban-dat-khong-dong-y-vo-chong' },
+  { week:12, day:'CN', ch:'gldt', title:'Vợ/chồng bán đất không hỏi — hợp đồng vô hiệu?', cat:'Dân sự', slug:'ban-dat-khong-dong-y-vo-chong' },
+
+  // Week 13
+  { week:13, day:'T2', ch:'stl', title:'Freelancer — đóng BHXH tự nguyện được gì?', cat:'Lao động', slug:'freelancer-bhxh-tu-nguyen' },
+  { week:13, day:'T3', ch:'gldt', title:'Nghỉ việc đúng luật — bao nhiêu ngày báo trước?', cat:'Lao động', slug:'nghi-viec-dung-luat' },
+  { week:13, day:'T4', ch:'stl', title:'Bồi thường thiệt hại ngoài hợp đồng', cat:'Dân sự', slug:'boi-thuong-thiet-hai-ngoai-hop-dong' },
+  { week:13, day:'T5', ch:'gldt', title:'Công ty không đóng BHXH — báo ở đâu?', cat:'Lao động', slug:'cong-ty-khong-dong-bhxh' },
+  { week:13, day:'T6', ch:'lskc', title:'Cho vay lãi nặng — case app vay tiền lãi nặng', cat:'Dân sự', slug:'cho-vay-lai-nang' },
+  { week:13, day:'T7', ch:'stl', title:'Ủy quyền bán nhà đất — rủi ro và cách làm đúng luật', cat:'Dân sự', slug:'uy-quyen-ban-nha-dat' },
+  { week:13, day:'CN', ch:'gldt', title:'Ủy quyền bán nhà đất — rủi ro', cat:'Dân sự', slug:'uy-quyen-ban-nha-dat' },
+
+  // Week 14
+  { week:14, day:'T2', ch:'stl', title:'Lương tối thiểu vùng 2026 — bắt buộc tăng lương?', cat:'Lao động', slug:'luong-toi-thieu-vung-2026' },
+  { week:14, day:'T3', ch:'gldt', title:'Quyền từ chối làm thêm giờ', cat:'Lao động', slug:'quyen-tu-choi-lam-them-gio' },
+  { week:14, day:'T4', ch:'stl', title:'Lương hưu giảm còn 15 năm — rút BHXH 1 lần còn đáng?', cat:'Lao động', slug:'luong-huu-15-nam-rut-bhxh' },
+  { week:14, day:'T5', ch:'gldt', title:'Lương hưu 15 năm — rút BHXH 1 lần còn đáng?', cat:'Lao động', slug:'luong-huu-15-nam-rut-bhxh' },
+  { week:14, day:'T6', ch:'lskc', title:'Bị sa thải trái luật — case NLĐ thắng kiện', cat:'Lao động', slug:'sa-thai-trai-luat-boi-thuong' },
+  { week:14, day:'T7', ch:'stl', title:'Thai sản cho lao động nam — nghỉ bao nhiêu ngày?', cat:'Lao động', slug:'thai-san-lao-dong-nam' },
+  { week:14, day:'CN', ch:'gldt', title:'Bị công ty sa thải trái luật — đòi bồi thường?', cat:'Dân sự', slug:'sa-thai-trai-luat-boi-thuong' },
+
+  // Week 15
+  { week:15, day:'T2', ch:'stl', title:'Hợp đồng thử việc — bẫy pháp lý phổ biến', cat:'Lao động', slug:'hop-dong-thu-viec-bay-phap-ly' },
+  { week:15, day:'T3', ch:'gldt', title:'Hợp đồng thử việc — bẫy pháp lý phổ biến', cat:'Lao động', slug:'hop-dong-thu-viec-bay-phap-ly' },
+  { week:15, day:'T4', ch:'stl', title:'Công ty giám sát camera, đọc email nhân viên', cat:'Lao động', slug:'cong-ty-giam-sat-nhan-vien' },
+  { week:15, day:'T5', ch:'gldt', title:'Công ty giám sát camera, đọc email nhân viên', cat:'Lao động', slug:'cong-ty-giam-sat-nhan-vien' },
+  { week:15, day:'T6', ch:'lskc', title:'Vợ/chồng bán đất không hỏi — case vợ kiện chồng', cat:'Dân sự', slug:'ban-dat-khong-dong-y-vo-chong' },
+  { week:15, day:'T7', ch:'stl', title:'Bán hàng online không đăng ký — phạt bao nhiêu?', cat:'TMĐT', slug:'ban-hang-online-khong-dang-ky' },
+  { week:15, day:'CN', ch:'gldt', title:'Bán hàng online không đăng ký — phạt bao nhiêu?', cat:'TMĐT', slug:'ban-hang-online-khong-dang-ky' },
+
+  // Week 16
+  { week:16, day:'T2', ch:'stl', title:'Livestream nói sai công dụng — bị phạt thế nào?', cat:'TMĐT', slug:'livestream-noi-sai-cong-dung' },
+  { week:16, day:'T3', ch:'gldt', title:'Livestream nói sai công dụng — bị phạt thế nào?', cat:'TMĐT', slug:'livestream-noi-sai-cong-dung' },
+  { week:16, day:'T4', ch:'stl', title:'Deepfake giả mạo lừa tiền — tố cáo thế nào?', cat:'TMĐT', slug:'deepfake-lua-tien' },
+  { week:16, day:'T5', ch:'gldt', title:'Deepfake giả mạo lừa tiền — tố cáo thế nào?', cat:'TMĐT', slug:'deepfake-lua-tien' },
+  { week:16, day:'T6', ch:'lskc', title:'Ủy quyền bán nhà đất — case lừa đảo qua ủy quyền', cat:'Dân sự', slug:'uy-quyen-ban-nha-dat' },
+  { week:16, day:'T7', ch:'stl', title:'Dữ liệu cá nhân bị rao bán — kiện được không?', cat:'TMĐT', slug:'du-lieu-ca-nhan-bi-rao-ban' },
+  { week:16, day:'CN', ch:'gldt', title:'Dữ liệu cá nhân bị rao bán — kiện được không?', cat:'TMĐT', slug:'du-lieu-ca-nhan-bi-rao-ban' },
+
+  // Week 17
+  { week:17, day:'T2', ch:'stl', title:'Tổng hợp luật hiệu lực 01/7/2026 — Phần 1', cat:'Quy định mới', slug:'tong-hop-luat-1-7-2026-p1' },
+  { week:17, day:'T3', ch:'gldt', title:'Quyền nuôi con sau ly hôn (bonus — góc mẹ đơn thân)', cat:'Hôn nhân', slug:'quyen-nuoi-con-bonus' },
+  { week:17, day:'T4', ch:'stl', title:'Tổng hợp luật hiệu lực 01/7/2026 — Phần 2', cat:'Quy định mới', slug:'tong-hop-luat-1-7-2026-p2' },
+  { week:17, day:'T5', ch:'gldt', title:'Đặt cọc mua nhà bị "bùng" — hướng xử lý', cat:'Dân sự', slug:'dat-coc-bonus' },
+  { week:17, day:'T6', ch:'lskc', title:'Bị sa thải trái luật — case tranh chấp #1 tòa án', cat:'Lao động', slug:'bi-sa-thai-trai-luat' },
+  { week:17, day:'T7', ch:'stl', title:'Tổng hợp luật hiệu lực 01/7/2026 — Phần 3', cat:'Quy định mới', slug:'tong-hop-luat-1-7-2026-p3' },
+  { week:17, day:'CN', ch:'gldt', title:'Cho vay tiền không giấy tờ (bonus — tin nhắn Zalo)', cat:'Dân sự', slug:'cho-vay-bonus' },
+];
+
+// ============================================================
+// STATE — localStorage persistence
+// ============================================================
+const STORAGE_KEY = 'vibalaw_plan_v2';
+
+function loadState() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch { return {}; }
+}
+function saveState(state) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+function getKey(i, type) { return `${i}_${type}`; }
+
+// ============================================================
+// DATE UTILS
+// ============================================================
+const START_DATE = new Date(2026, 6, 14); // 2026-07-14 Monday
+const DAY_MAP = { 'T2':0, 'T3':1, 'T4':2, 'T5':3, 'T6':4, 'T7':5, 'CN':6 };
+
+function getWeekStart(weekNum) {
+  const d = new Date(START_DATE);
+  d.setDate(d.getDate() + (weekNum - 1) * 7);
+  return d;
+}
+function getWeekEnd(weekNum) {
+  const d = getWeekStart(weekNum);
+  d.setDate(d.getDate() + 6);
+  return d;
+}
+function formatDate(d) {
+  return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}`;
+}
+function getEpDate(ep) {
+  const d = new Date(getWeekStart(ep.week));
+  d.setDate(d.getDate() + DAY_MAP[ep.day]);
+  return d;
+}
+
+// ============================================================
+// RENDER
+// ============================================================
+let currentFilter = 'all';
+let state = loadState();
+
+function render() {
+  renderDashboard();
+  renderWeeks();
+}
+
+function renderDashboard() {
+  const total = EPISODES.length;
+
+  const stlCount = EPISODES.filter(e=>e.ch==='stl').length;
+  const gldtCount = EPISODES.filter(e=>e.ch==='gldt').length;
+  const lskcCount = EPISODES.filter(e=>e.ch==='lskc').length;
+  const totalWeeksN = Math.max(...EPISODES.map(e => e.week));
+
+  document.getElementById('dashboard').innerHTML = `
+    <div class="stat-card">
+      <div class="label">Tổng bài</div>
+      <div class="value">${total}</div>
+      <div class="sub">${totalWeeksN} tuần · 7 bài/tuần</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">STL — Sổ Tay Luật</div>
+      <div class="value" style="color:var(--stl-color)">${stlCount}</div>
+      <div class="sub">3 bài/tuần · T2, T4, T7</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">GLDT — Góc Luật Đời Thường</div>
+      <div class="value" style="color:var(--gldt-color)">${gldtCount}</div>
+      <div class="sub">3 bài/tuần · T3, T5, CN</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">LSKC — Luật Sư Kể Chuyện</div>
+      <div class="value" style="color:var(--lskc-color)">${lskcCount}</div>
+      <div class="sub">1 bài/tuần · T6</div>
+    </div>
+  `;
+}
+
+
+function renderWeeks() {
+  const container = document.getElementById('weeks-container');
+  // Keep col-headers
+  const headers = container.querySelector('.col-headers');
+  container.innerHTML = '';
+  container.appendChild(headers);
+
+  const totalWeeks = Math.max(...EPISODES.map(e => e.week));
+
+  for (let w = 1; w <= totalWeeks; w++) {
+    const weekEps = EPISODES.map((e,i) => ({...e, idx:i})).filter(e => e.week === w);
+    const filtered = currentFilter === 'all' ? weekEps : weekEps.filter(e => e.ch === currentFilter);
+    if (filtered.length === 0) continue;
+
+    const ws = getWeekStart(w);
+    const we = getWeekEnd(w);
+
+    const section = document.createElement('div');
+    section.className = 'week-section';
+
+    section.innerHTML = `
+      <div class="week-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <span class="week-title">Tuần ${w}</span>
+        <span class="week-dates">${formatDate(ws)} — ${formatDate(we)}</span>
+        <span class="week-progress">${filtered.length} bài</span>
+        <span class="week-chevron">▼</span>
+      </div>
+      <div class="week-body">
+        ${filtered.map(ep => {
+          const epDate = getEpDate(ep);
+          return `
+          <div class="episode-row">
+            <span class="ep-day">${ep.day}</span>
+            <span class="ep-channel ${ep.ch}">${ep.ch.toUpperCase()}</span>
+            <span class="ep-title">${ep.title}</span>
+            <span class="ep-category">${ep.cat}</span>
+          </div>`;
+        }).join('')}
+      </div>
+    `;
+    container.appendChild(section);
+  }
+}
+
+function toggle(idx, type, checked) {
+  state[getKey(idx, type)] = checked;
+  saveState(state);
+  render();
+}
+
+// Filter tabs
+document.querySelectorAll('.filter-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentFilter = tab.dataset.filter;
+    render();
+  });
+});
+
+// Initial render
+render();
+</script>
+</body>
+</html>
