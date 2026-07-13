@@ -2,81 +2,72 @@
 
 **Kênh:** STL — Sổ Tay Luật
 **Chủ đề:** Đất đai — Hợp đồng đặt cọc
-**Căn cứ pháp lý:** Điều 328 Bộ luật Dân sự 2015, Điều 188 Luật Đất đai 2024
+**Căn cứ pháp lý:** Điều 328 Bộ luật Dân sự 2015; Điều 45 Luật Đất đai 2024; Án lệ 79/2025/AL
 **Cập nhật:** 2026-07-13
 
 ---
 
 ## Mở đầu
 
-Đặt cọc mua đất — khi nào mất trắng, khi nào đòi gấp đôi? Rất nhiều người đặt cọc hàng trăm triệu mà không biết quyền của mình nằm ở đâu. Câu trả lời gói gọn trong Điều 328 Bộ luật Dân sự 2015. Nhưng thực tế phức tạp hơn nhiều so với một điều luật.
+Rất nhiều người nghĩ rằng cứ bên nào "bùng" thì mất cọc hoặc đền gấp đôi — đơn giản vậy thôi. Thực tế phức tạp hơn nhiều. Có trường hợp bên bán bỏ cọc mà không phải đền một đồng. Có trường hợp bên mua mất trắng dù lỗi không hoàn toàn do mình. Tất cả nằm ở Điều 328 Bộ luật Dân sự 2015 — và cách hai bên viết hợp đồng đặt cọc.
 
-## Đặt cọc là gì?
+## Đặt cọc là gì — nói ngắn gọn
 
-Theo khoản 1 Điều 328 Bộ luật Dân sự 2015, đặt cọc là việc một bên giao cho bên kia một khoản tiền hoặc tài sản có giá trị khác trong một thời hạn, nhằm bảo đảm việc giao kết hoặc thực hiện hợp đồng.
+Theo khoản 1 Điều 328 Bộ luật Dân sự 2015, đặt cọc là việc bên mua giao cho bên bán một khoản tiền hoặc tài sản có giá trị, nhằm bảo đảm sẽ ký hợp đồng chuyển nhượng đất. Bên bán nhận cọc cũng cam kết sẽ bán.
 
-Nói đơn giản: bạn đưa tiền cọc để "giữ chỗ" — cam kết sẽ ký hợp đồng chuyển nhượng đất. Bên bán nhận cọc cũng cam kết sẽ bán cho bạn.
+Pháp luật không giới hạn mức cọc khi mua đất giữa cá nhân với nhau. Thực tế thị trường, mức phổ biến là 10% đến 30% giá trị giao dịch. Tuy nhiên, các chuyên gia khuyến nghị chỉ nên đặt cọc 5% đến 10% để kiểm soát rủi ro.
 
-Hiện tại, pháp luật không giới hạn mức đặt cọc. Các bên tự thỏa thuận, thường dao động từ 10% đến 20% giá trị giao dịch.
+Riêng với nhà ở hình thành trong tương lai — tức mua từ chủ đầu tư dự án — Luật Kinh doanh Bất động sản 2023 giới hạn cứng: chủ đầu tư chỉ được thu tối đa 5% giá bán làm tiền cọc.
 
 ## Khi nào mất cọc?
 
-Khoản 2 Điều 328 Bộ luật Dân sự 2015 quy định rõ: nếu bên đặt cọc từ chối giao kết hoặc thực hiện hợp đồng, thì tài sản đặt cọc thuộc về bên nhận cọc.
+Khoản 2 Điều 328 quy định rõ: bên đặt cọc từ chối giao kết hoặc thực hiện hợp đồng thì tài sản đặt cọc thuộc về bên nhận cọc.
 
-Nghĩa là: bạn đặt cọc 200 triệu rồi đổi ý không mua nữa — mất 200 triệu. Không cần lý do gì thêm. Chỉ cần bạn là người từ chối, bạn mất cọc.
+Nói đơn giản: bạn đặt cọc 200 triệu rồi đổi ý không mua — mất 200 triệu. Không cần lý do gì thêm.
 
-Các trường hợp phổ biến dẫn đến mất cọc:
-
-- Bên mua tìm được đất khác rẻ hơn, bỏ giao dịch.
-- Bên mua không đủ tài chính để thanh toán đúng hạn.
-- Bên mua không đến ký hợp đồng công chứng theo thời hạn đã thỏa thuận.
-- Bên mua yêu cầu thay đổi điều kiện giao dịch mà bên bán không đồng ý.
+Các trường hợp phổ biến dẫn đến mất cọc: bên mua tìm được đất khác rẻ hơn nên bỏ giao dịch. Bên mua không đủ tài chính thanh toán đúng hạn. Bên mua không đến ký hợp đồng công chứng theo thời hạn đã thỏa thuận. Hoặc bên mua yêu cầu thay đổi điều kiện mà bên bán không đồng ý.
 
 ## Khi nào đòi gấp đôi?
 
-Cũng theo khoản 2 Điều 328: nếu bên nhận đặt cọc từ chối giao kết hoặc thực hiện hợp đồng, thì phải trả lại tài sản đặt cọc và một khoản tiền tương đương giá trị tài sản đặt cọc.
+Cũng theo khoản 2 Điều 328: bên nhận đặt cọc từ chối giao kết hoặc thực hiện hợp đồng thì phải trả lại tài sản đặt cọc cộng thêm một khoản tương đương.
 
-Ví dụ: bạn đặt cọc 200 triệu mua đất. Bên bán đổi ý không bán — bên bán phải trả lại 200 triệu cọc, cộng thêm 200 triệu phạt. Tổng cộng bạn nhận lại 400 triệu.
+Ví dụ: bạn đặt cọc 200 triệu. Bên bán đổi ý không bán — bên bán phải trả lại 200 triệu cọc, cộng thêm 200 triệu bồi thường. Tổng cộng bạn nhận lại 400 triệu.
 
-Các trường hợp đòi gấp đôi:
+Đáng chú ý: pháp luật cho phép thỏa thuận phạt cao hơn gấp đôi. Hai bên hoàn toàn có thể ghi phạt gấp ba, gấp năm lần tiền cọc — miễn là ghi rõ trong hợp đồng. Thực tế đã có vụ bên bán nhận cọc 300 triệu, bỏ cọc, và bị Tòa án buộc bồi thường tổng cộng 3 tỉ đồng theo đúng thỏa thuận trong hợp đồng.
 
-- Bên bán tự ý bán đất cho người khác giá cao hơn.
-- Bên bán từ chối ra công chứng mà không có lý do chính đáng.
-- Đất đang thế chấp ngân hàng mà bên bán không giải chấp được, dẫn đến không thể chuyển nhượng.
-- Đất có tranh chấp hoặc không đủ điều kiện chuyển nhượng theo Điều 188 Luật Đất đai 2024.
+## Khi nào không bị phạt cọc?
 
-## Ngoại lệ — không phạt cọc
+Đây là phần nhiều người bỏ qua. Điều 328 có cụm từ quan trọng: "trừ trường hợp có thỏa thuận khác." Nghĩa là nếu hợp đồng đặt cọc ghi rõ các trường hợp được hoàn cọc — ví dụ đất bị quy hoạch, phát hiện tranh chấp, hoặc ngân hàng không duyệt vay — thì bên vi phạm có thể không bị phạt.
 
-Không phải lúc nào cũng mất cọc hoặc đền gấp đôi. Điều 328 có cụm từ quan trọng: "trừ trường hợp có thỏa thuận khác."
+Ngoài ra, theo Điều 156 Bộ luật Dân sự 2015, nếu hợp đồng không thực hiện được vì sự kiện bất khả kháng — thiên tai, dịch bệnh, lệnh cấm của cơ quan nhà nước — thì các bên cũng không bị phạt cọc.
 
-Nếu hợp đồng đặt cọc ghi rõ các trường hợp được hoàn cọc — ví dụ đất bị quy hoạch, bị thu hồi, hoặc phát hiện tranh chấp — thì bên vi phạm có thể không bị phạt.
+## Hợp đồng đặt cọc — độc lập với hợp đồng mua bán
 
-Ngoài ra, nếu hợp đồng không được thực hiện vì trở ngại khách quan hoặc bất khả kháng — như thiên tai, dịch bệnh, lệnh cấm của cơ quan nhà nước — thì các bên cũng không bị phạt cọc.
+Đây là điểm mới rất quan trọng. Án lệ 79/2025 của Hội đồng Thẩm phán Tòa án Nhân dân Tối cao đã xác lập nguyên tắc: hợp đồng đặt cọc là hợp đồng độc lập, không phụ thuộc vào hợp đồng chuyển nhượng.
 
-## Các bên có thể thỏa thuận mức phạt khác
+Trước đây, nhiều Tòa án cấp dưới tuyên hợp đồng đặt cọc vô hiệu khi đất đang thế chấp ngân hàng hoặc người ký không phải chủ sở hữu. Từ nay, Án lệ 79/2025 khẳng định: đất đang thế chấp ngân hàng không làm vô hiệu hợp đồng đặt cọc, miễn là bên mua biết và vẫn đồng ý ký. Tương tự, người được chủ sở hữu ủy quyền vẫn có thể ký hợp đồng đặt cọc hợp lệ.
 
-Pháp luật tôn trọng sự thỏa thuận. Các bên hoàn toàn có thể ghi trong hợp đồng đặt cọc mức phạt cao hơn hoặc thấp hơn mức "gấp đôi" mặc định.
-
-Ví dụ: thỏa thuận phạt gấp ba lần tiền cọc, hoặc phạt bằng 30% giá trị giao dịch. Miễn là hai bên đồng ý và ghi rõ trong hợp đồng, Tòa án sẽ áp dụng theo thỏa thuận đó.
+Điều này có nghĩa: nếu bên bán nhận cọc rồi lấy lý do "đất đang thế chấp" để hủy giao dịch, họ vẫn phải đền cọc.
 
 ## 5 lưu ý quan trọng khi đặt cọc mua đất
 
-**Một — Kiểm tra pháp lý trước khi đặt cọc.** Theo Điều 188 Luật Đất đai 2024, đất phải có sổ đỏ, không tranh chấp, không bị kê biên, còn thời hạn sử dụng. Thiếu một điều kiện, giao dịch có thể vô hiệu.
+**Một — Kiểm tra pháp lý đất trước khi đặt cọc.** Điều 45 Luật Đất đai 2024 quy định đất phải có Giấy chứng nhận, không tranh chấp, không bị kê biên hoặc áp dụng biện pháp khẩn cấp tạm thời, còn thời hạn sử dụng. Thiếu một điều kiện, giao dịch chuyển nhượng có thể vô hiệu.
 
-**Hai — Lập hợp đồng đặt cọc bằng văn bản.** Pháp luật không bắt buộc công chứng hợp đồng đặt cọc, nhưng nên công chứng để có giá trị chứng cứ cao hơn khi xảy ra tranh chấp.
+**Hai — Lập hợp đồng đặt cọc bằng văn bản.** Hợp đồng đặt cọc không bắt buộc công chứng theo khoản 3 Điều 27 Luật Đất đai 2024. Nhưng nên công chứng để tăng giá trị chứng cứ khi tranh chấp.
 
-**Ba — Ghi rõ thời hạn và điều kiện.** Thời hạn ký hợp đồng công chứng, điều kiện hoàn cọc, mức phạt vi phạm — tất cả phải ghi cụ thể, không để chung chung.
+**Ba — Ghi rõ thời hạn và điều kiện.** Thời hạn ký hợp đồng công chứng, điều kiện hoàn cọc, mức phạt vi phạm — tất cả phải cụ thể, không để chung chung. Đặc biệt lưu ý ghi rõ trường hợp nào được hoàn cọc để bảo vệ cả hai bên.
 
-**Bốn — Giữ biên nhận đặt cọc.** Nếu không có hợp đồng đặt cọc, ít nhất phải có biên nhận có chữ ký hai bên, ghi rõ số tiền, mục đích đặt cọc, và thửa đất cụ thể.
+**Bốn — Giữ biên nhận đặt cọc.** Nếu không có hợp đồng đặt cọc, ít nhất phải có biên nhận có chữ ký hai bên, ghi rõ số tiền, mục đích, và thửa đất cụ thể.
 
 **Năm — Thời hiệu khởi kiện là 3 năm.** Theo Điều 429 Bộ luật Dân sự 2015, bạn có 3 năm kể từ ngày bên kia vi phạm để khởi kiện đòi phạt cọc. Quá hạn, Tòa án sẽ không thụ lý.
 
 ## Tóm tắt
 
 - Bên mua bỏ cọc → mất tiền cọc.
-- Bên bán bỏ cọc → trả lại cọc và đền thêm một khoản tương đương (tức gấp đôi).
-- Hai bên có thể thỏa thuận mức phạt khác.
-- Trở ngại khách quan, bất khả kháng → không phạt cọc.
+- Bên bán bỏ cọc → trả lại cọc và đền thêm một khoản tương đương — tức gấp đôi.
+- Hai bên có thể thỏa thuận mức phạt cao hơn hoặc thấp hơn gấp đôi.
+- Bất khả kháng hoặc có thỏa thuận miễn trừ → không phạt cọc.
+- Hợp đồng đặt cọc là hợp đồng độc lập — đất đang thế chấp không làm vô hiệu hợp đồng đặt cọc.
 - Luôn kiểm tra pháp lý đất và lập hợp đồng đặt cọc bằng văn bản trước khi giao tiền.
 
 *Nội dung mang tính tham khảo. Để được tư vấn chi tiết, vui lòng liên hệ Vibalaw.*

@@ -25,7 +25,7 @@
 | # | Chủ đề | Slug | Loại | Content | Audio-convert | Audio | TG | Ghi chú |
 |--:|--------|------|------|:-------:|:-------------:|:-----:|:--:|---------|
 | 1 | Đặt cọc mua đất — mất cọc khi nào, đòi gấp đôi khi nào? | dat-coc-mua-dat | single | ✅ | ✅ | ✅ | ✅ | |
-| 2 | Sang tên sổ đỏ — thủ tục, phí, mất bao lâu? | sang-ten-so-do | single | ✅ | ✅ | ✅ | ✅ | |
+| 2 | Sang tên sổ đỏ — thủ tục, phí, mất bao lâu? | sang-ten-so-do | single | ✅ | ✅ | ❌ | ❌ | |
 | 3 | Mua bán đất bằng giấy tay — có hợp pháp không? | mua-ban-dat-giay-tay | single | ❌ | ❌ | ❌ | ❌ | |
 | 4 | Đất bị thu hồi — được đền bù bao nhiêu? | dat-bi-thu-hoi-den-bu | single | ❌ | ❌ | ❌ | ❌ | |
 | 5 | Tách thửa đất 2026 — điều kiện, diện tích tối thiểu? | tach-thua-dat-2026 | single | ❌ | ❌ | ❌ | ❌ | |
