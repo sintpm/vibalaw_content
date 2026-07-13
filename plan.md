@@ -2,7 +2,7 @@
 
 **Tổng:** 117 bài · 17 tuần · 7 bài/tuần
 **Phát sóng từ:** 2026-07-21 (Thứ 2)
-**Tiến độ:** 9/117 hoàn thành
+**Tiến độ:** 11/117 hoàn thành
 **Quy tắc:** Nội dung chuẩn bị trước 1 tuần so với ngày phát sóng
 
 ## Lịch phát sóng cố định
@@ -37,10 +37,10 @@
 |------|:---:|:----:|--------|-----------|------|:------:|
 | 28/07 | T2 | STL | Sang tên sổ đỏ — thủ tục, phí, mất bao lâu? | Đất đai | sang-ten-so-do | ✅ |
 | 29/07 | T3 | GLDT | Thừa kế đất đai khi không có di chúc | Đất đai | thua-ke-dat-dai-khong-di-chuc | ✅ |
-| 30/07 | T4 | STL | Ly hôn đơn phương khi chồng/vợ không chịu ký đơn | Hôn nhân | ly-hon-don-phuong | ❌ |
+| 30/07 | T4 | STL | Ly hôn đơn phương khi chồng/vợ không chịu ký đơn | Hôn nhân | ly-hon-don-phuong | ✅ |
 | 31/07 | T5 | GLDT | Đặt cọc mua đất — mất cọc khi nào? | Đất đai | dat-coc-mua-dat | ❌ |
 | 01/08 | T6 | LSKC | Thừa kế đất đai không di chúc — case tranh chấp anh em | Đất đai | thua-ke-dat-dai-khong-di-chuc | ❌ |
-| 02/08 | T7 | STL | Chế độ thai sản 2025 — những thay đổi cần biết | Lao động | che-do-thai-san-2025 | ❌ |
+| 02/08 | T7 | STL | Chế độ thai sản 2025 — những thay đổi cần biết | Lao động | che-do-thai-san-2025 | ✅ |
 | 03/08 | CN | GLDT | Ly hôn đơn phương khi không chịu ký đơn | Hôn nhân | ly-hon-don-phuong | ❌ |
 
 ## Tuần 3 — Phát sóng: 04/08 → 10/08 · Sản xuất xong trước: 03/08
