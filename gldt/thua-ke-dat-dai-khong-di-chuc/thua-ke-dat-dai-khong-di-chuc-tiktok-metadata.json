@@ -1,0 +1,24 @@
+{
+  "title_vi": "Ba anh em tranh nhau miếng đất cha mẹ để lại — ai đúng, ai sai?",
+  "topic": "Đất đai — Thừa kế theo pháp luật",
+  "legal_basis": "Bộ luật Dân sự 2015; Luật Đất đai 2024; Nghị định 175/2025/NĐ-CP",
+  "type": "single",
+  "channels": ["GLDT"],
+  "primary_channel": "GLDT",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng",
+  "provider": "vbee",
+  "speed": 1.1,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "gldt/thua-ke-dat-dai-khong-di-chuc/audio/thua-ke-dat-dai-khong-di-chuc.mp3",
+      "duration_minutes": 3.85,
+      "title": "Cha mẹ mất không di chúc — con trưởng được giữ hết đất? Sai hoàn toàn",
+      "description": "3 anh em tranh nhau miếng đất cha mẹ để lại. Con trưởng tuyên bố giữ hết, con gái nghĩ mình có phần, con út im lặng. Luật nói gì?",
+      "hook_quote": "Con trưởng cũng chỉ được một phần ba — không hơn, không kém",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #thuake #datdai"
+    }
+  ]
+}

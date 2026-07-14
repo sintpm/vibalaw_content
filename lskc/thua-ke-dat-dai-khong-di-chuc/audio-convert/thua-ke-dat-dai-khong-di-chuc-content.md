@@ -1,0 +1,76 @@
+# Bốn anh em, một miếng đất, và mười năm không nhìn mặt nhau
+
+@@narrator
+Chào bạn, đây là Luật Sư Kể Chuyện. Nghề luật sư có những câu chuyện mà sách vở không dạy được.
+{{pause:scene}}
+
+@@narrator
+Tôi kể câu chuyện này vì bất kỳ ai trong chúng ta đều có thể rơi vào hoàn cảnh tương tự. Cha mẹ mất, để lại đất đai, không có di chúc — và anh em ruột thịt trở thành người đối đầu nhau trước tòa.
+{{pause:paragraph}}
+
+@@narrator
+Ông Sáu, một nông dân ở Long An, qua đời năm 2019. Vợ ông đã mất trước đó ba năm. Ông để lại một mảnh đất hơn 500 mét vuông có nhà ở, đã có sổ đỏ mang tên ông. Không di chúc. Không lời dặn dò. Bốn người con — hai trai, hai gái — và một miếng đất.
+{{pause:paragraph}}
+
+@@narrator
+Người con trai út, anh Phong, là người ở cùng và chăm sóc ông Sáu suốt những năm cuối đời. Anh sửa nhà, đóng tiền thuế đất, lo tang ma cho cả cha lẫn mẹ. Ba người con còn lại đều đi làm ăn xa — Sài Gòn, Bình Dương, Đồng Nai — ai cũng có cuộc sống riêng.
+{{pause:paragraph}}
+
+@@narrator
+Sau đám tang, mọi chuyện bắt đầu. Người anh cả — anh Tâm — yêu cầu bán đất chia đều bốn phần. Anh Phong phản đối. Anh nói: "Tôi ở đây mười mấy năm, chăm cha mẹ một mình, giờ bán đất thì tôi ở đâu?" Hai người chị thì mỗi người một ý. Chị Hai đồng ý với anh cả. Chị Ba muốn giữ đất, cho anh Phong ở, chỉ cần anh trả tiền chênh lệch cho mọi người.
+{{pause:paragraph}}
+
+@@narrator
+Bốn người, bốn ý kiến. Không ai nhường ai. Gia đình tan nát từ đó.
+{{pause:scene}}
+
+@@narrator
+Hai năm sau, anh Tâm đến gặp tôi. Anh muốn khởi kiện yêu cầu chia thừa kế. Tôi hỏi: "Anh đã thử hòa giải chưa?" Anh cười buồn: "Hòa giải ba lần rồi, luật sư. Không ai chịu ai."
+{{pause:paragraph}}
+
+@@narrator
+Tôi giải thích cho anh Tâm hiểu khung pháp lý. Ông Sáu mất không có di chúc, nên di sản được chia theo pháp luật. Bộ luật Dân sự 2015 quy định: khi không có di chúc, di sản phân chia theo hàng thừa kế. Hàng thứ nhất gồm vợ, chồng, cha mẹ, con cái. Vợ ông Sáu đã mất trước, cha mẹ ông cũng không còn. Vậy bốn người con thuộc hàng thứ nhất — và theo luật, được hưởng phần bằng nhau.
+{{pause:paragraph}}
+
+@@narrator
+Bằng nhau. Đó là điều anh Phong không chấp nhận được. Anh đã chăm sóc cha mẹ hơn mười năm, bỏ công bỏ sức, trong khi ba anh chị em kia gần như không đóng góp gì. Nhưng luật là luật — thừa kế theo pháp luật chia bằng nhau giữa những người cùng hàng, không phụ thuộc vào ai chăm sóc nhiều hay ít.
+{{pause:paragraph}}
+
+@@narrator
+Tôi cũng lưu ý: thời hiệu khởi kiện chia thừa kế đối với bất động sản là 30 năm. Anh Tâm khởi kiện sau hai năm — hoàn toàn trong thời hạn. Trước khi ra tòa, theo Luật Đất đai 2024, tranh chấp đất đai phải qua hòa giải tại UBND xã. Gia đình đã hòa giải không thành, có biên bản. Đủ điều kiện khởi kiện.
+{{pause:paragraph}}
+
+@@narrator
+Tại tòa, anh Phong trình bày toàn bộ công sức đóng góp: tiền sửa nhà, tiền thuế, chi phí mai táng. Tòa ghi nhận. Theo Bộ luật Dân sự 2015, khi chia di sản, tòa ưu tiên chia bằng hiện vật. Người đang trực tiếp sử dụng tài sản có thể được ưu tiên nhận, với điều kiện thanh toán phần chênh lệch cho những người còn lại.
+{{pause:scene}}
+
+@@narrator
+Tòa án định giá mảnh đất hơn 2 tỷ đồng. Mỗi người được hưởng khoảng 500 triệu. Tòa quyết định giao đất cho anh Phong — người đang sinh sống trên đất — và buộc anh thanh toán mỗi anh chị em còn lại 500 triệu đồng. Các chi phí mai táng và nghĩa vụ tài chính của ông Sáu được trừ vào di sản trước khi chia.
+{{pause:paragraph}}
+
+@@narrator
+Anh Phong giữ được đất. Nhưng anh phải vay ngân hàng 1,5 tỷ để trả cho ba anh chị em. Còn mối quan hệ gia đình? Mười năm rồi, bốn anh em gần như không nói chuyện với nhau. Miếng đất giữ được, nhưng tình thân thì mất.
+{{pause:scene}}
+
+@@narrator
+Vụ việc này dạy tôi ba điều mà tôi luôn nhắc lại với mọi khách hàng.
+{{pause:paragraph}}
+
+@@narrator
+Thứ nhất, hãy lập di chúc khi còn khỏe mạnh. Đây là điều quan trọng nhất. Một bản di chúc rõ ràng, được công chứng, sẽ tránh được hầu hết tranh chấp thừa kế. Cha mẹ nào cũng thương con, nhưng nếu không nói rõ ý nguyện, chính tình thương đó sẽ trở thành mầm mống chia rẽ.
+{{pause:paragraph}}
+
+@@narrator
+Thứ hai, nếu đã không có di chúc, hãy thỏa thuận trước khi kiện. Chi phí kiện tụng, thời gian, công sức — tất cả đều tốn kém hơn rất nhiều so với một buổi ngồi lại chia sẻ thẳng thắn. Tòa án là phương án cuối cùng, không phải phương án đầu tiên.
+{{pause:paragraph}}
+
+@@narrator
+Thứ ba, người chăm sóc cha mẹ xứng đáng được ghi nhận — nhưng luật không tự động cho họ phần nhiều hơn. Nếu cha mẹ muốn người con ở cùng được hưởng nhiều hơn, cách duy nhất chắc chắn là ghi vào di chúc. Không có di chúc, luật chia bằng nhau — và không có ngoại lệ.
+{{pause:paragraph}}
+
+@@narrator
+Mỗi lần gặp vụ tranh chấp thừa kế, tôi đều tự hỏi: nếu người cha, người mẹ nhìn thấy con cái mình đối đầu nhau trước tòa, họ sẽ cảm thấy thế nào? Có lẽ đó là lý do tốt nhất để bạn — ngay hôm nay — nói chuyện với cha mẹ về di chúc.
+{{pause:scene}}
+
+@@narrator
+Cảm ơn bạn đã lắng nghe Luật Sư Kể Chuyện. Mỗi vụ việc đều là bài học. Nội dung từ Vi-ba-law.

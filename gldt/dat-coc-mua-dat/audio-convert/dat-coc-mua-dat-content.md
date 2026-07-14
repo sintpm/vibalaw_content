@@ -1,0 +1,96 @@
+# Đặt cọc 200 triệu mua đất, bên bán biến mất — tiền cọc lấy lại được không?
+
+@@narrator
+Chào bạn, đây là Góc Luật Đời Thường. Câu chuyện hôm nay có thể xảy ra với bất kỳ ai.
+{{pause:scene}}
+
+@@narrator
+Chị Phương ở Đồng Nai tìm được miếng đất 100 mét vuông ở vị trí đẹp, giá 1,2 tỉ đồng. Bên bán — anh Hùng — yêu cầu đặt cọc 200 triệu, hẹn 30 ngày sau ra công chứng. Chị Phương đồng ý, hai bên viết giấy đặt cọc tay, chuyển khoản đủ 200 triệu. Đến ngày hẹn, chị Phương gọi điện — anh Hùng không nghe. Nhắn tin — không trả lời. Chị đến nhà thì hàng xóm bảo: "Anh ấy bán miếng đất cho người khác rồi, giá cao hơn."
+{{pause:paragraph}}
+
+@@narrator
+200 triệu — mất hay lấy lại được? Và nếu lấy lại, được bao nhiêu? Đáp án không đơn giản như bạn nghĩ.
+{{pause:scene}}
+
+@@narrator
+Bộ luật Dân sự 2015 quy định rất rõ hai nguyên tắc.
+{{pause:paragraph}}
+
+@@narrator
+Nguyên tắc thứ nhất: bên mua đổi ý không mua — mất tiền cọc. Bạn đặt cọc 200 triệu rồi tự ý rút lui, 200 triệu đó thuộc về bên bán. Không cần lý do gì thêm.
+{{pause:paragraph}}
+
+@@narrator
+Nguyên tắc thứ hai: bên bán đổi ý không bán — phải trả lại tiền cọc cộng thêm một khoản tương đương. Nghĩa là nếu anh Hùng bỏ cọc, anh phải trả chị Phương 200 triệu tiền cọc, cộng thêm 200 triệu bồi thường. Tổng cộng chị nhận lại 400 triệu đồng.
+{{pause:paragraph}}
+
+@@narrator
+Quay lại tình huống của chị Phương: bên bán biến mất, bán đất cho người khác — rõ ràng bên bán vi phạm. Chị Phương có quyền đòi gấp đôi, tức 400 triệu.
+{{pause:paragraph}}
+
+@@narrator
+Nhưng đòi được tiền trên giấy là một chuyện, đòi được trong thực tế là chuyện khác. Chị Phương phải chứng minh được hai bên đã có thỏa thuận đặt cọc, và bên bán đã nhận tiền. Giấy viết tay không rõ ràng sẽ khiến quá trình khởi kiện phức tạp hơn rất nhiều.
+{{pause:scene}}
+
+@@narrator
+Vậy khi nào không bị phạt cọc? Đây là phần nhiều người không biết. Bộ luật Dân sự có cụm từ then chốt: "trừ trường hợp có thỏa thuận khác." Nếu hợp đồng đặt cọc ghi rõ những trường hợp được hoàn cọc — ví dụ đất phát hiện tranh chấp, đất bị quy hoạch, ngân hàng không duyệt cho vay — thì bên vi phạm có thể được miễn phạt.
+{{pause:paragraph}}
+
+@@narrator
+Ngoài ra, nếu giao dịch không thực hiện được vì sự kiện bất khả kháng — thiên tai, dịch bệnh, lệnh cấm của nhà nước — thì cả hai bên đều không bị phạt cọc.
+{{pause:paragraph}}
+
+@@narrator
+Có một điểm nữa nhiều người chưa biết: hai bên hoàn toàn có thể thỏa thuận mức phạt cao hơn gấp đôi. Ghi rõ trong hợp đồng phạt gấp ba, gấp năm lần tiền cọc — hoàn toàn hợp pháp. Thực tế đã có vụ bên bán nhận cọc 300 triệu, bỏ cọc, và bị Tòa buộc đền tổng cộng 3 tỉ đồng vì hợp đồng ghi phạt gấp mười.
+{{pause:scene}}
+
+@@narrator
+Còn một điểm quan trọng: nhiều người lo đất đang thế chấp ngân hàng thì hợp đồng đặt cọc vô hiệu. Án lệ 79/2025 đã khẳng định rõ: hợp đồng đặt cọc là hợp đồng độc lập. Đất đang thế chấp không làm vô hiệu hợp đồng đặt cọc. Bên bán lấy cớ "đất đang thế chấp" để hủy giao dịch — vẫn phải đền cọc.
+{{pause:scene}}
+
+@@narrator
+Nếu bạn đang chuẩn bị đặt cọc mua đất, hãy nhớ bốn điều.
+{{pause:paragraph}}
+
+@@narrator
+Thứ nhất, kiểm tra pháp lý đất trước khi đặt cọc. Đất phải có Giấy chứng nhận, không tranh chấp, không bị kê biên. Thiếu một điều kiện, giao dịch có thể vô hiệu.
+{{pause:paragraph}}
+
+@@narrator
+Thứ hai, lập hợp đồng đặt cọc bằng văn bản, nên có công chứng để có chứng cứ mạnh khi tranh chấp.
+{{pause:paragraph}}
+
+@@narrator
+Thứ ba, ghi rõ thời hạn, điều kiện hoàn cọc, và mức phạt vi phạm. Phải cụ thể: ngày nào ký công chứng, trường hợp nào hoàn cọc, mức phạt bao nhiêu.
+{{pause:paragraph}}
+
+@@narrator
+Thứ tư, chỉ nên đặt cọc từ 5% đến 10% giá trị giao dịch. Đặt cọc quá cao là đặt rủi ro lên chính mình. Riêng mua nhà từ chủ đầu tư dự án, Luật Kinh doanh Bất động sản 2023 giới hạn cứng: tối đa 5% giá bán.
+{{pause:scene}}
+
+@@narrator
+Và đây là ba sai lầm phổ biến nhất.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ nhất: đặt cọc bằng giấy viết tay sơ sài. Nhiều người chỉ ghi vài dòng "nhận cọc 200 triệu, hẹn 30 ngày công chứng" rồi ký. Khi tranh chấp, giấy tờ không rõ ràng khiến Tòa rất khó xử lý.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ hai: nghĩ rằng bên nào bỏ cọc thì tự động mất tiền. Thực tế, bạn phải khởi kiện để Tòa ra phán quyết. Và thời hiệu khởi kiện chỉ có 3 năm kể từ ngày bên kia vi phạm. Quá hạn — mất quyền kiện.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ ba: đặt cọc mà không kiểm tra sổ đỏ gốc. Có trường hợp bên bán dùng sổ đỏ giả hoặc đất đã bán cho người khác. Luôn xác minh tại Văn phòng đăng ký đất đai trước khi chuyển tiền.
+{{pause:scene}}
+
+@@narrator
+Quay lại câu chuyện chị Phương: nếu chị có hợp đồng đặt cọc rõ ràng, có công chứng — chị hoàn toàn có cơ sở khởi kiện đòi 400 triệu. Nhưng nếu chỉ có giấy viết tay sơ sài — con đường đòi tiền sẽ gian nan hơn rất nhiều.
+{{pause:paragraph}}
+
+@@narrator
+Đặt cọc mua đất không phải chuyện nhỏ. 200 triệu, 500 triệu — đó là tiền mồ hôi nước mắt. Một hợp đồng đặt cọc tốt không chỉ bảo vệ tiền cọc — mà còn bảo vệ quyền đòi bồi thường khi bên kia vi phạm.
+{{pause:scene}}
+
+@@narrator
+Cảm ơn bạn đã lắng nghe Góc Luật Đời Thường. Nếu bạn cần tư vấn, liên hệ Vi-ba-law.

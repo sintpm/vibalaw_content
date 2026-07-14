@@ -1,0 +1,24 @@
+{
+  "title_vi": "Mua bán đất bằng giấy tay — có hợp pháp không?",
+  "topic": "Đất đai — Chuyển nhượng quyền sử dụng đất",
+  "legal_basis": "Luật Đất đai 2024; Bộ luật Dân sự 2015; Nghị định 101/2024; Nghị định 151/2025",
+  "type": "single",
+  "channels": ["STL"],
+  "primary_channel": "STL",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng",
+  "provider": "vbee",
+  "speed": 1.1,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "stl/mua-ban-dat-giay-tay/audio/mua-ban-dat-giay-tay.mp3",
+      "duration_minutes": 3.7,
+      "title": "Mua đất giấy tay — mất trắng hay vẫn được công nhận?",
+      "description": "Luật Đất đai 2024 bắt buộc công chứng. Nhưng nếu đã trả tiền, nhận đất, ở ổn định — tòa vẫn có thể công nhận. Nghị định mới còn cho phép cấp sổ đỏ cho đất giấy tay cũ.",
+      "hook_quote": "Đất bị giải tỏa — tiền bồi thường về tay người bán, không phải người mua giấy tay",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #datdai #muabandatgiaytay"
+    }
+  ]
+}

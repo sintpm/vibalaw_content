@@ -1,0 +1,24 @@
+{
+  "title_vi": "Mua đất chưa có sổ đỏ — rủi ro mất trắng nếu không biết điều này",
+  "topic": "Đất đai — Chuyển nhượng quyền sử dụng đất",
+  "legal_basis": "Điều 45 Luật Đất đai 2024; Nghị định 123/2024/NĐ-CP",
+  "type": "single",
+  "channels": ["GLDT"],
+  "primary_channel": "GLDT",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng",
+  "provider": "vbee",
+  "speed": 1.1,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "gldt/mua-dat-chua-co-so-do/audio/mua-dat-chua-co-so-do.mp3",
+      "duration_minutes": 3.1,
+      "title": "Anh Thành mất trắng 800 triệu vì mua đất bằng giấy tay — đừng mắc sai lầm này",
+      "description": "Mua đất chưa có sổ đỏ bằng giấy viết tay — rủi ro cực lớn theo Luật Đất đai 2024. Hợp đồng vô hiệu, không được bồi thường khi thu hồi, phạt đến 50 triệu đồng.",
+      "hook_quote": "800 triệu mất trắng vì mua đất bằng giấy tay — không sổ đỏ, không pháp lý",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #datdai #sodo"
+    }
+  ]
+}

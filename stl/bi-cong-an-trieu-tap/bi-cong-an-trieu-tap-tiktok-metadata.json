@@ -1,0 +1,24 @@
+{
+  "title_vi": "Bị công an triệu tập — Quyền của bạn là gì?",
+  "topic": "Hình sự — Triệu tập trong tố tụng hình sự",
+  "legal_basis": "Bộ luật Tố tụng hình sự 2015; Thông tư 119/2021/TT-BCA; Thông tư 45/2014/TT-BCA",
+  "type": "single",
+  "channels": ["STL"],
+  "primary_channel": "STL",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng",
+  "provider": "vbee",
+  "speed": 1.1,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "stl/bi-cong-an-trieu-tap/audio/bi-cong-an-trieu-tap.mp3",
+      "duration_minutes": 3.7,
+      "title": "Công an triệu tập — bạn CÓ QUYỀN từ chối? Giấy mời vs giấy triệu tập khác nhau thế nào",
+      "description": "Không phải cứ nhận giấy từ công an là bắt buộc phải đến. Giấy triệu tập và giấy mời khác nhau hoàn toàn — một cái bắt buộc, một cái không. 5 quyền bạn cần biết khi bị triệu tập.",
+      "hook_quote": "Không phải cứ nhận giấy từ công an là bắt buộc phải đến",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #congantrieutap #hinhsu"
+    }
+  ]
+}

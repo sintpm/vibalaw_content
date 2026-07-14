@@ -1,0 +1,96 @@
+# Ba anh em tranh nhau miếng đất cha mẹ để lại — ai đúng, ai sai?
+
+@@narrator
+Xin chào, Góc Luật Đời Thường. Mình có một tình huống rất hay muốn chia sẻ với bạn.
+{{pause:scene}}
+
+@@narrator
+Ông Tư ở Bình Dương mất đột ngột, không để lại di chúc. Ông có một mảnh đất 200 mét vuông đứng tên ông, và ba người con: anh Hai, chị Ba, và anh Út. Anh Hai — con trai cả — tuyên bố: "Tôi là con trưởng, đất này tôi giữ." Chị Ba phản đối: "Ba mất không di chúc thì chia đều, tôi cũng có phần." Còn anh Út thì im lặng, nghĩ mình là con út nên chẳng được gì.
+{{pause:paragraph}}
+
+@@narrator
+Vậy ai đúng? Anh Hai có quyền giữ hết đất vì là con trưởng không? Chị Ba — con gái — có được chia phần không? Và anh Út — liệu có thật sự mất trắng?
+{{pause:paragraph}}
+
+@@narrator
+Câu trả lời nằm trong quy định về thừa kế theo pháp luật. Và đáp án có thể khiến nhiều gia đình phải suy nghĩ lại.
+{{pause:scene}}
+
+@@narrator
+Khi một người mất mà không để lại di chúc, tài sản của họ được chia theo pháp luật. Bộ luật Dân sự 2015 quy định rất rõ: di sản thừa kế được chia đều cho những người cùng hàng thừa kế. Không phân biệt con trai hay con gái, con trưởng hay con út.
+{{pause:paragraph}}
+
+@@narrator
+Pháp luật chia người thừa kế thành ba hàng. Hàng thứ nhất gồm vợ hoặc chồng, cha mẹ đẻ, cha mẹ nuôi, con đẻ và con nuôi của người mất. Đây là nhóm được ưu tiên nhận di sản trước. Hàng thứ hai gồm ông bà nội ngoại, anh chị em ruột, và cháu ruột mà người mất là ông bà. Hàng thứ ba gồm cụ nội ngoại, bác, chú, cậu, cô, dì ruột, và chắt ruột.
+{{pause:paragraph}}
+
+@@narrator
+Nguyên tắc quan trọng: hàng sau chỉ được thừa kế khi hàng trước không còn ai — hoặc đã chết, hoặc từ chối nhận, hoặc bị tước quyền.
+{{pause:scene}}
+
+@@narrator
+Quay lại câu chuyện ông Tư. Ông mất, vợ ông đã mất trước đó. Ba người con — anh Hai, chị Ba, anh Út — đều thuộc hàng thừa kế thứ nhất. Theo luật, mảnh đất 200 mét vuông phải chia đều ba phần, mỗi người hơn 66 mét vuông. Anh Hai là con trưởng cũng chỉ được một phần ba — không hơn, không kém.
+{{pause:paragraph}}
+
+@@narrator
+Nhưng nếu vợ ông Tư còn sống thì sao? Lúc đó phải xác định tài sản chung trước. Nếu đất là tài sản chung vợ chồng, bà được một nửa vì đó là tài sản của bà. Nửa còn lại mới là di sản của ông Tư, chia đều cho bà và ba người con — mỗi người một phần tư.
+{{pause:scene}}
+
+@@narrator
+Muốn chia thừa kế đất đai hợp pháp, gia đình cần làm đúng thủ tục, gồm bốn bước.
+{{pause:paragraph}}
+
+@@narrator
+Bước một: Chuẩn bị giấy tờ — căn cước công dân của tất cả người thừa kế, sổ đỏ bản gốc, giấy chứng tử người mất, giấy khai sinh để chứng minh quan hệ huyết thống.
+{{pause:paragraph}}
+
+@@narrator
+Bước hai: Tất cả người thừa kế đến Văn phòng Công chứng để lập văn bản khai nhận di sản hoặc thỏa thuận phân chia di sản. Bắt buộc phải có mặt hoặc ủy quyền hợp pháp. Thiếu chữ ký một người thì hồ sơ bị bác, phải kiện ra tòa.
+{{pause:paragraph}}
+
+@@narrator
+Bước ba: Văn phòng Công chứng niêm yết thông tin tại ủy ban nhân dân xã nơi có đất trong 15 ngày.
+{{pause:paragraph}}
+
+@@narrator
+Bước bốn: Nộp hồ sơ đăng ký biến động tại Văn phòng Đăng ký đất đai, nộp nghĩa vụ tài chính, và nhận sổ đỏ mới.
+{{pause:paragraph}}
+
+@@narrator
+Về chi phí: thừa kế giữa cha mẹ và con, vợ chồng, anh chị em ruột thì được miễn thuế thu nhập cá nhân và miễn lệ phí trước bạ. Tổng chi phí chỉ khoảng một đến hai triệu đồng. Toàn bộ thủ tục mất khoảng 30 đến 90 ngày.
+{{pause:scene}}
+
+@@narrator
+Có bốn sai lầm mà rất nhiều gia đình mắc phải khi chia thừa kế đất đai.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ nhất: Tự chia đất mà không công chứng. Nhiều gia đình tự thỏa thuận miệng rồi ai ở đâu ở đó. Không có văn bản công chứng, việc chia này không có giá trị pháp lý. Khi cần bán đất, vay ngân hàng, hoặc tranh chấp xảy ra — sẽ không có cơ sở giải quyết.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ hai: Nghĩ con trưởng hoặc con trai được nhiều hơn. Pháp luật Việt Nam không phân biệt nam nữ, không ưu tiên con trưởng. Quan niệm "đất để cho con trai" là phong tục, không phải luật.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ ba: Để quá lâu không chia. Thời hiệu yêu cầu chia di sản bất động sản là 30 năm kể từ ngày người mất qua đời. Nghe thì dài, nhưng rất nhiều gia đình đã mất quyền vì để "treo" đất qua hai, ba thế hệ mà không ai đứng ra làm thủ tục.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ tư: Không biết con nuôi, con riêng cũng thuộc hàng thừa kế thứ nhất. Nếu ông Tư có con nuôi hợp pháp, người đó cũng được chia phần bằng con đẻ. Bỏ sót người thừa kế sẽ khiến hồ sơ công chứng bị từ chối.
+{{pause:scene}}
+
+@@narrator
+Nếu gia đình bạn đang có đất do cha mẹ để lại mà chưa làm thủ tục thừa kế — đừng chờ. Thời gian càng lâu, giấy tờ càng khó, người thừa kế càng đông, và tranh chấp càng phức tạp.
+{{pause:paragraph}}
+
+@@narrator
+Đất đai không chia theo tình cảm, không chia theo vai vế trong gia đình. Luật quy định rõ: cùng hàng thừa kế thì chia đều. Con trai, con gái, con trưởng, con út — quyền lợi như nhau.
+{{pause:paragraph}}
+
+@@narrator
+Hãy đến Văn phòng Công chứng, mang đủ giấy tờ, và làm cho đúng. Chi phí chỉ một đến hai triệu đồng — nhưng giá trị mà nó bảo vệ có thể là cả tỷ đồng.
+{{pause:scene}}
+
+@@narrator
+Cảm ơn bạn đã lắng nghe Góc Luật Đời Thường. Nếu bạn cần tư vấn, liên hệ Vi-ba-law.

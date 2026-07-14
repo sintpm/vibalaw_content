@@ -1,0 +1,72 @@
+# Mua đất chưa có sổ đỏ — rủi ro mất trắng nếu không biết điều này
+
+@@narrator
+Chào bạn, Góc Luật Đời Thường. Hôm nay mình sẽ kể một tình huống mà rất nhiều người đang gặp.
+{{pause:scene}}
+
+@@narrator
+Anh Thành ở Long An dành dụm được 800 triệu đồng, quyết định mua một miếng đất nền để xây nhà cho gia đình. Người bán là hàng xóm quen biết, đất đã ở từ lâu nhưng chưa có sổ đỏ. Hai bên viết giấy tay, anh Thành thanh toán đủ 800 triệu. Ba năm sau, khu đất nằm trong quy hoạch mở đường. Nhà nước thu hồi đất, tiền đền bù — người bán nhận. Anh Thành mất trắng 800 triệu, không đòi lại được đồng nào vì giấy tay không có giá trị pháp lý.
+{{pause:paragraph}}
+
+@@narrator
+Câu chuyện của anh Thành không hiếm. Rất nhiều người vì ham đất rẻ, tin người quen, mà bỏ qua một nguyên tắc cơ bản: đất chưa có sổ đỏ thì không được phép mua bán.
+{{pause:scene}}
+
+@@narrator
+Vậy luật quy định thế nào? Luật Đất đai 2024 quy định rất rõ: muốn chuyển nhượng quyền sử dụng đất, người bán phải có Giấy chứng nhận quyền sử dụng đất — tức là sổ đỏ hoặc sổ hồng. Không có sổ thì không được bán. Đây là điều kiện bắt buộc, không có ngoại lệ cho giao dịch dân sự thông thường.
+{{pause:paragraph}}
+
+@@narrator
+Ngoài ra, Luật Đất đai 2024 cũng yêu cầu hợp đồng chuyển nhượng quyền sử dụng đất phải được công chứng hoặc chứng thực mới có hiệu lực. Nhưng khi đất chưa có sổ đỏ, không văn phòng công chứng nào chấp nhận công chứng hợp đồng. Nghĩa là hợp đồng mua bán — dù viết tay hay đánh máy đầy đủ — đều không có giá trị pháp lý.
+{{pause:paragraph}}
+
+@@narrator
+Và điều quan trọng nhất: quyền sử dụng đất chỉ được chuyển khi đã đăng ký vào sổ địa chính. Chưa đăng ký thì chưa phải chủ đất, dù đã trả tiền đầy đủ.
+{{pause:scene}}
+
+@@narrator
+Vậy nếu bạn đang muốn mua một miếng đất chưa có sổ đỏ, đây là những việc cần làm.
+{{pause:paragraph}}
+
+@@narrator
+Thứ nhất, tuyệt đối không thanh toán toàn bộ tiền khi đất chưa có sổ. Dù người bán là ai — người thân, hàng xóm, bạn bè — tiền đã chuyển rồi thì rất khó đòi lại.
+{{pause:paragraph}}
+
+@@narrator
+Thứ hai, kiểm tra xem đất có đủ điều kiện để được cấp sổ đỏ hay không. Liên hệ Văn phòng đăng ký đất đai hoặc Ủy ban nhân dân xã, phường nơi có đất để xác minh. Nếu đất đủ điều kiện, yêu cầu người bán hoàn tất thủ tục cấp sổ trước, rồi mới tiến hành mua bán.
+{{pause:paragraph}}
+
+@@narrator
+Thứ ba, khi đã có sổ đỏ, hai bên ký hợp đồng chuyển nhượng tại văn phòng công chứng, sau đó đăng ký sang tên tại Văn phòng đăng ký đất đai trong vòng 30 ngày kể từ ngày công chứng.
+{{pause:paragraph}}
+
+@@narrator
+Thứ tư, nếu vì lý do nào đó bạn vẫn muốn mua đất chưa có sổ, hãy hiểu rằng bạn đang chấp nhận rủi ro rất lớn. Trong trường hợp này, ít nhất hãy lập hợp đồng đặt cọc có công chứng, ghi rõ điều kiện: khi nào người bán có sổ thì hai bên sẽ hoàn tất giao dịch chuyển nhượng.
+{{pause:scene}}
+
+@@narrator
+Bây giờ mình nói đến những sai lầm phổ biến mà rất nhiều người mắc phải.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ nhất: tin vào "giấy viết tay có người làm chứng là đủ". Từ năm 2025, mua bán đất bằng giấy viết tay hoàn toàn không được pháp luật công nhận. Dù có 10 người làm chứng, tòa án vẫn có thể tuyên hợp đồng vô hiệu.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ hai: nghĩ rằng "lập vi bằng thay sổ đỏ". Vi bằng chỉ ghi nhận sự kiện, hành vi — không phải văn bản pháp lý thay thế công chứng. Mua đất bằng vi bằng cũng tiềm ẩn rủi ro mất trắng.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ ba: mua đất rồi xây nhà, nghĩ rằng "ở lâu thành của mình". Thực tế, nếu đất bị thu hồi hoặc có tranh chấp, bạn không được bồi thường vì không phải chủ sử dụng đất hợp pháp. Thậm chí, theo Nghị định 123/2024, cá nhân chuyển nhượng đất không đủ điều kiện còn bị phạt từ 30 triệu đến 50 triệu đồng.
+{{pause:scene}}
+
+@@narrator
+Câu chuyện của anh Thành là lời cảnh tỉnh cho tất cả những ai đang có ý định mua đất chưa có sổ đỏ. Đất rẻ bao nhiêu cũng không đáng nếu mất trắng. Một nguyên tắc duy nhất bạn cần nhớ: không có sổ đỏ, không mua bán.
+{{pause:paragraph}}
+
+@@narrator
+Nếu bạn hoặc người thân đang trong tình huống tương tự — đã lỡ mua đất chưa có sổ, hoặc đang cân nhắc mua — hãy dừng lại, tìm hiểu kỹ pháp lý, và tham khảo ý kiến luật sư trước khi quyết định. Bảo vệ tài sản của mình bằng pháp luật, đừng bảo vệ bằng niềm tin.
+{{pause:scene}}
+
+@@narrator
+Cảm ơn bạn đã lắng nghe Góc Luật Đời Thường. Nếu bạn cần tư vấn, liên hệ Vi-ba-law.

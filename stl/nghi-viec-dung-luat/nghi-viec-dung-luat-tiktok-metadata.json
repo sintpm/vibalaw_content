@@ -1,0 +1,24 @@
+{
+  "title_vi": "Nghỉ việc đúng luật — Bao nhiêu ngày báo trước?",
+  "topic": "Lao động — Đơn phương chấm dứt hợp đồng lao động",
+  "legal_basis": "Điều 35, Điều 40 Bộ luật Lao động 2019; Nghị định 145/2020/NĐ-CP",
+  "type": "single",
+  "channels": ["STL"],
+  "primary_channel": "STL",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng",
+  "provider": "vbee",
+  "speed": 1.1,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "stl/nghi-viec-dung-luat/audio/nghi-viec-dung-luat.mp3",
+      "duration_minutes": 2.8,
+      "title": "Nghỉ việc báo trước 30 ngày là đủ? Sai — có thể phải bồi thường",
+      "description": "Tùy loại hợp đồng, bạn phải báo trước 3, 30, 45 hoặc 120 ngày. Báo thiếu ngày là vi phạm — mất trợ cấp, phải đền tiền.",
+      "hook_quote": "Hợp đồng không thời hạn phải báo trước 45 ngày — không phải 30 ngày như nhiều người tưởng",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #nghiviec #luatlaodong"
+    }
+  ]
+}

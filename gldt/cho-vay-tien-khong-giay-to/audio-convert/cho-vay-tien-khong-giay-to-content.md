@@ -1,0 +1,80 @@
+# Cho vay tiền không giấy tờ — đòi lại được không?
+
+@@narrator
+Chào bạn, đây là Góc Luật Đời Thường. Câu chuyện hôm nay có thể xảy ra với bất kỳ ai.
+{{pause:scene}}
+
+@@narrator
+Nhiều người nghĩ rằng cho bạn vay tiền mà không có giấy tờ thì coi như mất. Không giấy vay nợ, không hợp đồng, không chữ ký — kiện kiểu gì? Sự thật hoàn toàn ngược lại.
+{{pause:paragraph}}
+
+@@narrator
+Anh Khoa cho bạn thân vay 150 triệu đồng. Hai người quen nhau hơn 10 năm, nên anh chuyển khoản thẳng mà không viết giấy gì. Đến hạn, người bạn lờ đi, chặn số, rồi nói: "Có giấy tờ gì đâu mà đòi?" Anh Khoa tưởng mình mất trắng. Nhưng thực tế, anh vẫn có cơ sở pháp lý để đòi lại tiền — và cơ hội thắng kiện không hề thấp.
+{{pause:scene}}
+
+@@narrator
+Bộ luật Dân sự 2015 quy định rất rõ: hợp đồng có thể được giao kết bằng lời nói, bằng văn bản, hoặc bằng hành vi cụ thể. Nghĩa là cho vay miệng, cho vay qua tin nhắn, hay đơn giản là chuyển khoản — tất cả đều là hợp đồng hợp lệ.
+{{pause:paragraph}}
+
+@@narrator
+Nói cách khác, không có giấy tờ không đồng nghĩa với không có hợp đồng. Vấn đề chỉ là: bạn chứng minh được không?
+{{pause:paragraph}}
+
+@@narrator
+Và đây là điều nhiều người không ngờ — chứng cứ nằm ngay trong điện thoại, trong tài khoản ngân hàng, trong những cuộc trò chuyện hàng ngày.
+{{pause:scene}}
+
+@@narrator
+Thứ nhất — Sao kê chuyển khoản ngân hàng. Đây là bằng chứng mạnh nhất. Bộ luật Tố tụng Dân sự 2015 công nhận dữ liệu điện tử là nguồn chứng cứ hợp pháp. Nếu nội dung chuyển khoản ghi "cho vay", gần như không thể chối cãi. Ngay cả khi nội dung để trống, bên nhận tiền phải giải thích được lý do họ nhận số tiền đó.
+{{pause:paragraph}}
+
+@@narrator
+Thứ hai — Tin nhắn Zalo, SMS, Messenger, email. Luật Giao dịch điện tử 2023 quy định: thông điệp dữ liệu không bị phủ nhận giá trị pháp lý chỉ vì ở dạng điện tử. Một tin nhắn kiểu "tháng sau anh trả" hay "cho mượn thêm 50 triệu" có thể có giá trị ngang giấy vay nợ.
+{{pause:paragraph}}
+
+@@narrator
+Thứ ba — Vi bằng Thừa phát lại. Nếu bạn có tin nhắn xác nhận nợ nhưng sợ đối phương xóa, hãy lập vi bằng ngay. Thừa phát lại sẽ ghi nhận nội dung tin nhắn tại thời điểm lập — giá trị pháp lý cao hơn nhiều so với ảnh chụp màn hình.
+{{pause:paragraph}}
+
+@@narrator
+Thứ tư — Ghi âm cuộc gọi. Nếu bạn ghi âm cuộc trò chuyện mà đối phương thừa nhận khoản vay, bản ghi âm này được tòa chấp nhận nếu thu thập hợp pháp.
+{{pause:paragraph}}
+
+@@narrator
+Thứ năm — Nhân chứng. Người biết về khoản vay, có mặt lúc giao tiền — lời khai của họ là chứng cứ bổ trợ có giá trị.
+{{pause:scene}}
+
+@@narrator
+Khi đã có chứng cứ, bạn nộp đơn khởi kiện tại Tòa án nhân dân cấp huyện nơi người vay cư trú. Tòa thụ lý trong 5 ngày làm việc. Thời gian giải quyết thường từ 4 đến 6 tháng. Án phí dân sự tính theo giá trị tranh chấp — ví dụ khoản vay 100 triệu, tạm ứng án phí khoảng 2,5 triệu đồng. Nếu thắng kiện, bên thua chịu toàn bộ.
+{{pause:paragraph}}
+
+@@narrator
+Một điều rất quan trọng: thời hiệu khởi kiện tranh chấp hợp đồng là 3 năm kể từ ngày đến hạn trả. Nhưng theo Bộ luật Dân sự 2015, yêu cầu bảo vệ quyền sở hữu không bị giới hạn thời hiệu. Nghĩa là quá 3 năm bạn vẫn đòi được nợ gốc — chỉ mất quyền đòi tiền lãi.
+{{pause:scene}}
+
+@@narrator
+Tuy nhiên, có những sai lầm mà rất nhiều người mắc phải.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ nhất: Cho vay bằng tiền mặt mà không chuyển khoản, không nhắn tin xác nhận. Không có dấu vết — gần như không thể chứng minh.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ hai: Xóa tin nhắn khi mâu thuẫn xảy ra. Nhiều người xóa lịch sử chat vì tức giận — chính là đang tự xóa chứng cứ của mình.
+{{pause:paragraph}}
+
+@@narrator
+Sai lầm thứ ba: Đòi nợ bằng cách đe dọa, xúc phạm, hoặc đến nhà gây rối. Hành vi này có thể khiến bạn bị truy cứu hình sự, dù bạn là người cho vay.
+{{pause:scene}}
+
+@@narrator
+Quay lại câu chuyện anh Khoa. Anh có sao kê chuyển khoản 150 triệu, có tin nhắn người bạn hứa "cuối tháng trả". Anh nộp đơn khởi kiện, tòa thụ lý, và anh thắng kiện.
+{{pause:paragraph}}
+
+@@narrator
+Nếu bạn đang trong tình huống tương tự — đừng vội nghĩ là mất. Kiểm tra lại tin nhắn, sao kê ngân hàng, mọi dấu vết liên quan. Và nhớ: lần sau cho ai vay, dù thân đến mấy — hãy chuyển khoản, ghi rõ nội dung, giữ lại tin nhắn xác nhận. Đó không phải thiếu tin tưởng — đó là bảo vệ cả hai bên.
+{{pause:scene}}
+
+@@narrator
+Hy vọng câu chuyện hôm nay giúp bạn tránh được những sai lầm không đáng có. Nội dung từ Vi-ba-law.

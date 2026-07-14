@@ -1,0 +1,24 @@
+{
+  "title_vi": "Đặt cọc mua đất — mất cọc khi nào?",
+  "topic": "Đất đai — Hợp đồng đặt cọc",
+  "legal_basis": "Điều 328 BLDS 2015; Điều 45 LĐĐ 2024; Án lệ 79/2025/AL",
+  "type": "single",
+  "channels": ["GLDT"],
+  "primary_channel": "GLDT",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng",
+  "provider": "vbee",
+  "speed": 1.1,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "gldt/dat-coc-mua-dat/audio/dat-coc-mua-dat.mp3",
+      "duration_minutes": 3.8,
+      "title": "Đặt cọc 200 triệu mua đất, bên bán biến mất — lấy lại được không?",
+      "description": "Chị Phương đặt cọc 200 triệu, đến ngày hẹn bên bán bán đất cho người khác. Mất cọc hay đòi gấp đôi? Khi nào không bị phạt cọc?",
+      "hook_quote": "Bên bán bỏ cọc 300 triệu, bị Tòa buộc đền 3 tỉ đồng vì hợp đồng ghi phạt gấp mười",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #datcoc #muadat"
+    }
+  ]
+}

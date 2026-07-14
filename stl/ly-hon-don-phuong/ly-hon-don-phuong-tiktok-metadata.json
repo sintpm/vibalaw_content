@@ -1,0 +1,24 @@
+{
+  "title_vi": "Ly hôn đơn phương — Chồng hoặc vợ không chịu ký đơn thì sao?",
+  "topic": "Hôn nhân gia đình",
+  "legal_basis": "Điều 56 Luật HN&GĐ 2014; BLTTDS 2015; NQ 01/2024/NQ-HĐTP",
+  "type": "single",
+  "channels": ["STL"],
+  "primary_channel": "STL",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng",
+  "provider": "vbee",
+  "speed": 1.0,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "stl/ly-hon-don-phuong/audio/ly-hon-don-phuong.mp3",
+      "duration_minutes": 4.6,
+      "title": "Bị bác đơn ly hôn đơn phương — phải chờ 1 năm mới nộp lại. Chuẩn bị sao cho đúng?",
+      "description": "Chồng hoặc vợ không chịu ký đơn? Bạn vẫn có thể ly hôn đơn phương. Nhưng thiếu chứng cứ, Tòa sẽ bác đơn — và bạn phải chờ cả năm.",
+      "hook_quote": "Tòa bác đơn ly hôn đơn phương — phải chờ đúng 1 năm mới được nộp lại",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #lyhon #lyhondonphuong"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title_vi": "Hàng xóm xây tường lấn sang đất nhà bạn — bạn sẽ làm gì?",
+  "topic": "Đất đai — Tranh chấp ranh giới",
+  "legal_basis": "Luật Đất đai 2024; Bộ luật Dân sự 2015; Nghị định 123/2024/NĐ-CP",
+  "type": "single",
+  "channels": ["GLDT"],
+  "primary_channel": "GLDT",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng",
+  "provider": "vbee",
+  "speed": 1.1,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "gldt/hang-xom-lan-dat/audio/hang-xom-lan-dat.mp3",
+      "duration_minutes": null,
+      "title": "Hàng xóm lấn đất 30 phân — đập tường hay kiện? Đáp án đúng luật ở đây",
+      "description": "Anh Phong phát hiện hàng xóm xây tường lấn đất. Nóng giận định đập — may mà dừng kịp. 5 bước xử lý đúng luật, tránh bị kiện ngược.",
+      "hook_quote": "Tự ý đập tường hàng xóm dù họ lấn đất — bạn lại là người vi phạm",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #datdai #tranhchapdat"
+    }
+  ]
+}

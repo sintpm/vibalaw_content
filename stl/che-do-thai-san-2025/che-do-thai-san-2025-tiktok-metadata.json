@@ -1,0 +1,24 @@
+{
+  "title_vi": "Chế độ thai sản từ 1/7/2025 — 6 thay đổi quan trọng nhất",
+  "topic": "Lao động — Chế độ thai sản",
+  "legal_basis": "Luật BHXH 2024; Luật Dân số 2025",
+  "type": "single",
+  "channels": ["STL"],
+  "primary_channel": "STL",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng",
+  "provider": "vbee",
+  "speed": 1.0,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "stl/che-do-thai-san-2025/audio/che-do-thai-san-2025.mp3",
+      "duration_minutes": 4.4,
+      "title": "BHXH tự nguyện lần đầu được hưởng thai sản — và 5 thay đổi nữa từ 1/7/2025",
+      "description": "Luật BHXH 2024 thay đổi hàng loạt chế độ thai sản. Lao động tự do được hưởng 2 triệu/con, cha nghỉ trong 60 ngày, khám thai nghỉ 2 ngày mỗi lần.",
+      "hook_quote": "Lần đầu tiên, BHXH tự nguyện được hưởng thai sản — 2 triệu đồng/con",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #thaisan #bhxh"
+    }
+  ]
+}

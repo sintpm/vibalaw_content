@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLDT-25 — So sánh nội dung: Bản gốc vs Luật sư sửa</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', -apple-system, sans-serif; background: #f5f5f5; color: #333; line-height: 1.7; }
+
+  .header { background: linear-gradient(135deg, #1a5632, #2d8a56); color: white; padding: 32px 24px; text-align: center; }
+  .header h1 { font-size: 22px; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; opacity: 0.85; }
+  .header .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 12px; font-size: 12px; margin-top: 8px; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 20px 16px; }
+
+  .summary-box { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .summary-box h2 { font-size: 16px; color: #1a5632; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e8f5e9; }
+
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  .stat-card { background: #f8faf8; border-radius: 8px; padding: 14px; text-align: center; }
+  .stat-card .label { font-size: 12px; color: #666; margin-bottom: 4px; }
+  .stat-card .value { font-size: 20px; font-weight: 700; }
+  .stat-card .value.green { color: #2d8a56; }
+  .stat-card .value.red { color: #d32f2f; }
+  .stat-card .value.orange { color: #e65100; }
+  .stat-card .note { font-size: 11px; color: #999; margin-top: 2px; }
+
+  .verdict { padding: 12px 16px; border-radius: 8px; font-size: 14px; margin-top: 12px; }
+  .verdict.warn { background: #fff3e0; border-left: 4px solid #ff9800; color: #e65100; }
+
+  .section { background: white; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
+  .section-header { padding: 16px 20px; cursor: pointer; display: flex; align-items: center; gap: 10px; }
+  .section-header:hover { background: #f8faf8; }
+  .section-header .icon { font-size: 18px; }
+  .section-header h3 { font-size: 15px; flex: 1; }
+  .section-header .tag { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+  .tag.apply { background: #e8f5e9; color: #2e7d32; }
+  .tag.adjust { background: #fff3e0; color: #e65100; }
+  .tag.reject { background: #fce4ec; color: #c62828; }
+  .tag.info { background: #e3f2fd; color: #1565c0; }
+
+  .section-body { padding: 0 20px 20px; }
+
+  .diff-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+  .diff-table th { text-align: left; padding: 8px 10px; background: #f5f5f5; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #888; border-bottom: 1px solid #e0e0e0; }
+  .diff-table td { padding: 10px; vertical-align: top; border-bottom: 1px solid #f0f0f0; }
+  .diff-table tr:last-child td { border-bottom: none; }
+
+  .col-original { background: #fff8f8; width: 42%; }
+  .col-revised { background: #f8fff8; width: 42%; }
+  .col-verdict { width: 16%; text-align: center; }
+
+  .highlight { background: #fff9c4; padding: 1px 3px; border-radius: 2px; }
+  .added { background: #c8e6c9; padding: 1px 3px; border-radius: 2px; }
+  .removed { background: #ffcdd2; padding: 1px 3px; border-radius: 2px; text-decoration: line-through; }
+
+  .note-box { font-size: 13px; padding: 10px 14px; border-radius: 8px; margin-top: 10px; }
+  .note-box.green { background: #e8f5e9; border-left: 3px solid #4caf50; }
+  .note-box.orange { background: #fff3e0; border-left: 3px solid #ff9800; }
+  .note-box.red { background: #fce4ec; border-left: 3px solid #ef5765; }
+  .note-box.blue { background: #e3f2fd; border-left: 3px solid #2196f3; }
+
+  .quote { font-style: italic; color: #555; padding: 8px 14px; border-left: 3px solid #ddd; margin: 8px 0; font-size: 13px; background: #fafafa; border-radius: 0 6px 6px 0; }
+
+  .action-list { list-style: none; padding: 0; }
+  .action-list li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; display: flex; align-items: flex-start; gap: 8px; }
+  .action-list li:last-child { border-bottom: none; }
+  .action-list .bullet { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; margin-top: 1px; }
+  .bullet.green { background: #e8f5e9; color: #2e7d32; }
+  .bullet.orange { background: #fff3e0; color: #e65100; }
+  .bullet.red { background: #fce4ec; color: #c62828; }
+
+  .footer { text-align: center; padding: 24px; font-size: 12px; color: #999; }
+
+  .question-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px; margin-top: 12px; }
+  .question-box h4 { font-size: 13px; color: #7b1fa2; margin-bottom: 8px; }
+  .question-box ul { padding-left: 18px; font-size: 13px; }
+  .question-box li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>GLDT-25 — Cho vay tien khong giay to</h1>
+  <div class="subtitle">So sanh ban goc vs Ban luat su da sua</div>
+  <div class="badge">Ngay: 2026-07-14 &nbsp;|&nbsp; Kenh: GLDT — Goc Luat Doi Thuong</div>
+</div>
+
+<div class="container">
+
+  <!-- TỔNG QUAN -->
+  <div class="summary-box">
+    <h2>Tong quan thay doi</h2>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="label">Ban goc</div>
+        <div class="value green">~530 tu</div>
+        <div class="note">~3.2 phut (OK)</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Ban luat su sua</div>
+        <div class="value red">~780 tu</div>
+        <div class="note">~4.7 phut (VUOT GIOI HAN)</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Can ap dung</div>
+        <div class="value green">8 diem</div>
+        <div class="note">Chinh xac hon, bo sung can cu</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Can trao doi</div>
+        <div class="value orange">4 diem</div>
+        <div class="note">Do dai, slogan, thong tin mat</div>
+      </div>
+    </div>
+    <div class="verdict warn">
+      <strong>Luu y:</strong> Ban luat su sua chinh xac hon ve phap ly nhung dai qua (~780 tu). Gioi han audio TikTok la 580 tu / 3.5 phut. Can cat giam ~200 tu truoc khi san xuat audio.
+    </div>
+  </div>
+
+  <!-- 1. MỞ ĐẦU -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">1.</span>
+      <h3>Mo dau / Tinh huong</h3>
+      <span class="tag adjust">Can dieu chinh</span>
+    </div>
+    <div class="section-body">
+      <table class="diff-table">
+        <tr>
+          <th class="col-original">Ban goc</th>
+          <th class="col-revised">Luat su sua</th>
+          <th class="col-verdict">Danh gia</th>
+        </tr>
+        <tr>
+          <td class="col-original">
+            Nhieu nguoi nghi rang cho ban vay tien ma khong co giay to thi coi nhu mat. Khong giay vay no, khong hop dong, khong chu ky — kien kieu gi? <strong>Su that hoan toan nguoc lai.</strong>
+          </td>
+          <td class="col-revised">
+            <span class="added">Chao ban, day la Goc Luat Doi Thuong. Hom nay la mot buc tranh cuc ky huu ich ve giao dich cho vay ma ban can phai biet.</span><br><br>
+            Nhieu nguoi nghi rang cho ban vay tien ma khong co giay to thi coi nhu mat. Khong giay vay no, khong hop dong, khong chu ky — kien kieu gi? <span class="highlight">Su that doi khi nhung can cu quan trong khong nam o giay to hay bat buoc can co chu ky.</span> <span class="added">Day la kien thuc huu ich ban can bo tui de phong ho nhung tinh huong khi co ban be, nguoi quen vay muon tien ma khong co giay to day du.</span>
+          </td>
+          <td class="col-verdict"><span class="tag adjust">Dieu chinh</span></td>
+        </tr>
+      </table>
+
+      <div class="note-box orange">
+        <strong>Van de:</strong><br>
+        - Intro "Chao ban, day la Goc Luat Doi Thuong" &rarr; khong de trong content.md (xu ly rieng trong audio-convert)<br>
+        - "Su that hoan toan nguoc lai" (ban goc) hook manh hon "Su that doi khi..." (ban sua)<br>
+        - Doan "Day la kien thuc huu ich ban can bo tui..." them ~30 tu nhung khong them gia tri moi
+      </div>
+
+      <div class="question-box">
+        <h4>Cau hoi cho Luat su:</h4>
+        <ul>
+          <li>Dong y giu hook goc "Su that hoan toan nguoc lai" (ngan gon, manh) va bo doan dan dat dai khong?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. VẤN ĐỀ PHÁP LÝ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">2.</span>
+      <h3>Van de phap ly — Can cu luat</h3>
+      <span class="tag apply">Nen ap dung</span>
+    </div>
+    <div class="section-body">
+      <table class="diff-table">
+        <tr>
+          <th class="col-original">Ban goc</th>
+          <th class="col-revised">Luat su sua</th>
+          <th class="col-verdict">Danh gia</th>
+        </tr>
+        <tr>
+          <td class="col-original">
+            Bo luat Dan su 2015 quy dinh rat ro: hop dong co the duoc giao ket bang loi noi, bang van ban, hoac bang hanh vi cu the — <strong>theo Dieu 119.</strong>
+          </td>
+          <td class="col-revised">
+            Theo quy dinh tai <span class="added">Khoan 1</span> Dieu 119 Bo luat Dan su 2015 quy dinh rat ro: hop dong co the duoc giao ket bang loi noi, bang van ban, hoac bang hanh vi cu the.
+          </td>
+          <td class="col-verdict"><span class="tag apply">Ap dung</span></td>
+        </tr>
+        <tr>
+          <td class="col-original">
+            <em>(Khong co)</em>
+          </td>
+          <td class="col-revised">
+            <span class="added">Truong hop neu Giao dich dan su thong qua phuong tien dien tu duoi hinh thuc thong diep du lieu theo quy dinh cua phap luat ve giao dich dien tu duoc the hien thong qua hinh thuc quy dinh tai Dieu 7 Luat Giao dich dien tu 2023 duoc coi la giao dich bang van ban.</span>
+          </td>
+          <td class="col-verdict"><span class="tag apply">Ap dung</span></td>
+        </tr>
+      </table>
+
+      <div class="note-box green">
+        <strong>Danh gia:</strong> Ca 2 thay doi deu chinh xac hon.<br>
+        - Bo sung "Khoan 1" cho Dieu 119 &rarr; dan chieu cu the hon<br>
+        - Lien ket Dieu 7 Luat GDDT 2023 &rarr; giao dich dien tu = giao dich bang van ban la diem phap ly quan trong
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. CHỨNG CỨ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">3.</span>
+      <h3>5 loai chung cu — Bo sung can cu phap ly</h3>
+      <span class="tag apply">Nen ap dung</span>
+    </div>
+    <div class="section-body">
+      <table class="diff-table">
+        <tr>
+          <th style="width:20%">Loai chung cu</th>
+          <th class="col-original">Ban goc</th>
+          <th class="col-revised">Luat su sua</th>
+          <th class="col-verdict">Danh gia</th>
+        </tr>
+        <tr>
+          <td><strong>Sao ke CK</strong></td>
+          <td class="col-original">Dieu 94 BLTTDS 2015</td>
+          <td class="col-revised"><span class="added">Khoan 1</span> Dieu 94 BLTTDS 2015</td>
+          <td class="col-verdict"><span class="tag apply">OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tin nhan</strong></td>
+          <td class="col-original">Luat GDDT 2023 (khong neu dieu)</td>
+          <td class="col-revised"><span class="added">Dieu 7</span> Luat GDDT 2023</td>
+          <td class="col-verdict"><span class="tag apply">OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tin nhan</strong> (dien dat)</td>
+          <td class="col-original">"co gia tri <span class="removed">ngang giay vay no</span>"</td>
+          <td class="col-revised">"<span class="added">co the co gia tri nhu mot loi xac nhan vay no</span>"</td>
+          <td class="col-verdict"><span class="tag apply">OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Vi bang</strong></td>
+          <td class="col-original">Mo ta ngan gon</td>
+          <td class="col-revised">Them: <span class="added">"can danh gia chi tiet noi dung can lap, tranh viec bo sot y hay qua du thua"</span></td>
+          <td class="col-verdict"><span class="tag apply">OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Ghi am</strong></td>
+          <td class="col-original">"duoc toa chap nhan neu thu thap hop phap"</td>
+          <td class="col-revised">Bo sung: <span class="added">Khoan 2 Dieu 95 BLTTDS 2015</span></td>
+          <td class="col-verdict"><span class="tag apply">OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Nhan chung</strong></td>
+          <td class="col-original">Khong neu dieu luat</td>
+          <td class="col-revised">Bo sung: <span class="added">Khoan 5 Dieu 95 BLTTDS 2015</span></td>
+          <td class="col-verdict"><span class="tag apply">OK</span></td>
+        </tr>
+      </table>
+
+      <div class="note-box green">
+        <strong>Danh gia:</strong> Tat ca deu chinh xac hon — bo sung so khoan/dieu cu the, dien dat than trong hon ("co the co gia tri" thay vi "ngang giay vay no"). Nen ap dung toan bo.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. THỜI HIỆU — THAY ĐỔI LỚN NHẤT -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">4.</span>
+      <h3>Thoi hieu khoi kien — THAY DOI LON NHAT</h3>
+      <span class="tag apply">Nen ap dung</span>
+    </div>
+    <div class="section-body">
+      <table class="diff-table">
+        <tr>
+          <th class="col-original">Ban goc</th>
+          <th class="col-revised">Luat su sua</th>
+        </tr>
+        <tr>
+          <td class="col-original">
+            Thoi hieu khoi kien tranh chap hop dong la <strong>3 nam</strong> ke tu ngay den han tra. Nhung theo BLDS 2015, <span class="removed">Dieu 155, yeu cau bao ve quyen so huu khong bi gioi han thoi hieu.</span> Nghia la qua 3 nam ban van doi duoc no goc — chi mat quyen doi tien lai.
+          </td>
+          <td class="col-revised">
+            Theo <span class="added">Dieu 429 Bo luat Dan su 2015</span> thoi hieu khoi kien tranh chap hop dong vay se duoc hieu la <strong>3 nam</strong> ke tu ngay ma ban biet quyen va loi ich hop phap cua minh bi xam hai (ngay den han tra ma ho khong tra tien). Trong truong hop het thoi hieu khoi kien doi no thi ben cho vay no van co the khoi kien doi tra lai khoan tien no goc <span class="added">tuy nhien quyen loi cua ban da bi han che di rat nhieu nen hay dac biet ghi nho moc thoi gian nay.</span>
+          </td>
+        </tr>
+      </table>
+
+      <div class="note-box green">
+        <strong>Danh gia — Chinh xac hon:</strong><br>
+        - <strong>Dieu 429</strong> la can cu dung cho thoi hieu hop dong vay. Ban goc dung <strong>Dieu 155</strong> (bao ve quyen so huu) — co the gay tranh cai vi quan he vay la quan he nghia vu, khong phai so huu<br>
+        - Dien dat "quyen loi bi han che di rat nhieu" than trong hon "chi mat quyen doi tien lai"<br>
+        - <strong>Nen ap dung thay doi nay</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. THỦ TỤC KHỞI KIỆN -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">5.</span>
+      <h3>Thu tuc khoi kien — Mat thong tin cu the</h3>
+      <span class="tag adjust">Can trao doi</span>
+    </div>
+    <div class="section-body">
+      <table class="diff-table">
+        <tr>
+          <th class="col-original">Ban goc (chi tiet)</th>
+          <th class="col-revised">Luat su sua (gon)</th>
+        </tr>
+        <tr>
+          <td class="col-original">
+            Ban nop don khoi kien tai <strong>Toa an nhan dan cap huyen noi nguoi vay cu tru</strong>. Toa thu ly trong <strong>5 ngay lam viec</strong>. Thoi gian giai quyet thuong tu <strong>4 den 6 thang</strong>. An phi dan su tinh theo gia tri tranh chap — vi du khoan vay 100 trieu, tam ung an phi khoang <strong>2,5 trieu dong</strong>. Neu thang kien, ben thua chiu toan bo.
+          </td>
+          <td class="col-revised">
+            Ban nop hoan toan co the tu minh hoac nho Luat su nop don khoi kien yeu cau tai <strong>Toa an nhan dan co tham quyen</strong> de giai quyet.
+          </td>
+        </tr>
+      </table>
+
+      <div class="note-box orange">
+        <strong>Van de:</strong> Ban goc co thong tin rat thuc te (toa cap huyen, 5 ngay thu ly, 4-6 thang, an phi 2.5 trieu/100 trieu). Ban sua bo het, chi ghi chung chung "TAND co tham quyen".<br><br>
+        Con so cu the giup nguoi nghe hinh dung duoc quy trinh, la diem manh cua ban goc.
+      </div>
+
+      <div class="question-box">
+        <h4>Cau hoi cho Luat su:</h4>
+        <ul>
+          <li>Co nen giu lai thong tin "toa cap huyen noi nguoi vay cu tru, thu ly 5 ngay, 4-6 thang, an phi ~2.5 trieu/100 trieu" khong? Day la thong tin rat huu ich cho nguoi nghe.</li>
+          <li>Hay Luat su thay thong tin nay khong chinh xac / co the gay hieu nham nen bo?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. SAI LẦM PHỔ BIẾN -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">6.</span>
+      <h3>Sai lam pho bien</h3>
+      <span class="tag apply">Nen ap dung</span>
+    </div>
+    <div class="section-body">
+      <table class="diff-table">
+        <tr>
+          <th style="width:10%">#</th>
+          <th class="col-original">Ban goc</th>
+          <th class="col-revised">Luat su sua</th>
+          <th class="col-verdict">Danh gia</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td class="col-original">Cho vay bang tien mat ma khong chuyen khoan, khong nhan tin xac nhan</td>
+          <td class="col-revised">Cho vay bang tien mat ma khong phai la chuyen khoan, cung khong co bat ky nhan tin xac nhan</td>
+          <td class="col-verdict"><span class="tag info">Tuong duong</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="col-original">Giu nguyen</td>
+          <td class="col-revised">Giu nguyen</td>
+          <td class="col-verdict"><span class="tag apply">OK</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="col-original">"de doa, xuc pham, hoac den nha gay roi" + "bi truy cuu hinh su, du ban la nguoi cho vay"</td>
+          <td class="col-revised">Them: <span class="added">"tac dong vat ly doi phuong"</span> + <span class="added">"ban dang la ben dung bong thanh sai"</span></td>
+          <td class="col-verdict"><span class="tag apply">Hay hon</span></td>
+        </tr>
+      </table>
+
+      <div class="note-box green">
+        <strong>Danh gia:</strong> Sai lam thu 3 dien dat hay hon — "ban dang la ben dung bong thanh sai" rat de hieu va tao an tuong manh.
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. KẾT BÀI -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">7.</span>
+      <h3>Ket bai</h3>
+      <span class="tag adjust">Can trao doi</span>
+    </div>
+    <div class="section-body">
+      <table class="diff-table">
+        <tr>
+          <th class="col-original">Ban goc</th>
+          <th class="col-revised">Luat su sua</th>
+        </tr>
+        <tr>
+          <td class="col-original">
+            Neu ban dang trong tinh huong tuong tu — dung voi nghi la mat. Kiem tra lai tin nhan, sao ke ngan hang, moi dau vet lien quan. Va nho: lan sau cho ai vay, du than den may — hay chuyen khoan, ghi ro noi dung, giu lai tin nhan xac nhan. <strong>Do khong phai thieu tin tuong — do la bao ve ca hai ben.</strong>
+          </td>
+          <td class="col-revised">
+            Khi cho vay tien, du than den may — hay chuyen khoan, ghi ro noi dung, giu lai tin nhan xac nhan. <strong>Do khong phai thieu tin tuong — do la bao ve ca hai ben truoc nhung tranh cai khi "tri nho" moi ben khong giong nhau hoac don gian la bao ve ban than khi rui ro xay ra, chung ta van hoan toan co the chung minh duoc.</strong><br><br>
+            <span class="added">Hy vong cau chuyen hom nay giup co them kien thuc de phong ngua rui ro trong viec cho vay va tranh duoc nhung sai lam khong dang co. Neu can duoc tu van sau hon ve giao dich vay - cho vay, hay lien he voi chung toi de duoc Luat su tu van day du chi tiet hon.</span><br><br>
+            <span class="added"><strong>Luat su vi ban — dong hanh cung ban!</strong></span>
+          </td>
+        </tr>
+      </table>
+
+      <div class="note-box green">
+        <strong>Diem hay:</strong> "bao ve ca hai ben truoc nhung tranh cai khi tri nho moi ben khong giong nhau" — giai thich "tai sao" phai lam, rat thuyet phuc.
+      </div>
+
+      <div class="note-box orange">
+        <strong>Can trao doi:</strong><br>
+        - Ban goc co doan <span class="removed">"dung voi nghi la mat. Kiem tra lai tin nhan, sao ke..."</span> — loi khuyen thuc te, rat huu ich. Ban sua bo mat doan nay.<br>
+        - CTA "Neu can tu van sau hon... hay lien he voi chung toi" &rarr; xu ly trong outro audio, khong can de trong content<br>
+        - <strong>"Luat su vi ban — dong hanh cung ban!"</strong> &rarr; day la slogan moi? Co dung cho Vibalaw khong?
+      </div>
+
+      <div class="question-box">
+        <h4>Cau hoi cho Luat su:</h4>
+        <ul>
+          <li>"Luat su vi ban — dong hanh cung ban!" la slogan chinh thuc muon dung cho Vibalaw khong? Hay chi la ket nganh chung?</li>
+          <li>Co nen giu lai loi khuyen "dung voi nghi la mat, kiem tra lai tin nhan, sao ke ngan hang" tu ban goc?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. VẤN ĐỀ ĐỘ DÀI -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">8.</span>
+      <h3>Van de do dai — VUOT GIOI HAN</h3>
+      <span class="tag reject">Can cat giam</span>
+    </div>
+    <div class="section-body">
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="label">Gioi han audio TikTok</div>
+          <div class="value green">&le; 580 tu</div>
+          <div class="note">~3.5 phut toi da</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Ban luat su sua</div>
+          <div class="value red">~780 tu</div>
+          <div class="note">Vuot ~200 tu</div>
+        </div>
+      </div>
+
+      <div class="note-box red">
+        <strong>Ban luat su sua dai ~780 tu, vuot gioi han 580 tu khoang 200 tu.</strong><br>
+        Audio se dai ~4.7 phut — qua dai cho TikTok (toi da 3.5 phut).<br><br>
+        <strong>De xuat cat giam:</strong><br>
+        - Bo doan dan dat mo dau (~50 tu)<br>
+        - Rut gon phan giao dich dien tu (gop vao Dieu 119, ~30 tu)<br>
+        - Rut gon phan vi bang (bo loi khuyen danh gia noi dung, ~25 tu)<br>
+        - Rut gon ket bai (bo CTA lien he + slogan, ~50 tu)<br>
+        - Rut gon cau van dai thanh cau ngan hon (~50 tu)
+      </div>
+
+      <div class="question-box">
+        <h4>Cau hoi cho Luat su:</h4>
+        <ul>
+          <li>Luat su dong y cat giam de ve duoi 580 tu khong?</li>
+          <li>Phan nao Luat su thay KHONG THE cat (bat buoc phai giu)?</li>
+          <li>Hay de AI cat giam roi gui lai Luat su duyet lan cuoi?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TỔNG KẾT HÀNH ĐỘNG -->
+  <div class="summary-box">
+    <h2>Tong ket — Hanh dong de xuat</h2>
+
+    <h4 style="color: #2e7d32; margin: 12px 0 8px;">Ap dung ngay (8 diem chinh xac hon):</h4>
+    <ul class="action-list">
+      <li><span class="bullet green">1</span> Bo sung "Khoan 1" cho Dieu 119 BLDS 2015</li>
+      <li><span class="bullet green">2</span> Bo sung Dieu 7 Luat GDDT 2023 — giao dich dien tu = giao dich bang van ban</li>
+      <li><span class="bullet green">3</span> Sua "co gia tri ngang giay vay no" &rarr; "co the co gia tri nhu mot loi xac nhan vay no" (than trong hon)</li>
+      <li><span class="bullet green">4</span> Bo sung Khoan 1 Dieu 94, Khoan 2 Dieu 95, Khoan 5 Dieu 95 BLTTDS 2015</li>
+      <li><span class="bullet green">5</span> Thoi hieu: dung Dieu 429 BLDS 2015 thay vi Dieu 155 (chinh xac hon)</li>
+      <li><span class="bullet green">6</span> Them luu y khi lap vi bang — danh gia noi dung, tranh bo sot</li>
+      <li><span class="bullet green">7</span> Sai lam 3: them "tac dong vat ly" + "ben dung bong thanh sai"</li>
+      <li><span class="bullet green">8</span> Ket bai: "bao ve ca hai ben truoc nhung tranh cai khi tri nho moi ben khong giong nhau"</li>
+    </ul>
+
+    <h4 style="color: #e65100; margin: 16px 0 8px;">Can Luat su xac nhan (4 diem):</h4>
+    <ul class="action-list">
+      <li><span class="bullet orange">1</span> <strong>Do dai:</strong> Dong y cat giam ve &le;580 tu? Phan nao bat buoc giu?</li>
+      <li><span class="bullet orange">2</span> <strong>Thu tuc khoi kien:</strong> Giu thong tin cu the (toa cap huyen, 5 ngay thu ly, an phi 2.5 trieu) hay bo?</li>
+      <li><span class="bullet orange">3</span> <strong>Slogan:</strong> "Luat su vi ban — dong hanh cung ban" la slogan chinh thuc?</li>
+      <li><span class="bullet orange">4</span> <strong>Ket bai:</strong> Giu loi khuyen "dung voi nghi la mat, kiem tra lai tin nhan" tu ban goc?</li>
+    </ul>
+
+    <h4 style="color: #c62828; margin: 16px 0 8px;">Khong ap dung:</h4>
+    <ul class="action-list">
+      <li><span class="bullet red">1</span> Intro "Chao ban, day la Goc Luat Doi Thuong" — xu ly rieng trong audio-convert, khong de trong content.md</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  Vibalaw — GLDT-25 Review | Tao boi AI, ngay 2026-07-14 | Gui Luat su duyet truoc khi cap nhat
+</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+# Hàng xóm xây tường lấn sang đất nhà bạn — bạn sẽ làm gì?
+
+@@narrator
+Chào bạn, Góc Luật Đời Thường. Hôm nay mình sẽ kể một tình huống mà rất nhiều người đang gặp.
+{{pause:scene}}
+
+@@narrator
+Hàng xóm xây tường rào lấn sang đất nhà bạn 30 phân. Bạn sẽ làm gì? Đập tường? Gọi công an? Hay kiện ra tòa?
+{{pause:paragraph}}
+
+@@narrator
+Anh Phong ở Long An phát hiện nhà hàng xóm — ông Bảy — đổ móng xây tường rào mới, lấn sang phần đất của anh khoảng 30 phân dọc theo chiều dài 15 mét. Anh Phong nói thì ông Bảy bảo: "Tôi xây đúng ranh giới, ông nhìn lại đi." Hai bên cãi nhau, không ai chịu ai. Anh Phong nóng giận, định thuê người đập tường. May mà vợ anh ngăn lại kịp — vì nếu tự ý đập, chính anh Phong lại bị kiện ngược.
+{{pause:paragraph}}
+
+@@narrator
+Vậy gặp chuyện này, xử lý thế nào cho đúng luật?
+{{pause:scene}}
+
+@@narrator
+Trước hết, cần phân biệt hai khái niệm: lấn đất và chiếm đất.
+{{pause:paragraph}}
+
+@@narrator
+Luật Đất đai 2024 định nghĩa rất rõ: lấn đất là khi người đang sử dụng đất tự ý dịch chuyển mốc giới hoặc ranh giới thửa đất để mở rộng diện tích. Còn chiếm đất là khi người không có quyền sử dụng đất lại tự ý sử dụng. Trường hợp ông Bảy xây tường lấn sang đất anh Phong — đó là lấn đất, thuộc hành vi bị nghiêm cấm theo Luật Đất đai 2024.
+{{pause:paragraph}}
+
+@@narrator
+Về ranh giới giữa hai thửa đất, Bộ luật Dân sự 2015 quy định: ranh giới được xác định theo thỏa thuận giữa hai bên, theo quyết định của cơ quan nhà nước, hoặc theo tập quán được thừa nhận. Nếu hai bên không thống nhất được ranh giới, có thể yêu cầu Tòa án xác định.
+{{pause:paragraph}}
+
+@@narrator
+Vậy ai đúng ai sai? Câu trả lời nằm ở kết quả đo đạc địa chính — không phải lời nói của bên nào.
+{{pause:scene}}
+
+@@narrator
+Bước 1: Thu thập chứng cứ ngay. Chụp ảnh, quay video hiện trạng — ghi rõ ngày giờ. Giữ sổ đỏ, bản đồ địa chính, hợp đồng mua bán. Nhờ hàng xóm khác làm nhân chứng nếu họ biết ranh giới đất từ trước.
+{{pause:paragraph}}
+
+@@narrator
+Bước 2: Yêu cầu đo đạc xác định ranh giới. Đây là bước quan trọng nhất. Liên hệ Văn phòng đăng ký đất đai hoặc cơ quan địa chính xã, huyện để yêu cầu đo đạc thực địa. Kết quả đo đạc là bằng chứng mạnh nhất, khách quan nhất — không ai cãi được.
+{{pause:paragraph}}
+
+@@narrator
+Bước 3: Hòa giải trực tiếp. Có kết quả đo đạc rồi thì nói chuyện với hàng xóm. Nếu hai bên đồng ý, lập biên bản thỏa thuận có chữ ký, tốt nhất có xác nhận của UBND xã.
+{{pause:paragraph}}
+
+@@narrator
+Bước 4: Hòa giải tại UBND xã — đây là bước bắt buộc. Nếu hàng xóm không chịu, nộp đơn yêu cầu hòa giải tại UBND xã nơi có đất. Theo Luật Đất đai 2024, bỏ qua bước này thì Tòa án có quyền trả đơn.
+{{pause:paragraph}}
+
+@@narrator
+UBND xã sẽ lập Hội đồng hòa giải gồm đại diện UBND, Mặt trận Tổ quốc, tổ dân phố, cán bộ địa chính. Thời hạn hòa giải tối đa 30 ngày. Kết quả được lập thành biên bản — hòa giải thành hoặc không thành.
+{{pause:paragraph}}
+
+@@narrator
+Bước 5: Khởi kiện ra Tòa án. Hòa giải không thành? Bạn có quyền khởi kiện dân sự tại Tòa án nhân dân cấp huyện. Tại đây, bạn có thể yêu cầu: buộc hàng xóm trả lại phần đất đã lấn, buộc tháo dỡ công trình xây trên đất lấn chiếm, và bồi thường thiệt hại nếu có.
+{{pause:paragraph}}
+
+@@narrator
+Lưu ý về thẩm quyền: nếu đất đã có sổ đỏ thì Tòa án giải quyết. Nếu đất chưa có sổ đỏ, bạn được chọn: kiện ra Tòa hoặc yêu cầu UBND cấp huyện giải quyết.
+{{pause:scene}}
+
+@@narrator
+Song song với các bước trên, bạn có thể tố cáo hành vi lấn đất lên UBND xã để xử phạt hành chính theo Nghị định 123/2024. Mức phạt với đất ở: từ 10 triệu đến 20 triệu đồng nếu diện tích lấn chiếm dưới 500 mét vuông. Diện tích lớn hơn, phạt có thể lên đến hàng trăm triệu. Ngoài phạt tiền, người vi phạm còn bị buộc khôi phục tình trạng ban đầu và trả lại đất. Quan trọng: bị phạt hành chính không miễn trừ trách nhiệm bồi thường dân sự.
+{{pause:scene}}
+
+@@narrator
+Có ba sai lầm phổ biến mà bạn cần tránh.
+{{pause:paragraph}}
+
+@@narrator
+Thứ nhất, tự ý đập phá công trình. Dù hàng xóm lấn đất thật, bạn tự ý phá tường thì bạn lại vi phạm pháp luật. Có thể bị kiện ngược về tội hủy hoại tài sản.
+{{pause:paragraph}}
+
+@@narrator
+Thứ hai, bỏ qua bước hòa giải tại xã. Nhiều người nóng vội kiện thẳng ra tòa. Tòa án sẽ trả đơn vì chưa qua hòa giải bắt buộc tại UBND xã.
+{{pause:paragraph}}
+
+@@narrator
+Thứ ba, không đo đạc địa chính. Chỉ dựa vào mắt thường hoặc nói rằng ngày xưa ranh giới ở chỗ kia thì không có giá trị pháp lý. Kết quả đo đạc mới là bằng chứng Tòa án chấp nhận.
+{{pause:scene}}
+
+@@narrator
+Quay lại câu chuyện anh Phong: sau khi vợ ngăn lại, anh làm đúng quy trình — yêu cầu đo đạc, kết quả cho thấy ông Bảy lấn đúng 30 phân. Hòa giải tại xã, ông Bảy buộc phải dỡ tường và xây lại đúng ranh giới. Không cần kiện, không tốn tiền tòa.
+{{pause:paragraph}}
+
+@@narrator
+Nếu bạn gặp tình huống tương tự, nhớ ba nguyên tắc: đo đạc trước — hòa giải trước — kiện là phương án cuối cùng. Đừng để nóng giận biến bạn từ người bị hại thành người vi phạm.
+{{pause:paragraph}}
+
+@@narrator
+Một điều nữa: tranh chấp đòi lại quyền sử dụng đất không có thời hiệu khởi kiện — nghĩa là bạn có thể kiện bất cứ lúc nào. Nhưng càng để lâu, chứng cứ càng khó thu thập. Vì vậy, phát hiện lấn đất thì xử lý ngay, đừng chần chừ.
+{{pause:scene}}
+
+@@narrator
+Cảm ơn bạn đã lắng nghe Góc Luật Đời Thường. Nếu bạn cần tư vấn, liên hệ Vi-ba-law.

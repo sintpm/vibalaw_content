@@ -1,0 +1,24 @@
+{
+  "title_vi": "Mất trắng 800 triệu vì mua đất giấy tay — bài học xương máu",
+  "topic": "Đất đai — Mua đất chưa có sổ đỏ",
+  "legal_basis": "Điều 45, Điều 27 Luật Đất đai 2024; Điều 129, 131 BLDS 2015; Án lệ 55/2022/AL",
+  "type": "single",
+  "channels": ["LSKC"],
+  "primary_channel": "LSKC",
+  "voice": "n_hanoi_male_namnhenhangamap_story_vc",
+  "voice_name": "Nam Nhẹ Nhàng",
+  "provider": "vbee",
+  "speed": 1.0,
+  "created_at": "2026-07-13",
+  "parts": [
+    {
+      "part": null,
+      "audio_file": "lskc/mua-dat-chua-co-so-do/audio/mua-dat-chua-co-so-do.mp3",
+      "duration_minutes": 4.05,
+      "title": "800 triệu mất trắng vì mua đất giấy tay — luật sư kể lại vụ việc đau lòng",
+      "description": "Anh công nhân dành dụm 10 năm mua đất không sổ đỏ. Người bán bán cho 3 người rồi bỏ trốn. Kết cục ra sao?",
+      "hook_quote": "800 triệu đồng. Mười năm tích cóp. Mất gần hết chỉ vì một tờ giấy viết tay.",
+      "tags": "#vibalaw #phapluat #tuvanphapluat #datdai #sodo"
+    }
+  ]
+}

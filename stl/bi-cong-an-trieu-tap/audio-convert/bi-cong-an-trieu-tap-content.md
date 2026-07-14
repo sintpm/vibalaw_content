@@ -1,0 +1,80 @@
+# Bị công an triệu tập — Quyền của bạn là gì?
+
+@@narrator
+Chào bạn, Sổ Tay Luật xin chia sẻ một kiến thức pháp luật rất thiết thực.
+{{pause:scene}}
+
+@@narrator
+Bạn có biết rằng không phải cứ nhận giấy từ công an là bắt buộc phải đến? Pháp luật phân biệt rất rõ hai loại văn bản: giấy triệu tập và giấy mời. Một cái bắt buộc, một cái không. Nhầm lẫn hai loại này, bạn có thể hoặc bỏ lỡ nghĩa vụ pháp lý, hoặc bị lợi dụng quyền. Bài này sẽ giúp bạn phân biệt rõ ràng và nắm đầy đủ quyền lợi của mình khi bị công an triệu tập.
+{{pause:scene}}
+
+@@narrator
+Đây là điểm then chốt mà phần lớn người dân không biết. Giấy triệu tập là văn bản tố tụng hình sự chính thức, chỉ được sử dụng sau khi vụ án đã được khởi tố. Theo Bộ luật Tố tụng hình sự 2015, giấy triệu tập do Điều tra viên, Kiểm sát viên hoặc Thẩm phán ký. Người nhận giấy triệu tập bắt buộc phải có mặt. Không đến mà không có lý do chính đáng — bạn có thể bị áp giải hoặc dẫn giải đến cơ quan điều tra.
+{{pause:paragraph}}
+
+@@narrator
+Giấy mời thì khác. Giấy mời chỉ là hình thức mời làm việc hành chính, thường dùng khi chưa khởi tố hoặc cần xác minh thông tin ban đầu. Giấy mời không có tính bắt buộc. Bạn hoàn toàn có quyền từ chối hoặc đề nghị hoãn lịch mà không bị xử lý pháp lý.
+{{pause:paragraph}}
+
+@@narrator
+Nói cách khác: nhận giấy mời mà không đến — không sao. Nhận giấy triệu tập mà không đến — có thể bị cưỡng chế.
+{{pause:scene}}
+
+@@narrator
+Vậy giấy triệu tập hợp lệ cần có gì? Phải có đầy đủ: họ tên, chỗ ở của người được triệu tập, tư cách tham gia tố tụng — bạn đến với vai trò gì: bị can, người làm chứng, hay bị hại. Phải ghi rõ giờ, ngày, địa điểm, mục đích làm việc, gặp ai. Và phải có chữ ký của người có thẩm quyền cùng con dấu cơ quan.
+{{pause:paragraph}}
+
+@@narrator
+Thiếu bất kỳ nội dung nào trong số này, bạn có quyền yêu cầu cơ quan phát hành lại đúng quy định trước khi đến.
+{{pause:scene}}
+
+@@narrator
+Bây giờ đến phần quan trọng nhất — quyền của bạn khi bị triệu tập.
+{{pause:paragraph}}
+
+@@narrator
+Thứ nhất — quyền không tự buộc tội mình. Bộ luật Tố tụng hình sự 2015 quy định rõ: người bị buộc tội có quyền không đưa ra lời khai chống lại chính mình hoặc buộc phải nhận mình có tội. Luật cũng khẳng định: trách nhiệm chứng minh tội phạm thuộc về cơ quan tố tụng, không phải bạn.
+{{pause:paragraph}}
+
+@@narrator
+Thứ hai — quyền có luật sư. Người bị tạm giữ, bị can, bị cáo đều có quyền tự bào chữa hoặc nhờ luật sư. Luật sư có quyền có mặt khi cơ quan điều tra hỏi cung. Đây là quyền, không phải đặc ân — bạn không cần xin phép.
+{{pause:paragraph}}
+
+@@narrator
+Thứ ba — quyền từ chối khai báo trong một số trường hợp. Nếu bạn là người làm chứng, bạn được từ chối khai báo nếu lời khai gây hại cho bản thân hoặc người thân thích như cha mẹ, vợ chồng, con, anh chị em ruột.
+{{pause:paragraph}}
+
+@@narrator
+Thứ tư — không bị lấy lời khai vào ban đêm. Luật cấm lấy lời khai từ 22 giờ đến 6 giờ sáng, trừ trường hợp khẩn cấp không thể trì hoãn. Đặc biệt, với người dưới 18 tuổi, chỉ được lấy lời khai tối đa 2 lần mỗi ngày, mỗi lần không quá 2 giờ.
+{{pause:paragraph}}
+
+@@narrator
+Thứ năm — quyền không ký biên bản có nội dung sai. Bạn có quyền yêu cầu sửa hoặc ghi ý kiến không đồng ý vào biên bản trước khi ký.
+{{pause:scene}}
+
+@@narrator
+Vậy không đến theo giấy triệu tập thì sao? Hậu quả phụ thuộc vào tư cách của bạn. Nếu là bị can mà cố ý vắng mặt — có thể bị áp giải. Bỏ trốn thì bị truy nã. Nếu là người làm chứng hoặc bị hại mà cố ý không đến — có thể bị dẫn giải hoặc bị phạt hành chính từ 100 nghìn đến 1 triệu đồng.
+{{pause:paragraph}}
+
+@@narrator
+Nhưng lưu ý: biện pháp dẫn giải chỉ áp dụng khi bạn vắng mặt không có lý do bất khả kháng và việc vắng mặt gây trở ngại cho quá trình giải quyết vụ án.
+{{pause:scene}}
+
+@@narrator
+Cuối cùng, một số lưu ý rất quan trọng. Cảnh giác lừa đảo. Công an không bao giờ triệu tập qua điện thoại. Pháp luật yêu cầu phải bằng văn bản. Nếu ai đó gọi điện nói bạn bị triệu tập, yêu cầu chuyển tiền hoặc cung cấp thông tin tài khoản — đó là lừa đảo, 100%.
+{{pause:paragraph}}
+
+@@narrator
+Giấy triệu tập tố tụng hình sự chỉ được dùng sau khi có quyết định khởi tố vụ án. Giai đoạn trước khởi tố, cơ quan công an chỉ được dùng giấy mời. Nếu bạn nhận được giấy triệu tập mà chưa có quyết định khởi tố — đó là sai quy trình.
+{{pause:paragraph}}
+
+@@narrator
+Và điều quan trọng nhất: luôn mời luật sư trước khi đến. Đặc biệt nếu bạn là bị can hoặc chưa rõ lý do triệu tập. Luật sư sẽ giúp bạn hiểu quyền, tránh khai báo bất lợi cho chính mình.
+{{pause:scene}}
+
+@@narrator
+Tóm lại: giấy triệu tập bắt buộc phải đến, giấy mời thì không. Bạn có quyền không tự buộc tội, có quyền mời luật sư, có quyền từ chối khai báo nếu lời khai gây hại cho bản thân hoặc người thân. Không ai được triệu tập bạn qua điện thoại — đó là lừa đảo. Khi nhận giấy triệu tập, việc đầu tiên nên làm là liên hệ luật sư.
+{{pause:scene}}
+
+@@narrator
+Cảm ơn bạn đã lắng nghe Sổ Tay Luật. Biết luật sớm, tránh rủi ro sớm. Nội dung từ Vi-ba-law.
