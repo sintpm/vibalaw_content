@@ -3,203 +3,435 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLDT-25 — So sánh nội dung: Bản gốc vs Luật sư sửa</title>
+<title>GLDT-25 — So sánh nội dung bản gốc vs Luật sư sửa</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Segoe UI', -apple-system, sans-serif; background: #f5f5f5; color: #333; line-height: 1.7; }
+:root {
+  --primary: #0f62fe;
+  --on-primary: #ffffff;
+  --ink: #161616;
+  --ink-muted: #525252;
+  --ink-subtle: #8c8c8c;
+  --canvas: #ffffff;
+  --surface-1: #f4f4f4;
+  --surface-2: #e0e0e0;
+  --hairline: #e0e0e0;
+  --success: #24a148;
+  --warning: #f1c21b;
+  --error: #da1e28;
+  --gldt-color: #8a3ffc;
+}
 
-  .header { background: linear-gradient(135deg, #1a5632, #2d8a56); color: white; padding: 32px 24px; text-align: center; }
-  .header h1 { font-size: 22px; margin-bottom: 8px; }
-  .header .subtitle { font-size: 14px; opacity: 0.85; }
-  .header .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 12px; font-size: 12px; margin-top: 8px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-  .container { max-width: 900px; margin: 0 auto; padding: 20px 16px; }
+body {
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.16px;
+  color: var(--ink);
+  background: var(--surface-1);
+}
 
-  .summary-box { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-  .summary-box h2 { font-size: 16px; color: #1a5632; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e8f5e9; }
+/* Top Nav */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--canvas);
+  border-bottom: 1px solid var(--hairline);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  gap: 16px;
+}
+.top-nav .brand {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.16px;
+  color: var(--ink);
+}
+.top-nav .sep { color: var(--hairline); }
+.top-nav .page-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+.top-nav .badge {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gldt-color);
+  letter-spacing: 0.32px;
+}
 
-  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
-  .stat-card { background: #f8faf8; border-radius: 8px; padding: 14px; text-align: center; }
-  .stat-card .label { font-size: 12px; color: #666; margin-bottom: 4px; }
-  .stat-card .value { font-size: 20px; font-weight: 700; }
-  .stat-card .value.green { color: #2d8a56; }
-  .stat-card .value.red { color: #d32f2f; }
-  .stat-card .value.orange { color: #e65100; }
-  .stat-card .note { font-size: 11px; color: #999; margin-top: 2px; }
+/* Hero */
+.hero {
+  background: var(--canvas);
+  padding: 48px 32px 32px;
+  border-bottom: 1px solid var(--hairline);
+}
+.hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.20;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.hero .subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+  color: var(--ink-muted);
+}
 
-  .verdict { padding: 12px 16px; border-radius: 8px; font-size: 14px; margin-top: 12px; }
-  .verdict.warn { background: #fff3e0; border-left: 4px solid #ff9800; color: #e65100; }
+/* Dashboard */
+.dashboard {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-top: none;
+}
+.stat-card {
+  padding: 20px 24px;
+  border-right: 1px solid var(--hairline);
+}
+.stat-card:last-child { border-right: none; }
+.stat-card .label {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.stat-card .value {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.20;
+  color: var(--ink);
+}
+.stat-card .value.success { color: var(--success); }
+.stat-card .value.error { color: var(--error); }
+.stat-card .sub {
+  font-size: 12px;
+  color: var(--ink-subtle);
+  margin-top: 2px;
+}
 
-  .section { background: white; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
-  .section-header { padding: 16px 20px; cursor: pointer; display: flex; align-items: center; gap: 10px; }
-  .section-header:hover { background: #f8faf8; }
-  .section-header .icon { font-size: 18px; }
-  .section-header h3 { font-size: 15px; flex: 1; }
-  .section-header .tag { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
-  .tag.apply { background: #e8f5e9; color: #2e7d32; }
-  .tag.adjust { background: #fff3e0; color: #e65100; }
-  .tag.reject { background: #fce4ec; color: #c62828; }
-  .tag.info { background: #e3f2fd; color: #1565c0; }
+/* Alert */
+.alert {
+  max-width: 960px;
+  margin: 24px auto 0;
+  padding: 16px 20px;
+  background: #fff8e1;
+  border-left: 3px solid var(--warning);
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.50;
+}
+.alert strong { font-weight: 600; }
 
-  .section-body { padding: 0 20px 20px; }
+/* Content */
+.content {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0;
+}
 
-  .diff-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
-  .diff-table th { text-align: left; padding: 8px 10px; background: #f5f5f5; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #888; border-bottom: 1px solid #e0e0e0; }
-  .diff-table td { padding: 10px; vertical-align: top; border-bottom: 1px solid #f0f0f0; }
-  .diff-table tr:last-child td { border-bottom: none; }
+/* Section */
+.section {
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  margin-bottom: 16px;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--hairline);
+  gap: 12px;
+}
+.section-num {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-subtle);
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  min-width: 24px;
+}
+.section-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.16px;
+  color: var(--ink);
+  flex: 1;
+}
+.tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.32px;
+  padding: 2px 10px;
+}
+.tag.apply { background: #defbe6; color: #0e6027; }
+.tag.adjust { background: #fff8e1; color: #8e6a00; }
+.tag.reject { background: #fff1f1; color: #a2191f; }
+.tag.info { background: #e0e0e0; color: var(--ink-muted); }
 
-  .col-original { background: #fff8f8; width: 42%; }
-  .col-revised { background: #f8fff8; width: 42%; }
-  .col-verdict { width: 16%; text-align: center; }
+.section-body { padding: 20px 24px; }
 
-  .highlight { background: #fff9c4; padding: 1px 3px; border-radius: 2px; }
-  .added { background: #c8e6c9; padding: 1px 3px; border-radius: 2px; }
-  .removed { background: #ffcdd2; padding: 1px 3px; border-radius: 2px; text-decoration: line-through; }
+/* Diff table */
+.diff-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.54;
+}
+.diff-table th {
+  text-align: left;
+  padding: 10px 12px;
+  background: var(--surface-1);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--hairline);
+}
+.diff-table td {
+  padding: 12px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--surface-1);
+}
+.diff-table tr:last-child td { border-bottom: none; }
+.col-original { background: #fff5f5; }
+.col-revised { background: #f0fff4; }
+.col-label { width: 16%; font-weight: 600; color: var(--ink-muted); font-size: 12px; }
+.col-verdict { width: 12%; text-align: center; }
 
-  .note-box { font-size: 13px; padding: 10px 14px; border-radius: 8px; margin-top: 10px; }
-  .note-box.green { background: #e8f5e9; border-left: 3px solid #4caf50; }
-  .note-box.orange { background: #fff3e0; border-left: 3px solid #ff9800; }
-  .note-box.red { background: #fce4ec; border-left: 3px solid #ef5765; }
-  .note-box.blue { background: #e3f2fd; border-left: 3px solid #2196f3; }
+.added { background: #c8e6c9; padding: 1px 4px; }
+.removed { background: #ffcdd2; padding: 1px 4px; text-decoration: line-through; }
+.highlight { background: #fff9c4; padding: 1px 4px; }
 
-  .quote { font-style: italic; color: #555; padding: 8px 14px; border-left: 3px solid #ddd; margin: 8px 0; font-size: 13px; background: #fafafa; border-radius: 0 6px 6px 0; }
+/* Note boxes */
+.note-box {
+  font-size: 13px;
+  line-height: 1.54;
+  padding: 14px 16px;
+  margin-top: 16px;
+  border-left: 3px solid;
+}
+.note-box.success { background: #defbe6; border-color: var(--success); }
+.note-box.warning { background: #fff8e1; border-color: var(--warning); }
+.note-box.error { background: #fff1f1; border-color: var(--error); }
+.note-box strong { font-weight: 600; }
 
-  .action-list { list-style: none; padding: 0; }
-  .action-list li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; display: flex; align-items: flex-start; gap: 8px; }
-  .action-list li:last-child { border-bottom: none; }
-  .action-list .bullet { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; margin-top: 1px; }
-  .bullet.green { background: #e8f5e9; color: #2e7d32; }
-  .bullet.orange { background: #fff3e0; color: #e65100; }
-  .bullet.red { background: #fce4ec; color: #c62828; }
+/* Question box */
+.question-box {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f6f2ff;
+  border: 1px solid #d4bbff;
+}
+.question-box h4 {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  color: var(--gldt-color);
+  margin-bottom: 10px;
+}
+.question-box ul { padding-left: 18px; font-size: 13px; line-height: 1.6; }
+.question-box li { margin-bottom: 6px; }
 
-  .footer { text-align: center; padding: 24px; font-size: 12px; color: #999; }
+/* Action list */
+.action-list { list-style: none; padding: 0; }
+.action-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--surface-1);
+  font-size: 13px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.54;
+}
+.action-list li:last-child { border-bottom: none; }
+.bullet {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 1px;
+}
+.bullet.success { background: #defbe6; color: #0e6027; }
+.bullet.warning { background: #fff8e1; color: #8e6a00; }
+.bullet.error { background: #fff1f1; color: #a2191f; }
 
-  .question-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px; margin-top: 12px; }
-  .question-box h4 { font-size: 13px; color: #7b1fa2; margin-bottom: 8px; }
-  .question-box ul { padding-left: 18px; font-size: 13px; }
-  .question-box li { margin-bottom: 6px; }
+.footer {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 32px 0;
+  font-size: 12px;
+  color: var(--ink-subtle);
+  letter-spacing: 0.32px;
+}
+
+@media (max-width: 768px) {
+  .dashboard { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 28px; }
+  .top-nav { padding: 0 16px; }
+  .hero { padding: 32px 16px 24px; }
+  .section-body { padding: 16px; }
+  .content { padding: 0 8px; }
+  .alert { margin: 16px 8px 0; }
+}
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>GLDT-25 — Cho vay tien khong giay to</h1>
-  <div class="subtitle">So sanh ban goc vs Ban luat su da sua</div>
-  <div class="badge">Ngay: 2026-07-14 &nbsp;|&nbsp; Kenh: GLDT — Goc Luat Doi Thuong</div>
+<!-- Top Nav -->
+<nav class="top-nav">
+  <span class="brand">Vibalaw</span>
+  <span class="sep">/</span>
+  <span class="page-title">Review nội dung</span>
+  <span class="badge">GLDT-25</span>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Cho vay tiền không giấy tờ — đòi lại được không?</h1>
+    <div class="subtitle">So sánh bản gốc và bản Luật sư đã sửa · Kênh GLDT — Góc Luật Đời Thường · 14/07/2026</div>
+  </div>
 </div>
 
-<div class="container">
-
-  <!-- TỔNG QUAN -->
-  <div class="summary-box">
-    <h2>Tong quan thay doi</h2>
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="label">Ban goc</div>
-        <div class="value green">~530 tu</div>
-        <div class="note">~3.2 phut (OK)</div>
-      </div>
-      <div class="stat-card">
-        <div class="label">Ban luat su sua</div>
-        <div class="value red">~780 tu</div>
-        <div class="note">~4.7 phut (VUOT GIOI HAN)</div>
-      </div>
-      <div class="stat-card">
-        <div class="label">Can ap dung</div>
-        <div class="value green">8 diem</div>
-        <div class="note">Chinh xac hon, bo sung can cu</div>
-      </div>
-      <div class="stat-card">
-        <div class="label">Can trao doi</div>
-        <div class="value orange">4 diem</div>
-        <div class="note">Do dai, slogan, thong tin mat</div>
-      </div>
-    </div>
-    <div class="verdict warn">
-      <strong>Luu y:</strong> Ban luat su sua chinh xac hon ve phap ly nhung dai qua (~780 tu). Gioi han audio TikTok la 580 tu / 3.5 phut. Can cat giam ~200 tu truoc khi san xuat audio.
-    </div>
+<!-- Dashboard -->
+<div class="dashboard">
+  <div class="stat-card">
+    <div class="label">Bản gốc</div>
+    <div class="value success">~530</div>
+    <div class="sub">từ · ~3.2 phút (OK)</div>
   </div>
+  <div class="stat-card">
+    <div class="label">Bản luật sư sửa</div>
+    <div class="value error">~780</div>
+    <div class="sub">từ · ~4.7 phút (vượt)</div>
+  </div>
+  <div class="stat-card">
+    <div class="label">Nên áp dụng</div>
+    <div class="value success">8</div>
+    <div class="sub">điểm chính xác hơn</div>
+  </div>
+  <div class="stat-card">
+    <div class="label">Cần trao đổi</div>
+    <div class="value" style="color: #8e6a00;">4</div>
+    <div class="sub">điểm chờ xác nhận</div>
+  </div>
+</div>
+
+<!-- Alert -->
+<div class="alert">
+  <strong>Lưu ý:</strong> Bản luật sư sửa chính xác hơn về pháp lý nhưng dài ~780 từ — vượt giới hạn audio TikTok (tối đa 580 từ / 3.5 phút). Cần cắt giảm ~200 từ trước khi sản xuất audio.
+</div>
+
+<!-- Content sections -->
+<div class="content">
 
   <!-- 1. MỞ ĐẦU -->
   <div class="section">
     <div class="section-header">
-      <span class="icon">1.</span>
-      <h3>Mo dau / Tinh huong</h3>
-      <span class="tag adjust">Can dieu chinh</span>
+      <span class="section-num">01</span>
+      <h3>Mở đầu / Tình huống</h3>
+      <span class="tag adjust">Cần điều chỉnh</span>
     </div>
     <div class="section-body">
       <table class="diff-table">
         <tr>
-          <th class="col-original">Ban goc</th>
-          <th class="col-revised">Luat su sua</th>
-          <th class="col-verdict">Danh gia</th>
+          <th style="width:44%">Bản gốc</th>
+          <th style="width:44%">Luật sư sửa</th>
+          <th style="width:12%">Đánh giá</th>
         </tr>
         <tr>
           <td class="col-original">
-            Nhieu nguoi nghi rang cho ban vay tien ma khong co giay to thi coi nhu mat. Khong giay vay no, khong hop dong, khong chu ky — kien kieu gi? <strong>Su that hoan toan nguoc lai.</strong>
+            Nhiều người nghĩ rằng cho bạn vay tiền mà không có giấy tờ thì coi như mất. Không giấy vay nợ, không hợp đồng, không chữ ký — kiện kiểu gì? <strong>Sự thật hoàn toàn ngược lại.</strong>
           </td>
           <td class="col-revised">
-            <span class="added">Chao ban, day la Goc Luat Doi Thuong. Hom nay la mot buc tranh cuc ky huu ich ve giao dich cho vay ma ban can phai biet.</span><br><br>
-            Nhieu nguoi nghi rang cho ban vay tien ma khong co giay to thi coi nhu mat. Khong giay vay no, khong hop dong, khong chu ky — kien kieu gi? <span class="highlight">Su that doi khi nhung can cu quan trong khong nam o giay to hay bat buoc can co chu ky.</span> <span class="added">Day la kien thuc huu ich ban can bo tui de phong ho nhung tinh huong khi co ban be, nguoi quen vay muon tien ma khong co giay to day du.</span>
+            <span class="added">Chào bạn, đây là Góc Luật Đời Thường. Hôm nay là một bức tranh cực kỳ hữu ích về giao dịch cho vay mà bạn cần phải biết.</span><br><br>
+            Nhiều người nghĩ rằng cho bạn vay tiền mà không có giấy tờ thì coi như mất. Không giấy vay nợ, không hợp đồng, không chữ ký — kiện kiểu gì? <span class="highlight">Sự thật đôi khi những căn cứ quan trọng không nằm ở giấy tờ hay bắt buộc cần có chữ ký.</span> <span class="added">Đây là kiến thức hữu ích bạn cần bỏ túi để phòng hờ những tình huống khi có bạn bè, người quen vay mượn tiền mà không có giấy tờ đầy đủ.</span>
           </td>
-          <td class="col-verdict"><span class="tag adjust">Dieu chinh</span></td>
+          <td class="col-verdict"><span class="tag adjust">Điều chỉnh</span></td>
         </tr>
       </table>
 
-      <div class="note-box orange">
-        <strong>Van de:</strong><br>
-        - Intro "Chao ban, day la Goc Luat Doi Thuong" &rarr; khong de trong content.md (xu ly rieng trong audio-convert)<br>
-        - "Su that hoan toan nguoc lai" (ban goc) hook manh hon "Su that doi khi..." (ban sua)<br>
-        - Doan "Day la kien thuc huu ich ban can bo tui..." them ~30 tu nhung khong them gia tri moi
+      <div class="note-box warning">
+        <strong>Vấn đề:</strong><br>
+        — Intro "Chào bạn, đây là Góc Luật Đời Thường" → không để trong content.md (xử lý riêng trong audio-convert)<br>
+        — "Sự thật hoàn toàn ngược lại" (bản gốc) hook mạnh hơn "Sự thật đôi khi..." (bản sửa)<br>
+        — Đoạn "Đây là kiến thức hữu ích bạn cần bỏ túi..." thêm ~30 từ nhưng không thêm giá trị mới
       </div>
 
       <div class="question-box">
-        <h4>Cau hoi cho Luat su:</h4>
+        <h4>Câu hỏi cho Luật sư</h4>
         <ul>
-          <li>Dong y giu hook goc "Su that hoan toan nguoc lai" (ngan gon, manh) va bo doan dan dat dai khong?</li>
+          <li>Đồng ý giữ hook gốc "Sự thật hoàn toàn ngược lại" (ngắn gọn, mạnh) và bỏ đoạn dẫn dắt dài không?</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- 2. VẤN ĐỀ PHÁP LÝ -->
+  <!-- 2. CĂN CỨ PHÁP LÝ -->
   <div class="section">
     <div class="section-header">
-      <span class="icon">2.</span>
-      <h3>Van de phap ly — Can cu luat</h3>
-      <span class="tag apply">Nen ap dung</span>
+      <span class="section-num">02</span>
+      <h3>Vấn đề pháp lý — Căn cứ luật</h3>
+      <span class="tag apply">Nên áp dụng</span>
     </div>
     <div class="section-body">
       <table class="diff-table">
         <tr>
-          <th class="col-original">Ban goc</th>
-          <th class="col-revised">Luat su sua</th>
-          <th class="col-verdict">Danh gia</th>
+          <th style="width:44%">Bản gốc</th>
+          <th style="width:44%">Luật sư sửa</th>
+          <th style="width:12%">Đánh giá</th>
         </tr>
         <tr>
           <td class="col-original">
-            Bo luat Dan su 2015 quy dinh rat ro: hop dong co the duoc giao ket bang loi noi, bang van ban, hoac bang hanh vi cu the — <strong>theo Dieu 119.</strong>
+            Bộ luật Dân sự 2015 quy định rất rõ: hợp đồng có thể được giao kết bằng lời nói, bằng văn bản, hoặc bằng hành vi cụ thể — <strong>theo Điều 119.</strong>
           </td>
           <td class="col-revised">
-            Theo quy dinh tai <span class="added">Khoan 1</span> Dieu 119 Bo luat Dan su 2015 quy dinh rat ro: hop dong co the duoc giao ket bang loi noi, bang van ban, hoac bang hanh vi cu the.
+            Theo quy định tại <span class="added">Khoản 1</span> Điều 119 Bộ luật Dân sự 2015 quy định rất rõ: hợp đồng có thể được giao kết bằng lời nói, bằng văn bản, hoặc bằng hành vi cụ thể.
           </td>
-          <td class="col-verdict"><span class="tag apply">Ap dung</span></td>
+          <td class="col-verdict"><span class="tag apply">Áp dụng</span></td>
         </tr>
         <tr>
           <td class="col-original">
-            <em>(Khong co)</em>
+            <em>(Không có)</em>
           </td>
           <td class="col-revised">
-            <span class="added">Truong hop neu Giao dich dan su thong qua phuong tien dien tu duoi hinh thuc thong diep du lieu theo quy dinh cua phap luat ve giao dich dien tu duoc the hien thong qua hinh thuc quy dinh tai Dieu 7 Luat Giao dich dien tu 2023 duoc coi la giao dich bang van ban.</span>
+            <span class="added">Trường hợp nếu Giao dịch dân sự thông qua phương tiện điện tử dưới hình thức thông điệp dữ liệu theo quy định của pháp luật về giao dịch điện tử được thể hiện thông qua hình thức quy định tại Điều 7 Luật Giao dịch điện tử 2023 được coi là giao dịch bằng văn bản.</span>
           </td>
-          <td class="col-verdict"><span class="tag apply">Ap dung</span></td>
+          <td class="col-verdict"><span class="tag apply">Áp dụng</span></td>
         </tr>
       </table>
 
-      <div class="note-box green">
-        <strong>Danh gia:</strong> Ca 2 thay doi deu chinh xac hon.<br>
-        - Bo sung "Khoan 1" cho Dieu 119 &rarr; dan chieu cu the hon<br>
-        - Lien ket Dieu 7 Luat GDDT 2023 &rarr; giao dich dien tu = giao dich bang van ban la diem phap ly quan trong
+      <div class="note-box success">
+        <strong>Đánh giá:</strong> Cả 2 thay đổi đều chính xác hơn.<br>
+        — Bổ sung "Khoản 1" cho Điều 119 → dẫn chiếu cụ thể hơn<br>
+        — Liên kết Điều 7 Luật GDĐT 2023 → giao dịch điện tử = giao dịch bằng văn bản là điểm pháp lý quan trọng
       </div>
     </div>
   </div>
@@ -207,90 +439,92 @@
   <!-- 3. CHỨNG CỨ -->
   <div class="section">
     <div class="section-header">
-      <span class="icon">3.</span>
-      <h3>5 loai chung cu — Bo sung can cu phap ly</h3>
-      <span class="tag apply">Nen ap dung</span>
+      <span class="section-num">03</span>
+      <h3>5 loại chứng cứ — Bổ sung căn cứ pháp lý</h3>
+      <span class="tag apply">Nên áp dụng</span>
     </div>
     <div class="section-body">
       <table class="diff-table">
         <tr>
-          <th style="width:20%">Loai chung cu</th>
-          <th class="col-original">Ban goc</th>
-          <th class="col-revised">Luat su sua</th>
-          <th class="col-verdict">Danh gia</th>
+          <th class="col-label">Loại</th>
+          <th style="width:36%">Bản gốc</th>
+          <th style="width:36%">Luật sư sửa</th>
+          <th class="col-verdict">Đánh giá</th>
         </tr>
         <tr>
-          <td><strong>Sao ke CK</strong></td>
-          <td class="col-original">Dieu 94 BLTTDS 2015</td>
-          <td class="col-revised"><span class="added">Khoan 1</span> Dieu 94 BLTTDS 2015</td>
+          <td class="col-label">Sao kê CK</td>
+          <td class="col-original">Điều 94 BLTTDS 2015</td>
+          <td class="col-revised"><span class="added">Khoản 1</span> Điều 94 BLTTDS 2015</td>
           <td class="col-verdict"><span class="tag apply">OK</span></td>
         </tr>
         <tr>
-          <td><strong>Tin nhan</strong></td>
-          <td class="col-original">Luat GDDT 2023 (khong neu dieu)</td>
-          <td class="col-revised"><span class="added">Dieu 7</span> Luat GDDT 2023</td>
+          <td class="col-label">Tin nhắn</td>
+          <td class="col-original">Luật GDĐT 2023 (không nêu điều)</td>
+          <td class="col-revised"><span class="added">Điều 7</span> Luật GDĐT 2023</td>
           <td class="col-verdict"><span class="tag apply">OK</span></td>
         </tr>
         <tr>
-          <td><strong>Tin nhan</strong> (dien dat)</td>
-          <td class="col-original">"co gia tri <span class="removed">ngang giay vay no</span>"</td>
-          <td class="col-revised">"<span class="added">co the co gia tri nhu mot loi xac nhan vay no</span>"</td>
+          <td class="col-label">Tin nhắn (diễn đạt)</td>
+          <td class="col-original">"có giá trị <span class="removed">ngang giấy vay nợ</span>"</td>
+          <td class="col-revised">"<span class="added">có thể có giá trị như một lời xác nhận vay nợ</span>"</td>
           <td class="col-verdict"><span class="tag apply">OK</span></td>
         </tr>
         <tr>
-          <td><strong>Vi bang</strong></td>
-          <td class="col-original">Mo ta ngan gon</td>
-          <td class="col-revised">Them: <span class="added">"can danh gia chi tiet noi dung can lap, tranh viec bo sot y hay qua du thua"</span></td>
+          <td class="col-label">Vi bằng</td>
+          <td class="col-original">Mô tả ngắn gọn</td>
+          <td class="col-revised">Thêm: <span class="added">"cần đánh giá chi tiết nội dung cần lập, tránh việc bỏ sót ý hay quá dư thừa"</span></td>
           <td class="col-verdict"><span class="tag apply">OK</span></td>
         </tr>
         <tr>
-          <td><strong>Ghi am</strong></td>
-          <td class="col-original">"duoc toa chap nhan neu thu thap hop phap"</td>
-          <td class="col-revised">Bo sung: <span class="added">Khoan 2 Dieu 95 BLTTDS 2015</span></td>
+          <td class="col-label">Ghi âm</td>
+          <td class="col-original">"được tòa chấp nhận nếu thu thập hợp pháp"</td>
+          <td class="col-revised">Bổ sung: <span class="added">Khoản 2 Điều 95 BLTTDS 2015</span></td>
           <td class="col-verdict"><span class="tag apply">OK</span></td>
         </tr>
         <tr>
-          <td><strong>Nhan chung</strong></td>
-          <td class="col-original">Khong neu dieu luat</td>
-          <td class="col-revised">Bo sung: <span class="added">Khoan 5 Dieu 95 BLTTDS 2015</span></td>
+          <td class="col-label">Nhân chứng</td>
+          <td class="col-original">Không nêu điều luật</td>
+          <td class="col-revised">Bổ sung: <span class="added">Khoản 5 Điều 95 BLTTDS 2015</span></td>
           <td class="col-verdict"><span class="tag apply">OK</span></td>
         </tr>
       </table>
 
-      <div class="note-box green">
-        <strong>Danh gia:</strong> Tat ca deu chinh xac hon — bo sung so khoan/dieu cu the, dien dat than trong hon ("co the co gia tri" thay vi "ngang giay vay no"). Nen ap dung toan bo.
+      <div class="note-box success">
+        <strong>Đánh giá:</strong> Tất cả đều chính xác hơn — bổ sung số khoản/điều cụ thể, diễn đạt thận trọng hơn ("có thể có giá trị" thay vì "ngang giấy vay nợ"). Nên áp dụng toàn bộ.
       </div>
     </div>
   </div>
 
-  <!-- 4. THỜI HIỆU — THAY ĐỔI LỚN NHẤT -->
+  <!-- 4. THỜI HIỆU -->
   <div class="section">
     <div class="section-header">
-      <span class="icon">4.</span>
-      <h3>Thoi hieu khoi kien — THAY DOI LON NHAT</h3>
-      <span class="tag apply">Nen ap dung</span>
+      <span class="section-num">04</span>
+      <h3>Thời hiệu khởi kiện — Thay đổi lớn nhất</h3>
+      <span class="tag apply">Nên áp dụng</span>
     </div>
     <div class="section-body">
       <table class="diff-table">
         <tr>
-          <th class="col-original">Ban goc</th>
-          <th class="col-revised">Luat su sua</th>
+          <th style="width:44%">Bản gốc</th>
+          <th style="width:44%">Luật sư sửa</th>
+          <th style="width:12%">Đánh giá</th>
         </tr>
         <tr>
           <td class="col-original">
-            Thoi hieu khoi kien tranh chap hop dong la <strong>3 nam</strong> ke tu ngay den han tra. Nhung theo BLDS 2015, <span class="removed">Dieu 155, yeu cau bao ve quyen so huu khong bi gioi han thoi hieu.</span> Nghia la qua 3 nam ban van doi duoc no goc — chi mat quyen doi tien lai.
+            Thời hiệu khởi kiện tranh chấp hợp đồng là <strong>3 năm</strong> kể từ ngày đến hạn trả. Nhưng theo BLDS 2015, <span class="removed">Điều 155, yêu cầu bảo vệ quyền sở hữu không bị giới hạn thời hiệu.</span> Nghĩa là quá 3 năm bạn vẫn đòi được nợ gốc — chỉ mất quyền đòi tiền lãi.
           </td>
           <td class="col-revised">
-            Theo <span class="added">Dieu 429 Bo luat Dan su 2015</span> thoi hieu khoi kien tranh chap hop dong vay se duoc hieu la <strong>3 nam</strong> ke tu ngay ma ban biet quyen va loi ich hop phap cua minh bi xam hai (ngay den han tra ma ho khong tra tien). Trong truong hop het thoi hieu khoi kien doi no thi ben cho vay no van co the khoi kien doi tra lai khoan tien no goc <span class="added">tuy nhien quyen loi cua ban da bi han che di rat nhieu nen hay dac biet ghi nho moc thoi gian nay.</span>
+            Theo <span class="added">Điều 429 Bộ luật Dân sự 2015</span> thời hiệu khởi kiện tranh chấp hợp đồng vay sẽ được hiểu là <strong>3 năm</strong> kể từ ngày mà bạn biết quyền và lợi ích hợp pháp của mình bị xâm hại (ngày đến hạn trả mà họ không trả tiền). Trong trường hợp hết thời hiệu khởi kiện đòi nợ thì bên cho vay nợ vẫn có thể khởi kiện đòi trả lại khoản tiền nợ gốc <span class="added">tuy nhiên quyền lợi của bạn đã bị hạn chế đi rất nhiều nên hãy đặc biệt ghi nhớ mốc thời gian này.</span>
           </td>
+          <td class="col-verdict"><span class="tag apply">Áp dụng</span></td>
         </tr>
       </table>
 
-      <div class="note-box green">
-        <strong>Danh gia — Chinh xac hon:</strong><br>
-        - <strong>Dieu 429</strong> la can cu dung cho thoi hieu hop dong vay. Ban goc dung <strong>Dieu 155</strong> (bao ve quyen so huu) — co the gay tranh cai vi quan he vay la quan he nghia vu, khong phai so huu<br>
-        - Dien dat "quyen loi bi han che di rat nhieu" than trong hon "chi mat quyen doi tien lai"<br>
-        - <strong>Nen ap dung thay doi nay</strong>
+      <div class="note-box success">
+        <strong>Đánh giá — Chính xác hơn:</strong><br>
+        — <strong>Điều 429</strong> là căn cứ đúng cho thời hiệu hợp đồng vay. Bản gốc dùng <strong>Điều 155</strong> (bảo vệ quyền sở hữu) — có thể gây tranh cãi vì quan hệ vay là quan hệ nghĩa vụ, không phải sở hữu<br>
+        — Diễn đạt "quyền lợi bị hạn chế đi rất nhiều" thận trọng hơn "chỉ mất quyền đòi tiền lãi"<br>
+        — <strong>Nên áp dụng thay đổi này</strong>
       </div>
     </div>
   </div>
@@ -298,36 +532,38 @@
   <!-- 5. THỦ TỤC KHỞI KIỆN -->
   <div class="section">
     <div class="section-header">
-      <span class="icon">5.</span>
-      <h3>Thu tuc khoi kien — Mat thong tin cu the</h3>
-      <span class="tag adjust">Can trao doi</span>
+      <span class="section-num">05</span>
+      <h3>Thủ tục khởi kiện — Mất thông tin cụ thể</h3>
+      <span class="tag adjust">Cần trao đổi</span>
     </div>
     <div class="section-body">
       <table class="diff-table">
         <tr>
-          <th class="col-original">Ban goc (chi tiet)</th>
-          <th class="col-revised">Luat su sua (gon)</th>
+          <th style="width:44%">Bản gốc (chi tiết)</th>
+          <th style="width:44%">Luật sư sửa (gọn)</th>
+          <th style="width:12%">Đánh giá</th>
         </tr>
         <tr>
           <td class="col-original">
-            Ban nop don khoi kien tai <strong>Toa an nhan dan cap huyen noi nguoi vay cu tru</strong>. Toa thu ly trong <strong>5 ngay lam viec</strong>. Thoi gian giai quyet thuong tu <strong>4 den 6 thang</strong>. An phi dan su tinh theo gia tri tranh chap — vi du khoan vay 100 trieu, tam ung an phi khoang <strong>2,5 trieu dong</strong>. Neu thang kien, ben thua chiu toan bo.
+            Bạn nộp đơn khởi kiện tại <strong>Tòa án nhân dân cấp huyện nơi người vay cư trú</strong>. Tòa thụ lý trong <strong>5 ngày làm việc</strong>. Thời gian giải quyết thường từ <strong>4 đến 6 tháng</strong>. Án phí dân sự tính theo giá trị tranh chấp — ví dụ khoản vay 100 triệu, tạm ứng án phí khoảng <strong>2,5 triệu đồng</strong>. Nếu thắng kiện, bên thua chịu toàn bộ.
           </td>
           <td class="col-revised">
-            Ban nop hoan toan co the tu minh hoac nho Luat su nop don khoi kien yeu cau tai <strong>Toa an nhan dan co tham quyen</strong> de giai quyet.
+            Bạn hoàn toàn có thể tự mình hoặc nhờ Luật sư nộp đơn khởi kiện yêu cầu tại <strong>Tòa án nhân dân có thẩm quyền</strong> để giải quyết.
           </td>
+          <td class="col-verdict"><span class="tag adjust">Trao đổi</span></td>
         </tr>
       </table>
 
-      <div class="note-box orange">
-        <strong>Van de:</strong> Ban goc co thong tin rat thuc te (toa cap huyen, 5 ngay thu ly, 4-6 thang, an phi 2.5 trieu/100 trieu). Ban sua bo het, chi ghi chung chung "TAND co tham quyen".<br><br>
-        Con so cu the giup nguoi nghe hinh dung duoc quy trinh, la diem manh cua ban goc.
+      <div class="note-box warning">
+        <strong>Vấn đề:</strong> Bản gốc có thông tin rất thực tế (tòa cấp huyện, 5 ngày thụ lý, 4-6 tháng, án phí 2,5 triệu/100 triệu). Bản sửa bỏ hết, chỉ ghi chung chung "TAND có thẩm quyền".<br><br>
+        Con số cụ thể giúp người nghe hình dung được quy trình, là điểm mạnh của bản gốc.
       </div>
 
       <div class="question-box">
-        <h4>Cau hoi cho Luat su:</h4>
+        <h4>Câu hỏi cho Luật sư</h4>
         <ul>
-          <li>Co nen giu lai thong tin "toa cap huyen noi nguoi vay cu tru, thu ly 5 ngay, 4-6 thang, an phi ~2.5 trieu/100 trieu" khong? Day la thong tin rat huu ich cho nguoi nghe.</li>
-          <li>Hay Luat su thay thong tin nay khong chinh xac / co the gay hieu nham nen bo?</li>
+          <li>Có nên giữ lại thông tin "tòa cấp huyện nơi người vay cư trú, thụ lý 5 ngày, 4-6 tháng, án phí ~2,5 triệu/100 triệu" không? Đây là thông tin rất hữu ích cho người nghe.</li>
+          <li>Hay Luật sư thấy thông tin này không chính xác / có thể gây hiểu nhầm nên bỏ?</li>
         </ul>
       </div>
     </div>
@@ -336,40 +572,40 @@
   <!-- 6. SAI LẦM PHỔ BIẾN -->
   <div class="section">
     <div class="section-header">
-      <span class="icon">6.</span>
-      <h3>Sai lam pho bien</h3>
-      <span class="tag apply">Nen ap dung</span>
+      <span class="section-num">06</span>
+      <h3>Sai lầm phổ biến</h3>
+      <span class="tag apply">Nên áp dụng</span>
     </div>
     <div class="section-body">
       <table class="diff-table">
         <tr>
-          <th style="width:10%">#</th>
-          <th class="col-original">Ban goc</th>
-          <th class="col-revised">Luat su sua</th>
-          <th class="col-verdict">Danh gia</th>
+          <th class="col-label">#</th>
+          <th style="width:36%">Bản gốc</th>
+          <th style="width:36%">Luật sư sửa</th>
+          <th class="col-verdict">Đánh giá</th>
         </tr>
         <tr>
-          <td>1</td>
-          <td class="col-original">Cho vay bang tien mat ma khong chuyen khoan, khong nhan tin xac nhan</td>
-          <td class="col-revised">Cho vay bang tien mat ma khong phai la chuyen khoan, cung khong co bat ky nhan tin xac nhan</td>
-          <td class="col-verdict"><span class="tag info">Tuong duong</span></td>
+          <td class="col-label">1</td>
+          <td class="col-original">Cho vay bằng tiền mặt mà không chuyển khoản, không nhắn tin xác nhận</td>
+          <td class="col-revised">Cho vay bằng tiền mặt mà không phải là chuyển khoản, cũng không có bất kỳ nhắn tin xác nhận</td>
+          <td class="col-verdict"><span class="tag info">Tương đương</span></td>
         </tr>
         <tr>
-          <td>2</td>
-          <td class="col-original">Giu nguyen</td>
-          <td class="col-revised">Giu nguyen</td>
+          <td class="col-label">2</td>
+          <td class="col-original">Giữ nguyên</td>
+          <td class="col-revised">Giữ nguyên</td>
           <td class="col-verdict"><span class="tag apply">OK</span></td>
         </tr>
         <tr>
-          <td>3</td>
-          <td class="col-original">"de doa, xuc pham, hoac den nha gay roi" + "bi truy cuu hinh su, du ban la nguoi cho vay"</td>
-          <td class="col-revised">Them: <span class="added">"tac dong vat ly doi phuong"</span> + <span class="added">"ban dang la ben dung bong thanh sai"</span></td>
-          <td class="col-verdict"><span class="tag apply">Hay hon</span></td>
+          <td class="col-label">3</td>
+          <td class="col-original">"đe dọa, xúc phạm, hoặc đến nhà gây rối" + "bị truy cứu hình sự, dù bạn là người cho vay"</td>
+          <td class="col-revised">Thêm: <span class="added">"tác động vật lý đối phương"</span> + <span class="added">"bạn đang là bên đúng bỗng thành sai"</span></td>
+          <td class="col-verdict"><span class="tag apply">Hay hơn</span></td>
         </tr>
       </table>
 
-      <div class="note-box green">
-        <strong>Danh gia:</strong> Sai lam thu 3 dien dat hay hon — "ban dang la ben dung bong thanh sai" rat de hieu va tao an tuong manh.
+      <div class="note-box success">
+        <strong>Đánh giá:</strong> Sai lầm thứ 3 diễn đạt hay hơn — "bạn đang là bên đúng bỗng thành sai" rất dễ hiểu và tạo ấn tượng mạnh.
       </div>
     </div>
   </div>
@@ -377,126 +613,133 @@
   <!-- 7. KẾT BÀI -->
   <div class="section">
     <div class="section-header">
-      <span class="icon">7.</span>
-      <h3>Ket bai</h3>
-      <span class="tag adjust">Can trao doi</span>
+      <span class="section-num">07</span>
+      <h3>Kết bài</h3>
+      <span class="tag adjust">Cần trao đổi</span>
     </div>
     <div class="section-body">
       <table class="diff-table">
         <tr>
-          <th class="col-original">Ban goc</th>
-          <th class="col-revised">Luat su sua</th>
+          <th style="width:44%">Bản gốc</th>
+          <th style="width:44%">Luật sư sửa</th>
+          <th style="width:12%">Đánh giá</th>
         </tr>
         <tr>
           <td class="col-original">
-            Neu ban dang trong tinh huong tuong tu — dung voi nghi la mat. Kiem tra lai tin nhan, sao ke ngan hang, moi dau vet lien quan. Va nho: lan sau cho ai vay, du than den may — hay chuyen khoan, ghi ro noi dung, giu lai tin nhan xac nhan. <strong>Do khong phai thieu tin tuong — do la bao ve ca hai ben.</strong>
+            Nếu bạn đang trong tình huống tương tự — đừng vội nghĩ là mất. Kiểm tra lại tin nhắn, sao kê ngân hàng, mọi dấu vết liên quan. Và nhớ: lần sau cho ai vay, dù thân đến mấy — hãy chuyển khoản, ghi rõ nội dung, giữ lại tin nhắn xác nhận. <strong>Đó không phải thiếu tin tưởng — đó là bảo vệ cả hai bên.</strong>
           </td>
           <td class="col-revised">
-            Khi cho vay tien, du than den may — hay chuyen khoan, ghi ro noi dung, giu lai tin nhan xac nhan. <strong>Do khong phai thieu tin tuong — do la bao ve ca hai ben truoc nhung tranh cai khi "tri nho" moi ben khong giong nhau hoac don gian la bao ve ban than khi rui ro xay ra, chung ta van hoan toan co the chung minh duoc.</strong><br><br>
-            <span class="added">Hy vong cau chuyen hom nay giup co them kien thuc de phong ngua rui ro trong viec cho vay va tranh duoc nhung sai lam khong dang co. Neu can duoc tu van sau hon ve giao dich vay - cho vay, hay lien he voi chung toi de duoc Luat su tu van day du chi tiet hon.</span><br><br>
-            <span class="added"><strong>Luat su vi ban — dong hanh cung ban!</strong></span>
+            Khi cho vay tiền, dù thân đến mấy — hãy chuyển khoản, ghi rõ nội dung, giữ lại tin nhắn xác nhận. <strong>Đó không phải thiếu tin tưởng — đó là bảo vệ cả hai bên trước những tranh cãi khi "trí nhớ" mỗi bên không giống nhau hoặc đơn giản là bảo vệ bản thân khi rủi ro xảy ra, chúng ta vẫn hoàn toàn có thể chứng minh được.</strong><br><br>
+            <span class="added">Hy vọng câu chuyện hôm nay giúp có thêm kiến thức để phòng ngừa rủi ro trong việc cho vay và tránh được những sai lầm không đáng có. Nếu cần được tư vấn sâu hơn về giao dịch vay - cho vay, hãy liên hệ với chúng tôi để được Luật sư tư vấn đầy đủ chi tiết hơn.</span><br><br>
+            <span class="added"><strong>Luật sư vì bạn — đồng hành cùng bạn!</strong></span>
           </td>
+          <td class="col-verdict"><span class="tag adjust">Trao đổi</span></td>
         </tr>
       </table>
 
-      <div class="note-box green">
-        <strong>Diem hay:</strong> "bao ve ca hai ben truoc nhung tranh cai khi tri nho moi ben khong giong nhau" — giai thich "tai sao" phai lam, rat thuyet phuc.
+      <div class="note-box success">
+        <strong>Điểm hay:</strong> "bảo vệ cả hai bên trước những tranh cãi khi trí nhớ mỗi bên không giống nhau" — giải thích "tại sao" phải làm, rất thuyết phục.
       </div>
 
-      <div class="note-box orange">
-        <strong>Can trao doi:</strong><br>
-        - Ban goc co doan <span class="removed">"dung voi nghi la mat. Kiem tra lai tin nhan, sao ke..."</span> — loi khuyen thuc te, rat huu ich. Ban sua bo mat doan nay.<br>
-        - CTA "Neu can tu van sau hon... hay lien he voi chung toi" &rarr; xu ly trong outro audio, khong can de trong content<br>
-        - <strong>"Luat su vi ban — dong hanh cung ban!"</strong> &rarr; day la slogan moi? Co dung cho Vibalaw khong?
+      <div class="note-box warning">
+        <strong>Cần trao đổi:</strong><br>
+        — Bản gốc có đoạn <span class="removed">"đừng vội nghĩ là mất. Kiểm tra lại tin nhắn, sao kê..."</span> — lời khuyên thực tế, rất hữu ích. Bản sửa bỏ mất đoạn này.<br>
+        — CTA "Nếu cần tư vấn sâu hơn... hãy liên hệ với chúng tôi" → xử lý trong outro audio, không cần để trong content<br>
+        — <strong>"Luật sư vì bạn — đồng hành cùng bạn!"</strong> → đây là slogan mới? Có dùng cho Vibalaw không?
       </div>
 
       <div class="question-box">
-        <h4>Cau hoi cho Luat su:</h4>
+        <h4>Câu hỏi cho Luật sư</h4>
         <ul>
-          <li>"Luat su vi ban — dong hanh cung ban!" la slogan chinh thuc muon dung cho Vibalaw khong? Hay chi la ket nganh chung?</li>
-          <li>Co nen giu lai loi khuyen "dung voi nghi la mat, kiem tra lai tin nhan, sao ke ngan hang" tu ban goc?</li>
+          <li>"Luật sư vì bạn — đồng hành cùng bạn!" là slogan chính thức muốn dùng cho Vibalaw không? Hay chỉ là kết ngành chung?</li>
+          <li>Có nên giữ lại lời khuyên "đừng vội nghĩ là mất, kiểm tra lại tin nhắn, sao kê ngân hàng" từ bản gốc?</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- 8. VẤN ĐỀ ĐỘ DÀI -->
+  <!-- 8. ĐỘ DÀI -->
   <div class="section">
     <div class="section-header">
-      <span class="icon">8.</span>
-      <h3>Van de do dai — VUOT GIOI HAN</h3>
-      <span class="tag reject">Can cat giam</span>
+      <span class="section-num">08</span>
+      <h3>Vấn đề độ dài — Vượt giới hạn</h3>
+      <span class="tag reject">Cần cắt giảm</span>
     </div>
     <div class="section-body">
-      <div class="stat-grid">
-        <div class="stat-card">
-          <div class="label">Gioi han audio TikTok</div>
-          <div class="value green">&le; 580 tu</div>
-          <div class="note">~3.5 phut toi da</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--hairline); margin-bottom: 16px;">
+        <div style="padding: 20px 24px; border-right: 1px solid var(--hairline);">
+          <div style="font-size: 12px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.32px; margin-bottom: 6px;">Giới hạn audio TikTok</div>
+          <div style="font-size: 36px; font-weight: 300; color: var(--success);">≤ 580</div>
+          <div style="font-size: 12px; color: var(--ink-subtle); margin-top: 2px;">từ · ~3.5 phút tối đa</div>
         </div>
-        <div class="stat-card">
-          <div class="label">Ban luat su sua</div>
-          <div class="value red">~780 tu</div>
-          <div class="note">Vuot ~200 tu</div>
+        <div style="padding: 20px 24px;">
+          <div style="font-size: 12px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.32px; margin-bottom: 6px;">Bản luật sư sửa</div>
+          <div style="font-size: 36px; font-weight: 300; color: var(--error);">~780</div>
+          <div style="font-size: 12px; color: var(--ink-subtle); margin-top: 2px;">từ · vượt ~200 từ</div>
         </div>
       </div>
 
-      <div class="note-box red">
-        <strong>Ban luat su sua dai ~780 tu, vuot gioi han 580 tu khoang 200 tu.</strong><br>
-        Audio se dai ~4.7 phut — qua dai cho TikTok (toi da 3.5 phut).<br><br>
-        <strong>De xuat cat giam:</strong><br>
-        - Bo doan dan dat mo dau (~50 tu)<br>
-        - Rut gon phan giao dich dien tu (gop vao Dieu 119, ~30 tu)<br>
-        - Rut gon phan vi bang (bo loi khuyen danh gia noi dung, ~25 tu)<br>
-        - Rut gon ket bai (bo CTA lien he + slogan, ~50 tu)<br>
-        - Rut gon cau van dai thanh cau ngan hon (~50 tu)
+      <div class="note-box error">
+        <strong>Bản luật sư sửa dài ~780 từ, vượt giới hạn 580 từ khoảng 200 từ.</strong><br>
+        Audio sẽ dài ~4.7 phút — quá dài cho TikTok (tối đa 3.5 phút).<br><br>
+        <strong>Đề xuất cắt giảm:</strong><br>
+        — Bỏ đoạn dẫn dắt mở đầu (~50 từ)<br>
+        — Rút gọn phần giao dịch điện tử (gộp vào Điều 119, ~30 từ)<br>
+        — Rút gọn phần vi bằng (bỏ lời khuyên đánh giá nội dung, ~25 từ)<br>
+        — Rút gọn kết bài (bỏ CTA liên hệ + slogan, ~50 từ)<br>
+        — Rút gọn câu văn dài thành câu ngắn hơn (~50 từ)
       </div>
 
       <div class="question-box">
-        <h4>Cau hoi cho Luat su:</h4>
+        <h4>Câu hỏi cho Luật sư</h4>
         <ul>
-          <li>Luat su dong y cat giam de ve duoi 580 tu khong?</li>
-          <li>Phan nao Luat su thay KHONG THE cat (bat buoc phai giu)?</li>
-          <li>Hay de AI cat giam roi gui lai Luat su duyet lan cuoi?</li>
+          <li>Luật sư đồng ý cắt giảm để về dưới 580 từ không?</li>
+          <li>Phần nào Luật sư thấy KHÔNG THỂ cắt (bắt buộc phải giữ)?</li>
+          <li>Hay để AI cắt giảm rồi gửi lại Luật sư duyệt lần cuối?</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- TỔNG KẾT HÀNH ĐỘNG -->
-  <div class="summary-box">
-    <h2>Tong ket — Hanh dong de xuat</h2>
+  <!-- TỔNG KẾT -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num" style="visibility: hidden;">00</span>
+      <h3>Tổng kết — Hành động đề xuất</h3>
+    </div>
+    <div class="section-body">
 
-    <h4 style="color: #2e7d32; margin: 12px 0 8px;">Ap dung ngay (8 diem chinh xac hon):</h4>
-    <ul class="action-list">
-      <li><span class="bullet green">1</span> Bo sung "Khoan 1" cho Dieu 119 BLDS 2015</li>
-      <li><span class="bullet green">2</span> Bo sung Dieu 7 Luat GDDT 2023 — giao dich dien tu = giao dich bang van ban</li>
-      <li><span class="bullet green">3</span> Sua "co gia tri ngang giay vay no" &rarr; "co the co gia tri nhu mot loi xac nhan vay no" (than trong hon)</li>
-      <li><span class="bullet green">4</span> Bo sung Khoan 1 Dieu 94, Khoan 2 Dieu 95, Khoan 5 Dieu 95 BLTTDS 2015</li>
-      <li><span class="bullet green">5</span> Thoi hieu: dung Dieu 429 BLDS 2015 thay vi Dieu 155 (chinh xac hon)</li>
-      <li><span class="bullet green">6</span> Them luu y khi lap vi bang — danh gia noi dung, tranh bo sot</li>
-      <li><span class="bullet green">7</span> Sai lam 3: them "tac dong vat ly" + "ben dung bong thanh sai"</li>
-      <li><span class="bullet green">8</span> Ket bai: "bao ve ca hai ben truoc nhung tranh cai khi tri nho moi ben khong giong nhau"</li>
-    </ul>
+      <h4 style="font-size: 12px; font-weight: 600; letter-spacing: 0.32px; text-transform: uppercase; color: #0e6027; margin-bottom: 12px;">Áp dụng ngay (8 điểm chính xác hơn)</h4>
+      <ul class="action-list">
+        <li><span class="bullet success">1</span> Bổ sung "Khoản 1" cho Điều 119 BLDS 2015</li>
+        <li><span class="bullet success">2</span> Bổ sung Điều 7 Luật GDĐT 2023 — giao dịch điện tử = giao dịch bằng văn bản</li>
+        <li><span class="bullet success">3</span> Sửa "có giá trị ngang giấy vay nợ" → "có thể có giá trị như một lời xác nhận vay nợ" (thận trọng hơn)</li>
+        <li><span class="bullet success">4</span> Bổ sung Khoản 1 Điều 94, Khoản 2 Điều 95, Khoản 5 Điều 95 BLTTDS 2015</li>
+        <li><span class="bullet success">5</span> Thời hiệu: dùng Điều 429 BLDS 2015 thay vì Điều 155 (chính xác hơn)</li>
+        <li><span class="bullet success">6</span> Thêm lưu ý khi lập vi bằng — đánh giá nội dung, tránh bỏ sót</li>
+        <li><span class="bullet success">7</span> Sai lầm 3: thêm "tác động vật lý" + "bên đúng bỗng thành sai"</li>
+        <li><span class="bullet success">8</span> Kết bài: "bảo vệ cả hai bên trước những tranh cãi khi trí nhớ mỗi bên không giống nhau"</li>
+      </ul>
 
-    <h4 style="color: #e65100; margin: 16px 0 8px;">Can Luat su xac nhan (4 diem):</h4>
-    <ul class="action-list">
-      <li><span class="bullet orange">1</span> <strong>Do dai:</strong> Dong y cat giam ve &le;580 tu? Phan nao bat buoc giu?</li>
-      <li><span class="bullet orange">2</span> <strong>Thu tuc khoi kien:</strong> Giu thong tin cu the (toa cap huyen, 5 ngay thu ly, an phi 2.5 trieu) hay bo?</li>
-      <li><span class="bullet orange">3</span> <strong>Slogan:</strong> "Luat su vi ban — dong hanh cung ban" la slogan chinh thuc?</li>
-      <li><span class="bullet orange">4</span> <strong>Ket bai:</strong> Giu loi khuyen "dung voi nghi la mat, kiem tra lai tin nhan" tu ban goc?</li>
-    </ul>
+      <h4 style="font-size: 12px; font-weight: 600; letter-spacing: 0.32px; text-transform: uppercase; color: #8e6a00; margin: 20px 0 12px;">Cần Luật sư xác nhận (4 điểm)</h4>
+      <ul class="action-list">
+        <li><span class="bullet warning">1</span> <strong>Độ dài:</strong> Đồng ý cắt giảm về ≤580 từ? Phần nào bắt buộc giữ?</li>
+        <li><span class="bullet warning">2</span> <strong>Thủ tục khởi kiện:</strong> Giữ thông tin cụ thể (tòa cấp huyện, 5 ngày thụ lý, án phí 2,5 triệu) hay bỏ?</li>
+        <li><span class="bullet warning">3</span> <strong>Slogan:</strong> "Luật sư vì bạn — đồng hành cùng bạn" là slogan chính thức?</li>
+        <li><span class="bullet warning">4</span> <strong>Kết bài:</strong> Giữ lời khuyên "đừng vội nghĩ là mất, kiểm tra lại tin nhắn" từ bản gốc?</li>
+      </ul>
 
-    <h4 style="color: #c62828; margin: 16px 0 8px;">Khong ap dung:</h4>
-    <ul class="action-list">
-      <li><span class="bullet red">1</span> Intro "Chao ban, day la Goc Luat Doi Thuong" — xu ly rieng trong audio-convert, khong de trong content.md</li>
-    </ul>
+      <h4 style="font-size: 12px; font-weight: 600; letter-spacing: 0.32px; text-transform: uppercase; color: #a2191f; margin: 20px 0 12px;">Không áp dụng</h4>
+      <ul class="action-list">
+        <li><span class="bullet error">1</span> Intro "Chào bạn, đây là Góc Luật Đời Thường" — xử lý riêng trong audio-convert, không để trong content.md</li>
+      </ul>
+    </div>
   </div>
 
 </div>
 
 <div class="footer">
-  Vibalaw — GLDT-25 Review | Tao boi AI, ngay 2026-07-14 | Gui Luat su duyet truoc khi cap nhat
+  Vibalaw · GLDT-25 Review · Tạo bởi AI, ngày 14/07/2026 · Gửi Luật sư duyệt trước khi cập nhật
 </div>
 
 </body>
