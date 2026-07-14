@@ -1,7 +1,7 @@
 {
   "title_vi": "Cho vay tiền không giấy tờ — đòi lại được không?",
   "topic": "Dân sự",
-  "legal_basis": "Bộ luật Dân sự 2015, Bộ luật Tố tụng Dân sự 2015, Luật Giao dịch điện tử 2023",
+  "legal_basis": "Bộ luật Dân sự 2015 (Khoản 1 Điều 119, Điều 429); Bộ luật Tố tụng Dân sự 2015 (Khoản 1 Điều 94, Khoản 2 Điều 95, Khoản 5 Điều 95); Luật Giao dịch điện tử 2023 (Điều 7)",
   "type": "single",
   "channels": ["GLDT"],
   "primary_channel": "GLDT",
@@ -9,15 +9,15 @@
   "voice_name": "Nam Nhẹ Nhàng",
   "provider": "vbee",
   "speed": 1.1,
-  "created_at": "2026-07-13",
+  "created_at": "2026-07-14",
   "parts": [
     {
       "part": null,
       "audio_file": "gldt/cho-vay-tien-khong-giay-to/audio/cho-vay-tien-khong-giay-to.mp3",
-      "duration_minutes": 3.7,
+      "duration_minutes": 2.4,
       "title": "Cho bạn vay 150 triệu không giấy tờ — tưởng mất trắng, nhưng luật nói khác",
       "description": "Không giấy vay nợ, không hợp đồng — nhiều người nghĩ là mất. Nhưng chứng cứ nằm ngay trong điện thoại và tài khoản ngân hàng của bạn.",
-      "hook_quote": "Không có giấy tờ không đồng nghĩa với không có hợp đồng",
+      "hook_quote": "Không giấy tờ không có nghĩa không có hợp đồng",
       "tags": "#vibalaw #phapluat #tuvanphapluat #chovaytien #doino"
     }
   ]
